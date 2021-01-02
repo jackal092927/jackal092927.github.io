@@ -85,7 +85,7 @@ author:
   bio              : "Research assistant at Purdue University, researcher on topological data analysis and machine learning"
   location         : "west lafayette, Indiana"
   employer         : "Purdue University" 
-  # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=lQk90B0AAAAJ&hl=en&oi=sra"
   email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
