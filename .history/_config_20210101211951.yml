@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Home"
+title                    : "Cheng Xin / Site Title"
 title_separator          : "-"
 name                     : &name "Cheng Xin"
 description              : &description "Research assistant at Purdue University"
