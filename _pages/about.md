@@ -8,9 +8,13 @@ redirect_from:
   - /about.html
 ---
 
-I am currently a Ph.D student of the department of computer science at Purdue University.
+<!-- I am currently a Ph.D student of the department of computer science at Purdue University.
 My current research interests focus on Topological data analysis (a new idea of applying algebraic topology techniques to problem in data science) and machine learning. I am trying to use this tool to bring some new methods to data science, both in theory and application levels. 
-Currently, I am trying to design meaningful and computable topological invariants for multi-parameter persistent homology with efficient algorithms. I am also studying the graph generation problem by tools from graph neural networks and algebraic topology. 
+Currently, I am trying to design meaningful and computable topological invariants for multi-parameter persistent homology with efficient algorithms. I am also studying the graph generation problem by tools from graph neural networks and algebraic topology.  -->
+
+Cheng Xin is a postdoctoral researcher at the Center for Discrete Mathematics and Theoretical Computer Science (DIMACS) at Rutgers University. His research focuses on the intersection of computational topology, geometry, machine learning, and artificial intelligence.
+Dr. Xin earned his Ph.D. in Computer Science from Purdue University, where his doctoral research centered on topological data analysis and graph representations. His work explores innovative approaches to data representation and analysis, seeking to uncover hidden patterns and structures in complex datasets.
+Through his research, Dr. Xin aims to develop novel algorithms and techniques that leverage the power of topology and geometry to enhance machine learning and AI systems. By bridging the gap between these disciplines, he strives to create more efficient, interpretable, and robust models for a wide range of applications.
 
 <!-- This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
 
