@@ -6,7 +6,6 @@ excerpt: 'Optimizing classifier predictions in networked learning for maximum ac
 date: 2024-07-01
 venue: '41st International Conference on Machine Learning (ICML, to appear)'
 paperurl: 'http://jackal092927.github.io/files/social_learning_arxiv.pdf'
-# citation: 'Your Name, You. (2024). &quot;Paper Title Number 3.&quot; <i>GitHub Journal of Bugs</i>. 1(3).'
 ---
 
 We consider a cooperative learning scenario where a collection of networked agents with indi-
