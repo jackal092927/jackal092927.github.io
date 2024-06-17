@@ -8,6 +8,7 @@ venue: '41st International Conference on Machine Learning (ICML, to appear)'
 paperurl: 'http://jackal092927.github.io/files/social_learning_arxiv.pdf'
 ---
 
+# Abstract
 We consider a cooperative learning scenario where a collection of networked agents with indi-
 vidually owned classifiers dynamically update their predictions, for the same classification task,
 through communication or observations of each other’s predictions. Clearly if highly influential
