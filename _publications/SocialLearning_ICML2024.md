@@ -20,3 +20,5 @@ ing the aggregate objective function, and show that optimizing the egalitarian o
 is NP-hard. Furthermore, we develop approximation algorithms for the egalitarian improvement.
 The performance of all of our algorithms are guaranteed by mathematical analysis and backed by
 experiments on synthetic and real data.
+
+[Paper](http://jackal092927.github.io/files/social_learning_arxiv.pdf)
