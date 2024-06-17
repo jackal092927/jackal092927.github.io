@@ -14,7 +14,7 @@ Currently, I am trying to design meaningful and computable topological invariant
 
 
 
-I am currently postdoctoral researcher at the Center for Discrete Mathematics and Theoretical Computer Science (DIMACS) at Rutgers University. My research focuses on the intersection of computational topology, geometry, machine learning, and artificial intelligence.
+I am currently a postdoctoral researcher of the Center for Discrete Mathematics and Theoretical Computer Science (DIMACS) at Rutgers University. My research focuses on the intersection of computational topology, geometry, machine learning, and artificial intelligence.
 
 I earned my Ph.D. in Computer Science from Purdue University, where my doctoral research centered on topological data analysis and graph representations. My work explores innovative approaches to data representation and analysis, to uncover hidden patterns and structures in complex datasets.
 
@@ -22,7 +22,7 @@ Through my research, I aim to develop novel algorithms and techniques that lever
 
 My [CV](http://jackal092927.github.io/files/resume_long.pdf). My [google scholar](https://scholar.google.com/citations?user=lQk90B0AAAAJ&hl=en). I work on the following projects at the moment.
 
-- Differentiable Topological Representation;
+- Differentiable Topological Representations;
 - Representation Learning beyond Euclidean Spaces;
 - Cooperative learning in social settings;
 
