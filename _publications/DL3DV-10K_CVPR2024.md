@@ -1,6 +1,6 @@
 ---
 title: "DL3DV-10K: A Large-Scale Scene Dataset for Deep Learning-based 3D Vision"
-collection: CVPR 2024
+collection: publications
 permalink: /publication/DL3DV-10K_CVPR2024
 excerpt: 'This paper presents a 10K real-world scene benchmark dataset for 3D vision.'
 date: 2024-06-01

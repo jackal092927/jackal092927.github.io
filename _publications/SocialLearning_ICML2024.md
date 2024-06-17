@@ -1,6 +1,6 @@
 ---
 title: "Optimally Improving Cooperative Learning in a Social Setting"
-collection: ICML 2024
+collection: publications
 permalink: /publication/SocialLearning_ICML2024
 excerpt: 'This paper presents a 10K real-world scene benchmark dataset for 3D vision.'
 date: 2024-07-01
