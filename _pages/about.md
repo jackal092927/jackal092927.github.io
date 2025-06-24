@@ -21,10 +21,11 @@ I earned my Ph.D. in Computer Science from Purdue University, where my doctoral 
 Through my research, I aim to develop novel algorithms and techniques that leverage the power of topology and geometry to enhance machine learning and AI models. By bridging the gap between these disciplines, I strive to create more efficient, interpretable, and robust models for a wide range of applications. 
 -->
 
-I am currently a postdoctoral researcher, advised by Dr. Jie Gao, in the computer science department at Rutgers University. 
+I am currently a postdoctoral researcher, advised by Dr. Jie Gao, in the computer science department at Rutgers University. My research focuses on the intersection of **computational topology, geometry, machine learning, and artificial intelligence**. 
+
+<div style="color:blue;">
 **I am actively seeking faculty and research positions.**
-<!-- , with publications in top-tier AI and computational geometry conferences including \textbf{NeurIPS, ICML, CVPR, SOCG}.  -->
-My research focuses on the intersection of **computational topology, geometry, machine learning, and artificial intelligence**. 
+</div>
 
 I earned my Ph.D. in Computer Science from Purdue University, advised by Dr. Tamal Dey. My doctoral research centered on **topological data analysis and graph representations learning**. My work explores innovative approaches to data representation and analysis, seeking to uncover hidden patterns and structures in complex datasets. 
 
