@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/SocialLearning_ICML2024
 excerpt: 'Optimizing classifier predictions in networked learning for maximum accuracy using efficient algorithms..'
 date: 2024-07-01
-venue: '41st International Conference on Machine Learning (ICML, to appear)'
+venue: '41st International Conference on Machine Learning (ICML)'
 paperurl: 'http://jackal092927.github.io/files/social_learning_arxiv.pdf'
 ---
 
