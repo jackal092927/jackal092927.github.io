@@ -13,12 +13,27 @@ My current research interests focus on Topological data analysis (a new idea of 
 Currently, I am trying to design meaningful and computable topological invariants for multi-parameter persistent homology with efficient algorithms. I am also studying the graph generation problem by tools from graph neural networks and algebraic topology.  -->
 
 
-
+<!-- 
 I am currently a postdoctoral researcher of the Center for Discrete Mathematics and Theoretical Computer Science (DIMACS) at Rutgers University. My research focuses on the intersection of computational topology, geometry, machine learning, and artificial intelligence.
 
 I earned my Ph.D. in Computer Science from Purdue University, where my doctoral research centered on topological data analysis and graph representations. My work explores innovative approaches to data representation and analysis, to uncover hidden patterns and structures in complex datasets.
 
-Through my research, I aim to develop novel algorithms and techniques that leverage the power of topology and geometry to enhance machine learning and AI models. By bridging the gap between these disciplines, I strive to create more efficient, interpretable, and robust models for a wide range of applications.
+Through my research, I aim to develop novel algorithms and techniques that leverage the power of topology and geometry to enhance machine learning and AI models. By bridging the gap between these disciplines, I strive to create more efficient, interpretable, and robust models for a wide range of applications. 
+-->
+
+I am currently a postdoctoral researcher, advised by Dr. Jie Gao, in the computer science department at Rutgers University. 
+**I am actively seeking faculty and research positions.**
+<!-- , with publications in top-tier AI and computational geometry conferences including \textbf{NeurIPS, ICML, CVPR, SOCG}.  -->
+My research focuses on the intersection of **computational topology, geometry, machine learning, and artificial intelligence**. 
+
+I earned my Ph.D. in Computer Science from Purdue University, advised by Dr. Tamal Dey. My doctoral research centered on **topological data analysis and graph representations learning**. My work explores innovative approaches to data representation and analysis, seeking to uncover hidden patterns and structures in complex datasets. 
+
+My recent projects include developing topological frameworks for **interpretable AI**, 
+advancing **AI for Science** through **generative AI** techniques,
+% analyzing human brain networks through **graph diffusion generative models**, 
+and contributing to the DL3DV benchmark for **3D/video generation**. 
+
+My research bridges the gap between theoretical foundations and practical applications. I develop novel mathematical frameworks and algorithms that leverage topology and geometry to create robust, interpretable, and reliable AI solutions. My goal is to address real-world challenges and drive impact across both scientific and industrial domains.
 
 My [CV](http://jackal092927.github.io/files/resume_long.pdf). My [google scholar](https://scholar.google.com/citations?user=lQk90B0AAAAJ&hl=en). I work on the following projects at the moment.
 
