@@ -34,7 +34,7 @@ author:
   avatar           : "profile.png"
   name             : "Cheng Xin"
   pronouns         : # example: "she/her"  
-  bio              : "Postdoc Scholar @ Rutgers University."
+  bio              : "Postdoc Scholar @ Rutgers University. <span style='color:red;'>on Job Market</span>"
   location         : "US"
   employer         : "Rutgers University"
   uri              : # URL
