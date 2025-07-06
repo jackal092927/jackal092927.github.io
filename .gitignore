@@ -13,3 +13,4 @@ package-lock.json
 files/.DS_Store
 .gitignore
 files/resume_archieve/.DS_Store
+.DS_Store

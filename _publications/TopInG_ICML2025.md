@@ -135,4 +135,4 @@ TopInG achieves higher prediction accuracy, especially with spurious correlation
 
 ## Links
 
-**Paper:** [OpenReview](https://openreview.net/pdf?id=u4LlYWJHUF) | **PDF:** [Download PDF](/files/toping/toping_icml25.pdf)
+**Poster:** [Download Poster](/files/toping/TopInG_poster_icml25.pdf) | **PDF:** [Download PDF](/files/toping/toping_icml25.pdf)
