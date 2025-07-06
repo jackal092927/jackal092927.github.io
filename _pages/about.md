@@ -22,7 +22,7 @@ Through my research, I aim to develop novel algorithms and techniques that lever
 -->
 
 I am currently a postdoctoral researcher, advised by Dr. Jie Gao, in the computer science department at Rutgers University. My research focuses on the intersection of **computational topology, geometry, machine learning, and artificial intelligence**. 
-<div style="color:blue;">
+<div style="color:blue; font-weight:bold;">
 **I am actively seeking faculty and research positions.**
 </div>
 
