@@ -93,20 +93,34 @@ TopInG consistently identifies correct rationale subgraphs with higher fidelity.
 
 TopInG achieves higher prediction accuracy, especially with spurious correlations that mislead other models.
 
-**Table 2: Prediction Performance (Accuracy) on Test Datasets**
+<div style="overflow-x: auto; margin: 20px 0;">
+<p style="font-size: 0.9em; font-weight: bold; margin-bottom: 10px;">Table 2: Prediction Performance (Accuracy) on Test Datasets</p>
+<table style="font-size: 0.8em; width: 100%; border-collapse: collapse; margin: 0 auto;">
+<thead>
+<tr style="background-color: #f8f9fa;">
+<th style="padding: 4px 6px; text-align: left; border: 1px solid #dee2e6;">Model</th>
+<th style="padding: 4px 6px; text-align: left; border: 1px solid #dee2e6;">Method</th>
+<th style="padding: 4px 6px; text-align: center; border: 1px solid #dee2e6;">Mutag</th>
+<th style="padding: 4px 6px; text-align: center; border: 1px solid #dee2e6;">Benzene</th>
+<th style="padding: 4px 6px; text-align: center; border: 1px solid #dee2e6;">SpuriousMotif (b=0.5)</th>
+<th style="padding: 4px 6px; text-align: center; border: 1px solid #dee2e6;">SpuriousMotif (b=0.7)</th>
+<th style="padding: 4px 6px; text-align: center; border: 1px solid #dee2e6;">SpuriousMotif (b=0.9)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="padding: 3px 6px; border: 1px solid #dee2e6;">GIN</td><td style="padding: 3px 6px; border: 1px solid #dee2e6;">DIR</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">68.72 ± 2.51</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">50.67 ± 0.93</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">45.49 ± 3.81</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">41.13 ± 2.62</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">37.61 ± 2.02</td></tr>
+<tr><td style="padding: 3px 6px; border: 1px solid #dee2e6;">GIN</td><td style="padding: 3px 6px; border: 1px solid #dee2e6;">GSAT</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;"><strong>98.28</strong> ± 0.78</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;"><strong>100.00</strong> ± 0.00</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">47.45 ± 5.87</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">43.57 ± 2.43</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">45.39 ± 5.02</td></tr>
+<tr><td style="padding: 3px 6px; border: 1px solid #dee2e6;">GIN</td><td style="padding: 3px 6px; border: 1px solid #dee2e6;">GMT-Lin</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">91.20 ± 2.75</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;"><strong>100.00</strong> ± 0.00</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">51.16 ± 3.51</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">53.11 ± 4.12</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">47.60 ± 2.06</td></tr>
+<tr style="background-color: #e8f4fd;"><td style="padding: 3px 6px; border: 1px solid #dee2e6;">GIN</td><td style="padding: 3px 6px; border: 1px solid #dee2e6;"><strong>TopInG</strong></td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">94.20 ± 5.61</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;"><strong>100.00</strong> ± 0.00</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;"><strong>52.22</strong> ± 2.07</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;"><strong>54.46</strong> ± 5.76</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;"><strong>50.21</strong> ± 3.22</td></tr>
+<tr style="background-color: #f8f9fa;"><td colspan="7" style="padding: 2px; border: 1px solid #dee2e6; text-align: center; font-size: 0.9em;"><em>CINpp Backbone</em></td></tr>
+<tr><td style="padding: 3px 6px; border: 1px solid #dee2e6;">CINpp</td><td style="padding: 3px 6px; border: 1px solid #dee2e6;">GSAT</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;"><strong>96.14</strong> ± 0.67</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">99.43 ± 0.54</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">74.70 ± 3.37</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">70.41 ± 3.44</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">65.90 ± 4.18</td></tr>
+<tr><td style="padding: 3px 6px; border: 1px solid #dee2e6;">CINpp</td><td style="padding: 3px 6px; border: 1px solid #dee2e6;">GMT-Lin</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">95.27 ± 1.36</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">98.87 ± 0.92</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">73.16 ± 3.51</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">69.11 ± 4.12</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">68.60 ± 6.06</td></tr>
+<tr style="background-color: #e8f4fd;"><td style="padding: 3px 6px; border: 1px solid #dee2e6;">CINpp</td><td style="padding: 3px 6px; border: 1px solid #dee2e6;"><strong>TopInG</strong></td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">92.92 ± 7.02</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;"><strong>100.00*</strong> ± 0.00</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;"><strong>79.30*</strong> ± 3.92</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;"><strong>75.46*</strong> ± 4.62</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;"><strong>77.68*</strong> ± 4.64</td></tr>
+</tbody>
+</table>
+</div>
 
-| Model | Method | Mutag | Benzene | SpuriousMotif (b=0.5) | SpuriousMotif (b=0.7) | SpuriousMotif (b=0.9) |
-| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| GIN | DIR | 68.72 ± 2.51 | 50.67 ± 0.93 | 45.49 ± 3.81 | 41.13 ± 2.62 | 37.61 ± 2.02 |
-| GIN | GSAT | **98.28** ± 0.78 | **100.00** ± 0.00 | 47.45 ± 5.87 | 43.57 ± 2.43 | 45.39 ± 5.02 |
-| GIN | GMT-Lin | 91.20 ± 2.75 | **100.00** ± 0.00 | 51.16 ± 3.51 | 53.11 ± 4.12 | 47.60 ± 2.06 |
-| GIN | **TopInG** | 94.20 ± 5.61 | **100.00** ± 0.00 | **52.22** ± 2.07 | **54.46** ± 5.76 | **50.21** ± 3.22 |
-| **---** | **---** | **---** | **---** | **---** | **---** | **---** |
-| CINpp | GSAT | **96.14** ± 0.67 | 99.43 ± 0.54 | 74.70 ± 3.37 | 70.41 ± 3.44 | 65.90 ± 4.18 |
-| CINpp | GMT-Lin | 95.27 ± 1.36 | 98.87 ± 0.92 | 73.16 ± 3.51 | 69.11 ± 4.12 | 68.60 ± 6.06 |
-| CINpp | **TopInG** | 92.92 ± 7.02 | **100.00*** ± 0.00 | **79.30*** ± 3.92 | **75.46*** ± 4.62 | **77.68*** ± 4.64 |
-
-<p style="font-size: smaller; text-align: left;"><em>*Results are statistically significant and outperform the best baseline.</em></p>
+<p style="font-size: 0.8em; text-align: left; margin-top: 5px;"><em>*Results are statistically significant and outperform the best baseline.</em></p>
 
 ---
 
