@@ -51,7 +51,7 @@ Roughly 6-7 written homework (30%), midterm (35%) and final (35%).
 - All homework must be written in LaTeX and submitted as compiled PDF files
 - No late homework will be accepted
 - The lowest homework score will be dropped from the final grade calculation
-- Both midterm and final exams are closed book. The final exam is cumulative. 
+- Both midterm and final exams are closed book. The final exam is cumulative. You are allowed to bring a handwritten letter-size "cheat sheet". 
 
 <!-- 
 ## Grading Policy
