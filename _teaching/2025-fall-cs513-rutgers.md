@@ -33,13 +33,13 @@ The list of topics we plan to cover includes, but is not limited to:
 
 ## Course Topics
 The list of topics we plan to cover includes, but is not limited to:
-- **Divide and Conquer:** 
-- **Greedy algorithms:**
-- **Dynamic Programming:** 
-- **NP and Intractability:** 
-- **Approximation Algorithms:**
-- **Randomized Algorithms:** 
-- **Graph Algorithms:** 
+- **Divide and Conquer** 
+- **Greedy algorithms**
+- **Dynamic Programming** 
+- **NP and Intractability** 
+- **Approximation Algorithms**
+- **Randomized Algorithms** 
+- **Graph Algorithms** 
 <!-- - **Dimensionality Reduction:**  -->
 - **Other Topics:** 
 
