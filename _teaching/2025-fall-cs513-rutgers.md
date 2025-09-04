@@ -13,7 +13,7 @@ This is a graduate-level course on the design and analysis of algorithms. We wil
 This course expects students with undergraduate algorithm knowledge. If you plan to take this course, I expect that you know what the following words mean: big-O notion, running time, sorting, worst-case analysis. 
 
 ## Course Information
-- **Instructor:** Dr. Xin
+- **Instructor:** Cheng Xin
 - **Office Hours:** Fridays, 5pm - 6pm
 - **Location:** Busch SEC-209
 - **Time:** Fridays, 2pm - 5pm
