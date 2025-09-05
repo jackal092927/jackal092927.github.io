@@ -10,7 +10,7 @@ location: "New Brunswick, NJ"
 
 This is a graduate-level course on the design and analysis of algorithms. We will explore fundamental techniques for designing and analyzing efficient algorithms for computationally challenging problems. The course will cover classic paradigms as well as modern algorithmic techniques. The goal is to provide students with a robust theoretical foundation and an understanding of the mathematical tools needed to tackle complex algorithmic problems in their own research.
 
-This course expects students with undergraduate algorithm knowledge. If you plan to take this course, I expect that you know what the following words mean: big-O notion, time/space complexity, worst-case analysis, asynmpotic upper and lower bounds. 
+This course expects students with undergraduate algorithm knowledge. If you plan to take this course, I expect that you know what the following words mean: Big-O notion, Time/Space Complexity, Run-time analysis, Asynmpotic Upper and Lower bounds. 
 
 ## Course Information
 - **Instructor:** Cheng Xin
