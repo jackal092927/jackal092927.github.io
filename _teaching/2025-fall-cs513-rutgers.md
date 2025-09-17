@@ -45,12 +45,17 @@ The list of topics we plan to cover includes, but is not limited to:
 
 *The selection of topics may be adjusted based on class progress and interest.*
 
+### Some specific references:
+- Proof of the Master Theorem: [CLRS] Chapter 4, Section 4.6,
+- QuickSort: Nice lecture [notes](https://www.cs.cmu.edu/afs/cs/academic/class/15451-s07/www/lecture_notes/lect0123.pdf) and [slides](https://www.cs.jhu.edu/~mdinitz/classes/IntroAlgorithms/Fall2024/schedule/Lectures/Lecture3/lecture3slides.pdf) from Michael Dinitz
+
 ## Grading:
-Roughly 6-7 written homework (30%), midterm (35%) and final (35%).
+Homeworks, Midterm, and Final.
+<!-- Roughly 6-7 written homework (30%), midterm (35%) and final (35%).
 - You may discuss problems with your classmates, but you must write up your solutions independently
 - All homework must be written in LaTeX and submitted as compiled PDF files
 - No late homework will be accepted
-- The lowest homework score will be dropped from the final grade calculation
+- The lowest homework score will be dropped from the final grade calculation -->
 - Both midterm and final exams are closed book. The final exam is cumulative. You are allowed to bring a handwritten letter-size "cheat sheet". 
 
 <!-- 
@@ -75,7 +80,7 @@ Roughly 6-7 written homework (30%), midterm (35%) and final (35%).
 ## Recommended Textbooks:
 - [PDV] Algorithms, Christos Papadimitriou, Sanjoy Dasgupta, and Umesh Vazirani, McGraw-Hill, 2006.     
 - [KT] Algorithm design, by Jon Kleinberg, Eva Tardos, Addison-Wesley, 2005. 
-- [CLRS] Introduction to algorithms, by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein, The MIT Press, 2nd edition, 2001.
+- [CLRS] Introduction to algorithms, by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein, The MIT Press, 3nd edition, 2009.
 - [Va] Approximation algorithms, Vijay V. Vazirani.
 <!-- - [MR] Randomized algorithms, by Rajeev Motwani, Prabhakar Raghavan. -->
 
