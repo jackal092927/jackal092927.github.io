@@ -49,13 +49,7 @@ The list of topics we plan to cover includes, but is not limited to:
 - Proof of the Master Theorem: [CLRS] Chapter 4, Section 4.6,
 - QuickSort: Nice lecture [notes](https://www.cs.cmu.edu/afs/cs/academic/class/15451-s07/www/lecture_notes/lect0123.pdf) and [slides](https://www.cs.jhu.edu/~mdinitz/classes/IntroAlgorithms/Fall2024/schedule/Lectures/Lecture3/lecture3slides.pdf) from Michael Dinitz
 
-## Grading:
-Homeworks, Midterm, and Final.
-<!-- Roughly 6-7 written homework (30%), midterm (35%) and final (35%).
-- You may discuss problems with your classmates, but you must write up your solutions independently
-- All homework must be written in LaTeX and submitted as compiled PDF files
-- No late homework will be accepted
-- The lowest homework score will be dropped from the final grade calculation -->
+## Grading: Midterm (50%) + Final (50%).
 - Both midterm and final exams are closed book. The final exam is cumulative. You are allowed to bring a handwritten letter-size "cheat sheet". 
 
 <!-- 
@@ -97,7 +91,8 @@ The following additional books are excellent references for the topics covered i
 - **Michael Mitzenmacher and Eli Upfal:** *Probability and Computing: Randomized Algorithms and Probabilistic Analysis* [MU] -->
 
 ## Academic Integrity
-All work submitted in this course must be your own. For homework assignments, collaboration on high-level ideas is permitted, but you must write your solutions independently and list the names of your collaborators. Any form of academic dishonesty will be taken seriously and handled according to the university's academic integrity policy.
+<!-- All work submitted in this course must be your own. For homework assignments, collaboration on high-level ideas is permitted, but you must write your solutions independently and list the names of your collaborators.  -->
+Any form of academic dishonesty will be taken seriously and handled according to the university's academic integrity policy.
 
 <!-- ## Contact Information
 For questions about the course, please contact Dr. Xin during office hours or via email. Course announcements and materials will be posted on the course website. -->
