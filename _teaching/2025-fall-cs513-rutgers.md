@@ -72,7 +72,7 @@ The list of topics we plan to cover includes, but is not limited to:
 -->
 
 ## Recommended Textbooks:
-- [PDV] Algorithms, Christos Papadimitriou, Sanjoy Dasgupta, and Umesh Vazirani, McGraw-Hill, 2006.     
+- [DPV] Algorithms, Sanjoy Dasgupta, Christos H. Papadimitriou, and Umesh Vazirani, McGraw-Hill, 2006.     
 - [KT] Algorithm design, by Jon Kleinberg, Eva Tardos, Addison-Wesley, 2005. 
 - [CLRS] Introduction to algorithms, by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein, The MIT Press, 3nd edition, 2009.
 - [Va] Approximation algorithms, Vijay V. Vazirani.
@@ -82,7 +82,7 @@ Good lecture notes:
 - Jeff Erickson: http://jeffe.cs.illinois.edu/teaching/algorithms/
 
 <!-- The main textbook for this course is:
-- **Christos Papadimitriou, Sanjoy Dasgupta, and Umesh Vazirani:** *Algorithms* [PDV]
+- **Christos Papadimitriou, Sanjoy Dasgupta, and Umesh Vazirani:** *Algorithms* [DPV]
 
 The following additional books are excellent references for the topics covered in this course:
 - **Jon Kleinberg and Éva Tardos:** *Algorithm Design* [KT]
