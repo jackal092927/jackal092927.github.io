@@ -34,7 +34,7 @@ The list of topics we plan to cover includes, but is not limited to:
 ## Course Topics
 The list of topics we plan to cover includes, but is not limited to:
 - Divide and Conquer: [CLRS] Ch 4, 30; [DPV] Ch 2; [\[Homework1\]]({{ '/files/hw1.pdf' | relative_url }})
-- Greedy algorithms
+- Greedy algorithms: [CLRS] Ch 16, 23; [DPV] Ch 5;
 - Dynamic Programming 
 - NP and Intractability 
 - Approximation Algorithms
