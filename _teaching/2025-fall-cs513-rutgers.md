@@ -52,6 +52,9 @@ The list of topics we plan to cover includes, but is not limited to:
 ## Grading: Midterm (50%) + Final (50%).
 - Both midterm and final exams are closed book. The final exam is cumulative. You are allowed to bring a handwritten letter-size "cheat sheet". 
 
+## (Optional) Homework
+- All homework assignments are optional for self-practice. Feel free to ask questions on [Piazza](https://piazza.com/rutgers/fall2025/1619851301dsgnanaldsalgori/home).
+
 <!-- 
 ## Grading Policy
 

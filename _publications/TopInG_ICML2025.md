@@ -133,6 +133,18 @@ TopInG achieves higher prediction accuracy, especially with spurious correlation
 
 ---
 
+## Suggested Citation:
+
+```bibtex
+@inproceedings{xin2025toping,
+  title={TopInG: Topologically Interpretable Graph Learning via Persistent Rationale Filtration},
+  author={Cheng Xin and Fan Xu and Xin Ding and Jie Gao and Jiaxin Ding},
+  booktitle={International Conference on Machine Learning},
+  year={2025},
+  url={https://openreview.net/forum?id=u4LlYWJHUF}
+}
+```
+
 ## Links
 
 **Poster:** [Download Poster](/files/toping/TopInG_poster_icml25.pdf) | **PDF:** [Download PDF](/files/toping/toping_icml25.pdf)
