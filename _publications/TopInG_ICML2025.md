@@ -133,7 +133,7 @@ TopInG achieves higher prediction accuracy, especially with spurious correlation
 
 ---
 
-## Suggested Citation:
+## BibTeX Citation:
 
 ```bibtex
 @inproceedings{xin2025toping,
@@ -147,4 +147,4 @@ TopInG achieves higher prediction accuracy, especially with spurious correlation
 
 ## Links
 
-**Poster:** [Download Poster](/files/toping/TopInG_poster_icml25.pdf) | **PDF:** [Download PDF](/files/toping/toping_icml25.pdf)
+[Paper](/files/toping/toping_icml25.pdf) | [Poster](/files/toping/TopInG_poster_icml25.pdf) | [BibTeX](/files/toping/toping_icml25.bib)
