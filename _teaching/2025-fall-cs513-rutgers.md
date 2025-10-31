@@ -36,7 +36,7 @@ The list of topics we plan to cover includes, but is not limited to:
 - Divide and Conquer: [CLRS] Ch 4, 30; [DPV] Ch 2; [\[Homework1\]]({{ '/files/hw1.pdf' | relative_url }}); [\[Sample Solutions\]]({{ '/files/hw1_sol.pdf' | relative_url }})
 - Greedy algorithms: [CLRS] Ch 16, 23, 24; [DPV] Ch 4,5;
 - Dynamic Programming: [CLRS] Ch 24, 25, 15; [DPV] Ch 4,6; [\[Homework2\]]({{ '/files/hw2.pdf' | relative_url }}); [\[Sample Solutions\]]({{ '/files/hw2_sol.pdf' | relative_url }})
-- NP and Intractability [CLRS] Ch 34; [DPV] Ch 8; 
+- NP and Intractability [CLRS] Ch 34; [DPV] Ch 8; [KT] Ch 8;
 - Approximation Algorithms
 - Randomized Algorithms 
 - Graph Algorithms 
@@ -47,7 +47,8 @@ The list of topics we plan to cover includes, but is not limited to:
 
 ### Some specific references:
 - Proof of the Master Theorem: [CLRS] Chapter 4, Section 4.6,
-- QuickSort: Nice lecture [notes](https://www.cs.cmu.edu/afs/cs/academic/class/15451-s07/www/lecture_notes/lect0123.pdf) and [slides](https://www.cs.jhu.edu/~mdinitz/classes/IntroAlgorithms/Fall2024/schedule/Lectures/Lecture3/lecture3slides.pdf) from Michael Dinitz
+- QuickSort: Nice lecture [notes](https://www.cs.cmu.edu/afs/cs/academic/class/15451-s07/www/lecture_notes/lect0123.pdf) and [slides](https://www.cs.jhu.edu/~mdinitz/classes/IntroAlgorithms/Fall2024/schedule/Lectures/Lecture3/lecture3slides.pdf) from Dr. Michael Dinitz
+- 3DM: Nice [slides](https://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/3dm.pdf) from Dr. Carl Kingsford
 
 ## Grading: Midterm (50%) + Final (50%).
 - Both midterm and final exams are closed book. The final exam is cumulative. You are allowed to bring a handwritten letter-size "cheat sheet". 
