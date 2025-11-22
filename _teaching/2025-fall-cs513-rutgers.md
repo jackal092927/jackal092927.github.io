@@ -49,6 +49,7 @@ The list of topics we plan to cover includes, but is not limited to:
 - Proof of the Master Theorem: [CLRS] Chapter 4, Section 4.6,
 - QuickSort: Nice lecture [notes](https://www.cs.cmu.edu/afs/cs/academic/class/15451-s07/www/lecture_notes/lect0123.pdf) and [slides](https://www.cs.jhu.edu/~mdinitz/classes/IntroAlgorithms/Fall2024/schedule/Lectures/Lecture3/lecture3slides.pdf) from Dr. Michael Dinitz
 - 3DM: Nice [slides](https://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/3dm.pdf) from Dr. Carl Kingsford
+- FPTAS algorithm for 0-1 Knapsack Problem: [\[Lecture Note\]]({{ '/files/knapsack_FPTAS.pdf' | relative_url }}); [\[Paper\]](https://dl.acm.org/doi/pdf/10.1145/321906.321909); 
 
 ## Grading: Midterm (50%) + Final (50%).
 - Both midterm and final exams are closed book. The final exam is cumulative. You are allowed to bring a handwritten letter-size "cheat sheet". 
