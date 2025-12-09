@@ -12,6 +12,10 @@ This is a graduate-level course on the design and analysis of algorithms. We wil
 
 This course expects students with undergraduate algorithm knowledge. If you plan to take this course, I expect that you know what the following words mean: Big-O notion, Time/Space Complexity, Run-time analysis, Asynmpotic Upper and Lower bounds. 
 
+> <span style="color:#b30000; font-weight:700;">📢 IMPORTANT: Final Exam</span>
+> 
+> <span style="color:#b30000;"><strong>Date & Time:</strong> Friday, December 19, 2pm - 5pm (in-class)</span>
+
 ## Course Information
 - **Instructor:** Cheng Xin
 - **Office Hours:** Fridays, 5pm - 6pm
