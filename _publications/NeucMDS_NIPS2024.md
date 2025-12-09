@@ -17,49 +17,35 @@ We introduce **N**on-**Euc**lidean-**MDS** (Neuc-MDS), an extension of classical
 
 ---
 
-## The Challenge: Non-Euclidean Inputs
+## The Challenge: Dimensionality Paradox
 
-Classical MDS relies on Euclidean distances, often discarding negative eigenvalues which contain valuable information when dealing with non-metric or non-Euclidean data. This leads to suboptimal embeddings and loss of structural information.
+Classical MDS (cMDS) assumes Euclidean geometry and discards negative eigenvalues from the Gram matrix. On non-Euclidean data (e.g., biological sequence dissimilarity, non-metric crowd-sourced similarity), this leads to a **Dimensionality Paradox**: increasing the number of target dimensions $k$ in cMDS can actually *increase* the STRESS error.
 
-<div style="text-align: center;">
-  <img src="/files/neucmds/geometry_issue.png" alt="Non-Euclidean Geometry Challenge" style="max-width: 90%; height: auto; margin: 20px 0;">
-  <p style="font-size: 0.9em;"><em><b>Figure 1</b>: The limitations of classical MDS on non-Euclidean data.</em></p>
-</div>
-
----
-
-## Our Method: Neuc-MDS
-
-We generalize the standard inner product to **symmetric bilinear forms**. This allows us to productively utilize the negative eigenvalues of dissimilarity Gram matrices. Our method, **Neuc-MDS**, efficiently selects a combination of positive and negative eigenvalues to directly minimize STRESS.
-
-<div style="text-align: center;">
-  <img src="/files/neucmds/neucmds_overview.png" alt="Neuc-MDS Framework" style="max-width: 100%; height: auto; margin: 20px 0;">
-  <p style="font-size: 0.9em;"><em><b>Figure 2</b>: Overview of the Neuc-MDS embedding process.</em></p>
-</div>
+Our method, **Neuc-MDS**, embraces the indefinite geometry (pseudo-Euclidean space) by selecting a mix of positive and negative eigenvalues, ensuring that STRESS monotonically decreases as dimensions are added.
 
 ---
 
 ## Experimental Results
 
-We evaluated Neuc-MDS on both synthetic and real-world datasets, comparing it against standard linear and non-linear dimension reduction techniques.
-
-### STRESS Reduction
+We evaluated Neuc-MDS on datasets with significant non-Euclidean components (indicated by negative eigenvalues), such as "Random-Simplex" and biological datasets (Brain, Breast Cancer).
 
 <div style="overflow-x: auto;">
-<p style="font-size: 0.9em; font-weight: bold; margin-bottom: 10px;">Table 1: Comparison of STRESS (Lower is better)</p>
+<p style="font-size: 0.9em; font-weight: bold; margin-bottom: 10px;">Table 1: STRESS Comparison (Lower is better)</p>
 <table style="font-size: 0.75em; width: 100%; border-collapse: collapse; margin: 0 auto;">
 <thead>
 <tr style="background-color: #f8f9fa;">
-<th style="padding: 4px 6px; text-align: left; border: 1px solid #dee2e6;">Method</th>
-<th style="padding: 4px 6px; text-align: center; border: 1px solid #dee2e6;">Dataset A</th>
-<th style="padding: 4px 6px; text-align: center; border: 1px solid #dee2e6;">Dataset B</th>
-<th style="padding: 4px 6px; text-align: center; border: 1px solid #dee2e6;">Dataset C</th>
+<th style="padding: 4px 6px; text-align: left; border: 1px solid #dee2e6;">Dataset</th>
+<th style="padding: 4px 6px; text-align: center; border: 1px solid #dee2e6;">Classical MDS</th>
+<th style="padding: 4px 6px; text-align: center; border: 1px solid #dee2e6;">Lower-MDS</th>
+<th style="padding: 4px 6px; text-align: center; border: 1px solid #dee2e6;">SMACOF</th>
+<th style="padding: 4px 6px; text-align: center; border: 1px solid #dee2e6;">Neuc-MDS (Ours)</th>
 </tr>
 </thead>
 <tbody>
-<tr><td style="padding: 3px 6px; border: 1px solid #dee2e6;">Classical MDS</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">--</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">--</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">--</td></tr>
-<tr><td style="padding: 3px 6px; border: 1px solid #dee2e6;">Isomap</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">--</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">--</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">--</td></tr>
-<tr style="background-color: #e8f4fd;"><td style="padding: 3px 6px; border: 1px solid #dee2e6;"><strong>Neuc-MDS</strong></td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;"><strong>--</strong></td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;"><strong>--</strong></td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;"><strong>--</strong></td></tr>
+<tr><td style="padding: 3px 6px; border: 1px solid #dee2e6;">Random-Simplex</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">80.52</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">31.54</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">15.96</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">**1.18**</td></tr>
+<tr><td style="padding: 3px 6px; border: 1px solid #dee2e6;">Euclidean Ball</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">36.97</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">17.30</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">4e6</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">**1.19**</td></tr>
+<tr><td style="padding: 3px 6px; border: 1px solid #dee2e6;">Brain (Genomics)</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">2.89</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">0.289</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">0.081</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">**0.046**</td></tr>
+<tr><td style="padding: 3px 6px; border: 1px solid #dee2e6;">CIFAR10</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">26.59</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">1.27</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">1.63e5</td><td style="padding: 3px 6px; text-align: center; border: 1px solid #dee2e6;">**0.85**</td></tr>
 </tbody>
 </table>
 </div>
@@ -69,12 +55,22 @@ We evaluated Neuc-MDS on both synthetic and real-world datasets, comparing it ag
 ## Key Contributions
 
 - **Generalization**: Extends MDS with symmetric bilinear forms to handle non-Euclidean and non-metric inputs.
-- **Optimization**: Efficiently uses positive and negative eigenvalues to reduce STRESS.
-- **Theoretical Guarantees**: Proofs of optimality for minimizing lower bounds of STRESS.
-- **Validation**: Superior performance on synthetic and real datasets compared to baselines.
+- **Optimization**: Proposes an $O(n)$ greedy algorithm to select the optimal subset of positive and negative eigenvalues.
+- **Theoretical Guarantees**: Proves that STRESS is decomposed into three terms, and Neuc-MDS minimizes the dominant lower bound.
+- **Validation**: Superior performance on synthetic and real datasets, resolving the dimensionality paradox.
 
 ---
 
+```bibtex
+@inproceedings{deng2024neucmds,
+  title={Neuc-MDS: Non-Euclidean Multidimensional Scaling Through Bilinear Forms},
+  author={Chengyuan Deng and Jie Gao and Kevin Lu and Feng Luo and Hongbin Sun and Cheng Xin},
+  booktitle={Conference on Neural Information Processing Systems (NeurIPS)},
+  year={2024},
+  url={[http://jackal092927.github.io/files/neucmds.pdf](http://jackal092927.github.io/files/neucmds.pdf)}
+}
+```
+
 ## Links
 
-[Paper](https://arxiv.org/pdf/2411.10889) | [Local PDF](http://jackal092927.github.io/files/neucmds.pdf)
+[Paper](http://jackal092927.github.io/files/neucmds.pdf) | [Code](https://github.com/KLu9812/MDSPlus)
