@@ -38,7 +38,7 @@ The list of topics we plan to cover includes, but is not limited to:
 - Dynamic Programming: [CLRS] Ch 24, 25, 15; [DPV] Ch 4,6; [\[Homework2\]]({{ '/files/hw2.pdf' | relative_url }}); [\[Sample Solutions (update)\]]({{ '/files/hw2_sol_update.pdf' | relative_url }})
 - [Midterm] [\[Sample Solutions\]]({{ '/files/midterm25fall_sol.pdf' | relative_url }})
 - NP and Intractability [CLRS] Ch 34; [DPV] Ch 8; [KT] Ch 8; [\[Homework3\]]({{ '/files/hw3.pdf' | relative_url }}); [\[Sample Solutions\]]({{ '/files/hw3_sol.pdf' | relative_url }})
-- Approximation Algorithms [\[Homework4\]]({{ '/files/hw4.pdf' | relative_url }});
+- Approximation Algorithms [\[Homework4\]]({{ '/files/hw4.pdf' | relative_url }});[\[Sample Solutions\]]({{ '/files/hw4_sol.pdf' | relative_url }})
 - Randomized Algorithms 
 <!-- - Graph Algorithms  -->
 <!-- - **Dimensionality Reduction:**  -->
