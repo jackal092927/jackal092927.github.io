@@ -65,12 +65,11 @@ Our methods (JL-PE and JL-Power) significantly outperform classical JL on non-Eu
 ## BibTeX Citation
 
 ```bibtex
-@inproceedings{neucjl2025,
-  title={NeucJL: [Full Title To Be Added]},
-  author={[Author List To Be Added]},
-  booktitle={Conference on Neural Information Processing Systems (NeurIPS)},
-  year={2025},
-  url={[http://jackal092927.github.io/files/NeucJL/neucJL.pdf](http://jackal092927.github.io/files/NeucJL/neucJL.pdf)}
+@inproceedings{deng2025jl,
+  title={Johnson-Lindenstrauss Lemma Beyond Euclidean Geometry},
+  author={Chengyuan Deng and Jie Gao and Kevin Lu and Feng Luo and Cheng Xin},
+  booktitle={Conference on Neural Information Processing Systems},
+  year={2025}
 }
 ```
 
