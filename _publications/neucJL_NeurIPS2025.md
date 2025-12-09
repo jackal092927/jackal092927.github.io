@@ -5,7 +5,7 @@ permalink: /publication/neucJL_NeurIPS2025
 excerpt: 'Details forthcoming for our latest NeurIPS paper.'
 date: 2025-12-01
 venue: 'Conference on Neural Information Processing Systems (NeurIPS)'
-paperurl: ''
+paperurl: 'http://jackal092927.github.io/files/NeucJL/neucJL.pdf'
 ---
 
 ## Abstract
@@ -24,4 +24,4 @@ Abstract coming soon. We will add a concise summary of the problem, method, and 
 
 ## Links
 
-Paper (coming soon) | Code (coming soon) | Poster (coming soon)
+[Paper](http://jackal092927.github.io/files/NeucJL/neucJL.pdf) | Code (coming soon) | Poster (coming soon)
