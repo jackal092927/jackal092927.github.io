@@ -8,17 +8,21 @@ venue: '41st International Conference on Machine Learning (ICML)'
 paperurl: 'http://jackal092927.github.io/files/social_learning_arxiv.pdf'
 ---
 
-# Abstract
-We consider a cooperative learning scenario where a collection of networked agents with indi-
-vidually owned classifiers dynamically update their predictions, for the same classification task,
-through communication or observations of each other’s predictions. Clearly if highly influential
-vertices use erroneous classifiers, there will be a negative effect on the accuracy of all the agents
-in the network. We ask the following question: how can we optimally fix the prediction of a few
-classifiers so as maximize the overall accuracy in the entire network. To this end we consider an
-aggregate and an egalitarian objective function. We show a polynomial time algorithm for optimiz-
-ing the aggregate objective function, and show that optimizing the egalitarian objective function
-is NP-hard. Furthermore, we develop approximation algorithms for the egalitarian improvement.
-The performance of all of our algorithms are guaranteed by mathematical analysis and backed by
-experiments on synthetic and real data.
+## Abstract
+
+We study cooperative learning where networked agents, each owning a classifier for the same task, update predictions via communication or observation. If influential vertices rely on erroneous classifiers, accuracy degrades for the whole network. We ask how to optimally fix a few classifiers to maximize overall accuracy. We propose aggregate and egalitarian objectives, give a polynomial-time algorithm for the aggregate objective, prove the egalitarian objective is NP-hard, and design approximation algorithms for that setting. Mathematical analysis and experiments on synthetic and real data validate the approach.
+
+---
+
+## Key Points
+
+- Cooperative learning over networks with agents updating predictions collaboratively
+- Polynomial-time optimization for the aggregate objective
+- NP-hardness and approximation algorithms for the egalitarian objective
+- Empirical validation on synthetic and real datasets
+
+---
+
+## Links
 
 [Paper](http://jackal092927.github.io/files/social_learning_arxiv.pdf)
