@@ -1,6 +1,3 @@
-### 4. `NeucMDS_NIPS2024.md` (NeurIPS 2024)
-
-```markdown
 ---
 title: "Neuc-MDS: Non-Euclidean Multidimensional Scaling Through Bilinear Forms"
 collection: publications
