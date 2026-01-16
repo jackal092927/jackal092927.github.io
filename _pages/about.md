@@ -8,19 +8,14 @@ redirect_from:
   - /about.html
 ---
 
-I am currently a **Postdoctoral Researcher** in the Department of Computer Science at **Rutgers University**, advised by **Dr. Jie Gao**.  
-My research lies at the intersection of **computational topology, geometry, machine learning, and artificial intelligence**, with an emphasis on building **mathematically grounded, interpretable, and reliable learning systems**.
-
-I am currently a **Postdoctoral Researcher** in the Department of Computer Science at **Rutgers University**, advised by **Dr. Jie Gao**.  
-I design **principled geometric and topological methods for trustworthy machine learning**, with a focus on **interpretability, robustness, and structural understanding in modern AI systems**.
+I am currently a **Postdoctoral Researcher** in the Department of Computer Science at **Rutgers University**, advised by **Dr. Jie Gao**. I design **principled geometric and topological methods for trustworthy machine learning**, with a focus on **interpretability, robustness, and structural understanding in modern AI systems**.
 
 
 <div style="color:blue; font-weight:bold;">
 I am actively seeking faculty and research positions.
 </div>
 
-I earned my **Ph.D. in Computer Science** from **Purdue University**, advised by **Dr. Tamal K. Dey**.  
-My doctoral research focused on **topological data analysis (TDA)** and the **theory and algorithms of multiparameter persistent homology**, with contributions to both foundational theory and efficient computation.
+I earned my **Ph.D. in Computer Science** from **Purdue University**, advised by **Dr. Tamal K. Dey**. My doctoral research focused on **topological data analysis (TDA)** and the **theory and algorithms of multiparameter persistent homology**, with contributions to both foundational theory and efficient computation.
 
 ---
 
