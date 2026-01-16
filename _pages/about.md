@@ -35,7 +35,7 @@ and contributing to the DL3DV benchmark for **3D/video generation**.
 
 My research bridges the gap between theoretical foundations and practical applications. I develop novel mathematical frameworks and algorithms that leverage topology and geometry to create robust, interpretable, and reliable AI solutions. My goal is to address real-world challenges and drive impact across both scientific and industrial domains.
 
-My [CV](http://jackal092927.github.io/files/resume_long.pdf). My [google scholar](https://scholar.google.com/citations?user=lQk90B0AAAAJ&hl=en). I work on the following projects at the moment.
+My [CV](http://jackal092927.github.io/files/resume_long.pdf). My [research statement](http://jackal092927.github.io/files/research_stat.pdf). My [teaching statement](http://jackal092927.github.io/files/teaching_stat.pdf). My [google scholar](https://scholar.google.com/citations?user=lQk90B0AAAAJ&hl=en). I work on the following projects at the moment.
 
 - Explainable Graph Neural Networks
 - Differentiable Topological Representations;
