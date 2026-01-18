@@ -65,7 +65,7 @@ I am committed to mentoring students at all levels and to fostering inclusive le
 
 ## Links
 
-- **CV**: [PDF](http://jackal092927.github.io/files/CVaca20260115.pdf)  
+- **CV**: [PDF](http://jackal092927.github.io/files/resume_long.pdf)  
 - **Research Statement**: [PDF](http://jackal092927.github.io/files/research_stat.pdf)  
 - **Teaching Statement**: [PDF](http://jackal092927.github.io/files/teaching_stat.pdf)  
 - **Google Scholar**: <https://scholar.google.com/citations?user=lQk90B0AAAAJ&hl=en>
