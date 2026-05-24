@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>忻成 - 工业 AI 平台研发</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-text: #09090b;
+    --color-muted: #71717a;
+    --color-border: #e4e4e7;
+    --color-bg: #ffffff;
+    --color-tag-bg: #f4f4f5;
+    --color-tag-text: #3f3f46;
+    --color-link: #18181b;
+    --font-sans: "Noto Sans SC", -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+    --font-mono: "SF Mono", "Fira Code", "JetBrains Mono", "Cascadia Code", ui-monospace, monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { font-size: 14px; }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background: #f4f4f5;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 750px;
+    margin: 2rem auto;
+    padding: 3rem;
+    background: var(--color-bg);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  }
+
+  .header { margin-bottom: 1.5rem; }
+  .header h1 { font-size: 1.85rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
+  .header .subtitle { color: var(--color-muted); font-size: 0.92rem; margin-top: 0.25rem; line-height: 1.5; }
+  .header .links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.6rem; }
+  .header .links a {
+    display: inline-flex; align-items: center; gap: 0.25rem;
+    font-size: 0.78rem; font-family: var(--font-mono);
+    color: var(--color-muted); text-decoration: none;
+    padding: 0.15rem 0.5rem; border: 1px solid var(--color-border); border-radius: 4px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .header .links a:hover { color: var(--color-text); border-color: var(--color-tag-text); }
+
+  section { margin-bottom: 1.5rem; }
+  section > h2 {
+    font-size: 0.85rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--color-text);
+    margin-bottom: 0.75rem; padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .summary { font-size: 0.88rem; color: var(--color-muted); line-height: 1.7; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .tag {
+    display: inline-block; font-size: 0.72rem;
+    font-family: "Noto Sans SC", -apple-system, "PingFang SC", "Hiragino Sans GB", var(--font-mono), sans-serif;
+    padding: 0.15rem 0.45rem; background: var(--color-tag-bg);
+    color: var(--color-tag-text); border-radius: 3px; white-space: nowrap;
+  }
+
+  .skills-grid { display: grid; gap: 0.6rem; }
+  .skill-row { display: grid; grid-template-columns: 7rem 1fr; gap: 0.5rem; align-items: start; }
+  .skill-label { font-size: 0.8rem; font-weight: 600; color: var(--color-text); padding-top: 0.15rem; }
+
+  .entry { margin-bottom: 1rem; break-inside: avoid; page-break-inside: avoid; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-header { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; margin-bottom: 0.15rem; }
+  .entry-title { font-size: 0.92rem; font-weight: 600; line-height: 1.3; }
+  .entry-title .org { font-weight: 600; }
+  .entry-title .role { font-weight: 400; color: var(--color-muted); }
+  .entry-date { font-size: 0.75rem; font-family: var(--font-mono); color: var(--color-muted); white-space: nowrap; flex-shrink: 0; }
+  .entry-meta { font-size: 0.78rem; color: var(--color-muted); margin-bottom: 0.3rem; }
+
+  .entry ul { padding-left: 1.2rem; margin: 0; }
+  .entry li { font-size: 0.82rem; color: var(--color-text); line-height: 1.6; margin-bottom: 0.15rem; }
+  .entry li:last-child { margin-bottom: 0; }
+  .entry li strong { font-weight: 600; }
+  .entry a { color: var(--color-link); text-decoration: underline; text-decoration-thickness: 0.06em; text-underline-offset: 0.14em; }
+
+  .venue { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; color: var(--color-text); background: var(--color-tag-bg); padding: 0.1rem 0.35rem; border-radius: 2px; }
+
+  .edu-entry { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.35rem; }
+  .edu-entry .degree { font-size: 0.88rem; font-weight: 600; }
+  .edu-entry .school { font-weight: 400; color: var(--color-muted); }
+  .edu-entry .year { font-size: 0.78rem; font-family: var(--font-mono); color: var(--color-muted); }
+  .edu-detail { font-size: 0.78rem; color: var(--color-muted); margin-left: 0.5rem; margin-bottom: 0.5rem; }
+
+  .pub { font-size: 0.82rem; margin-bottom: 0.35rem; line-height: 1.5; }
+  .pub .authors { color: var(--color-muted); }
+  .pub .me { color: var(--color-text); font-weight: 600; }
+  .pub .title { color: var(--color-text); }
+  .pub sup { font-size: 0.68em; line-height: 0; }
+  .pub-note { font-size: 0.76rem; color: var(--color-muted); margin-top: 0.25rem; }
+
+  .honor { font-size: 0.82rem; margin-bottom: 0.2rem; }
+
+  .version { text-align: right; font-size: 0.7rem; color: var(--color-muted); margin-top: 1.5rem; font-family: var(--font-mono); }
+
+  @media print {
+    html { font-size: 11.2px; }
+    body { background: white; }
+    .page { margin: 0; padding: 0; box-shadow: none; border-radius: 0; max-width: none; }
+    .header .links a { border: 1px solid #ccc; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.75rem; }
+    section { margin-bottom: 0.95rem; }
+    section > h2 { margin-bottom: 0.55rem; padding-bottom: 0.22rem; }
+    .entry { margin-bottom: 0.65rem; }
+    .entry li { line-height: 1.48; margin-bottom: 0.08rem; }
+    .summary { line-height: 1.55; }
+  }
+
+  @media (max-width: 600px) {
+    .page { margin: 0; border-radius: 0; padding: 1.5rem; }
+    .entry-header { flex-direction: column; gap: 0; }
+    .skill-row { grid-template-columns: 1fr; gap: 0.2rem; }
+    .edu-entry { flex-direction: column; gap: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="header">
+    <h1>忻成 (Cheng Xin)</h1>
+    <p class="subtitle">Agentic AI系统研发 · ML模型算法优化 · 图表示学习 · 可信 AI</p>
+    <div class="links">
+      <a href="mailto:xin.job2025@gmail.com"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> xin.job2025@gmail.com</a>
+      <a href="https://jackal092927.github.io"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> jackal092927.github.io</a>
+      <a href="https://jackal092927.github.io/scholar"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg> Google Scholar</a>
+      <a href="https://github.com/jackal092927"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+    </div>
+  </header>
+
+  <!-- 个人简介 -->
+  <section>
+    <h2>个人简介</h2>
+    <p class="summary">
+      <strong>普渡大学计算机科学博士</strong>。现为<strong>罗格斯大学博士后研究员</strong>，<strong>Synapse Foundry AI 联合创始人/CTO</strong>，拥有 <strong>7+ 年 AI 研究与工程经验</strong>，围绕 <strong>AI/ML 系统建模</strong>、<strong>图/拓扑机器学习</strong>、<strong>可解释与可信 AI</strong>、<strong>AI for Science/生物医学图学习</strong>、<strong>视觉模型评估与数据工程</strong>，以及 <strong>Agent 系统架构与评估</strong>开展研究与工程实践，成果发表于 <strong>NeurIPS、ICML、CVPR、SoCG</strong> 等顶级会议；曾与<strong>哈佛医学院 (Harvard Medical School)</strong> 合作推进真实医疗场景中的 GNN 与可解释 AI 应用，具有 <strong>Amazon、EA、Microsoft</strong> 等工业研发经历。负责 <strong>Agentic 开发基础设施</strong>、<strong>Data/Trust Gateway</strong>、<strong>RAG/Agentic Search</strong>、<strong>Evaluation Benchmark</strong> 和<strong>业务流自动化</strong>等设计开发工作。能够把语言、视觉、语音、图/网络结构、数据表格等多模态数据与大模型能力应用到实际工业智能的评估、预测和决策问题上，并围绕<strong>数据管线</strong>、<strong>模型评估</strong>、<strong>工具调用</strong>、<strong>可审计证据</strong>、<strong>AI系统框架</strong>构建可复用研发链路。
+    </p>
+  </section>
+
+  <!-- 技术技能 -->
+  <section>
+    <h2>技术技能</h2>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <span class="skill-label">AI/ML算法</span>
+        <div class="tags">
+          <span class="tag tag-cjk">预测建模</span>
+          <span class="tag tag-cjk">决策建模</span>
+          <span class="tag tag-cjk">图学习</span>
+          <span class="tag tag-cjk">拓扑机器学习</span>
+          <span class="tag tag-cjk">视觉语言模型</span>
+          <span class="tag tag-cjk">三维视觉</span>
+          <span class="tag tag-cjk">视觉检测</span>
+          <span class="tag tag-cjk">非欧几何表示</span>
+          <span class="tag tag-cjk">可解释 AI</span>
+          <span class="tag tag-cjk">置信度估计</span>
+          <span class="tag tag-cjk">图演化/状态识别</span>
+          <span class="tag tag-cjk">异常检测</span>
+          <span class="tag tag-cjk">特征工程</span>
+          <span class="tag tag-cjk">复杂系统建模</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">大模型Agent</span>
+        <div class="tags">
+          <span class="tag">LLM</span>
+          <span class="tag">RAG</span>
+          <span class="tag">Agentic Search</span>
+          <span class="tag tag-cjk">工具调用</span>
+          <span class="tag tag-cjk">业务流自动化</span>
+          <span class="tag tag-cjk">行业知识库</span>
+          <span class="tag tag-cjk">证据归因</span>
+          <span class="tag tag-cjk">可审计交接</span>
+          <span class="tag">MCP / Skill</span>
+          <span class="tag tag-cjk">多智能体协作</span>
+          <span class="tag tag-cjk">可观测性</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">开发工具与技能</span>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">React</span>
+          <span class="tag">SQL</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">Spark</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">API / SDK</span>
+          <span class="tag tag-cjk">数据管线</span>
+          <span class="tag tag-cjk">自动化评测框架</span>
+          <span class="tag tag-cjk">MLOps</span>
+          <span class="tag tag-cjk">全栈开发</span>
+          <span class="tag">CI/CD</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 开源项目贡献 -->
+  <section>
+    <h2>开源项目贡献</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">OpenClaw</span> <span class="role">— Agent Gateway / 多智能体基础设施开源贡献</span></div>
+        <span class="entry-date">2026.02 – 至今</span>
+      </div>
+      <ul>
+        <li>作为 <strong>OpenClaw 早期 Contributor</strong>，累计提交和维护 <strong>30+ 个 Pull Request</strong>，推动 <strong>Agent Gateway、A2A 会话协议、消息路由、记忆模块优化、模型兼容与工具调用</strong>相关问题的修复与改进，覆盖智能体基础设施中的接口适配、协议交互、异常处理和回归验证</li>
+        <li>设计可复用智能体技能与自动化工作流，覆盖任务拆解、跨来源信息检索、长流程任务恢复和上下文交接，提升复杂智能体运行框架在稳定性、可恢复性、可观测性和执行效率上的工程表现</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">PeonPing</span> <span class="role">— AI Coding Agent 通知系统与开发者工具开源贡献</span></div>
+        <span class="entry-date">2026.02 – 至今</span>
+      </div>
+      <ul>
+        <li>参与贡献 <strong>4.8k Stars</strong> 开源项目，该项目面向 Claude Code、Codex、Cursor 等主流 Coding Agent 开发工具，提供任务完成、权限等待、错误状态和会话事件的声音/桌面通知能力，帮助开发者在长流程智能体任务中保持可观测性和响应效率</li>
+        <li>实现可配置通知位置、自动消失/持久通知、项目标签覆盖和消息模板等功能；同步补充 CLI 子命令、默认配置、README/中文文档、bash/fish 补全和 BATS 测试，提升工具在多项目、多终端和长时间 agent 工作流中的可配置性、可维护性和用户体验</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">DL3DV-10K</span> <span class="role">— 大规模 3D 视觉数据集与视觉模型评测基准</span></div>
+        <span class="entry-date">2023 – 至今</span>
+      </div>
+      <ul>
+        <li>作为核心贡献者参与建设大规模真实场景 <strong>3D 视觉数据集与基准</strong>，覆盖 <strong>10K+ 真实场景</strong>、<strong>51M+ 视频帧</strong>、4K 视频和多样室内外环境，承担数据整理、基准构建、实验验证和研究支撑工作，为大规模真实场景视觉模型研发提供基础数据与评价基准（<strong>[CVPR 2024]</strong>）</li>
+        <li>项目 GitHub 获 <strong>600+ Stars</strong>；数据集已被 <strong>NVIDIA</strong>、<strong>Adobe Research</strong>、<strong>Google DeepMind</strong>、<strong>Meta AI</strong>、<strong>Microsoft Research</strong>、<strong>ByteDance</strong>、<strong>Tencent Hunyuan</strong> 等工业研究团队，以及 <strong>World Labs Marble</strong> 等空间智能产品研发采用，用于 Novel View Synthesis、3D 重建、视频理解生成、空间智能和 World Model 等方向的模型训练、后训练、基准评测或技术报告引用，体现其在工业视觉模型和真实场景应用中的落地价值</li>
+        <li>数据集也被 <strong>李飞飞</strong>、<strong>谢赛宁</strong>、<strong>吴佳俊</strong> 等顶级学术团队用于空间推理与视觉语言模型 benchmark 构建，体现其在学术界空间智能与多模态模型评测研究中的认可度</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 工业经历与实习 -->
+  <section>
+    <h2>行业工程经历</h2>
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">Synapse Foundry AI</span> <span class="role">— 联合创始人 / CTO，AI Agent / Data Gateway / 行业场景模型平台</span></div>
+        <span class="entry-date">2026.01 – 至今</span>
+      </div>
+      <div class="entry-meta">创业公司核心技术负责人 · 主导技术架构、研发实现、开发框架优化、基础设施构建、评测平台和客户化交付</div>
+      <ul>
+        <li><strong>Data/Trust Gateway</strong>: 构建面向高风险行业的 <strong>Agent workflow</strong> 的数据边界、评测与治理框架，将客户场景、失败案例、权限边界和合规要求沉淀为可重复运行的自动化评估系统；构建 <strong>10k+</strong> 医疗领域相关的 agent 数据安全和隐私基准数据集，并转化为覆盖率、错误分布、证据链和问题定位报告</li>
+        <li><strong>模型服务与工具调用层</strong>: 面向受监管行业 Agent tool layer，将 search、crawl、privacy guardrail 等外部能力封装为统一 SDK/API；提供统一响应结构、成本/延迟/质量策略、服务路由、失败切换、调用原因记录和审计日志，形成可复用模型服务与工具接入层</li>
+        <li><strong>业务流自动化智能体</strong>: 将大模型从通用问答扩展为可调用工具、可生成证据、可交接人工、可审计的业务流自动化系统，支持<strong>原始材料 → 信息筛选 → 工具执行 → 证据生成 → 规则核查 → 交接材料 → 审计摘要</strong>的闭环流程；可迁移到工业现场知识问答、异常处置、报告生成和人机协同决策场景</li>
+        <li><strong>Clinical Arena（已上线: <a href="https://www.clinicalarena.ai/">clinicalarena.ai</a>）</strong>: 医疗 AI 评测平台，面向医生、研究人员和机构用户提供临床场景下的大模型盲测对比、偏好数据收集、安全标注、排行榜和评测结果导出能力；内置基于 <strong>RAG</strong> 与智能体流程的证据校验功能，可检索公开可查、可验证的数据集和论文作为评测背书，并通过多智能体、多模型协作验证提升结果可靠性；帮助使用方在真实业务问题上比较不同模型的回答质量、安全性和稳定性，支持模型选型、质量验证、风险发现和后续模型优化</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">Electronic Arts（艺电）：大数据智能组</span> <span class="role">— 机器学习科学家实习生</span></div>
+        <span class="entry-date">2018.05 – 2018.08</span>
+      </div>
+      <ul>
+        <li>负责基于 <strong>Spark</strong> 搭建玩家行为数据的端到端 <strong>ML 流水线</strong>，覆盖多表数据抽取、数据清洗、用户画像特征构建、训练样本生成、模型训练支持和参与度预测分析，支撑业务侧对大规模用户行为的持续评估</li>
+        <li>基于<strong>图关系模型</strong>分析用户、行为事件、内容资产和关系型数据库表之间的连接结构，对用户画像相关的数据表和特征视图进行重构与优化，提升下游模型对关系型数据和图结构信号的利用效率</li>
+        <li>将业务问题拆解为可验证的数据与模型任务，围绕样本质量、特征覆盖、异常分布和预测效果做问题定位，形成从数据准备、实验分析到业务解释的闭环，契合工业 AI 场景模型建设中的样本整理、效果分析、指标评价和迭代优化需求</li>
+        <li>设计并推动<strong>特征工程与数据压缩方案</strong>落地，将数据视图体量<strong>降低 40%</strong>，提升下游分析效率与建模资源利用率</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">Amazon（亚马逊）：AWS 基础设施组</span> <span class="role">— 软件开发工程师实习生</span></div>
+        <span class="entry-date">2015.05 – 2015.08</span>
+      </div>
+      <ul>
+        <li>参与开发并部署<strong>实时数据管理系统</strong>，处理大规模网络消息流，承担后端基础设施、服务接口、消息解析、存储检索和数据流转模块实现，支持内部系统稳定运行与消息处理效率提升</li>
+        <li>围绕 AWS 基础设施中的数据管理和数据交互需求，优化消息接收、解析、持久化、查询和回放等环节的接口协议与数据交换流程，提升跨模块数据传递的一致性、可追踪性和可维护性</li>
+        <li>针对高吞吐消息处理场景进行问题排查与性能优化，关注数据结构、并发处理、异常恢复和运行稳定性，为后续构建可靠数据网关、模型服务接口和场景工具链打下工程基础</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">格尔软件：安全审计平台组</span> <span class="role">— 全栈开发工程师</span></div>
+        <span class="entry-date">2013.07 – 2013.12</span>
+      </div>
+      <ul>
+        <li>作为全栈工程师独立负责 Web 应用主要模块开发，覆盖<strong>需求拆解、数据库建模、后端业务逻辑、REST-style API、前端页面与交互、测试验证和上线交付</strong>，具备从业务需求到可运行系统的端到端实现经验</li>
+        <li>实现中文 NLP 功能：围绕业务文本数据完成<strong>中文分词、关键词抽取、主题模型建模和文本主题理解</strong>，将非结构化中文文本转化为可查询、可分析、可用于业务判断的数据对象</li>
+        <li>在系统层面打通数据库、后端服务、NLP 处理模块和前端展示界面，使文本分析结果能够进入业务查询、统计分析和用户交互流程；该经历与当前 LLM/RAG、行业知识库、信息抽取和业务流自动化经验形成连续性</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">Microsoft（微软）：SQL Server 商务智能组</span> <span class="role">— 研发实习生</span></div>
+        <span class="entry-date">2012.07 – 2012.11</span>
+      </div>
+      <ul>
+        <li>在 <strong>SQL Server</strong> 商务智能组担任研发实习生，围绕企业数据分析、报表、查询服务和数据库下游应用场景，参与 SQL Server 相关问题定位与功能验证，覆盖表结构、索引、视图、查询计划、日志和配置等核心数据库对象与运行机制</li>
+        <li>面向真实企业客户和开发者问题，分析慢查询、索引失效、视图/聚合逻辑、数据访问异常和性能瓶颈，结合执行计划、日志与环境配置定位根因，并提出可复现、可验证的修复路径</li>
+        <li>建立了对关系型数据库底层机制与商务智能应用链路的系统理解，涵盖数据建模、查询优化、索引/视图设计、性能诊断和数据库驱动的下游业务应用交付</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 教育与科研经历 -->
+  <section>
+    <h2>科研与场景模型研发经历</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">罗格斯大学 计算机科学系</span> <span class="role">— 博士后研究员</span></div>
+        <span class="entry-date">2023.10 – 至今</span>
+      </div>
+      <div class="entry-meta">导师: Prof. Jie Gao</div>
+      <ul>
+        <li>围绕 <strong>Agentic RL / 多步决策</strong>问题开展原型实验与评测探索，关注反馈信号设计、行为优化与实验分析；相关网络智能体协同学习工作可对应工业场景中的多主体决策、调度优化和人机协同，并支撑任务分解、约束建模与反馈闭环设计（<strong>[ICML 2024]</strong>）</li>
+        <li>主导开发 <strong>TopInG</strong> 可解释图学习框架，面向 <strong>AI for Science</strong> 与生物医学场景，将 <strong>GNN</strong> 及可解释性方法应用于真实医疗问题；与<strong>哈佛医学院 (Harvard Medical School)</strong> 合作推进方法设计、实验验证和场景落地，在分子性质预测任务上实现精度和可解释性最高 <strong>20%</strong> 提升；可迁移到设备关系网络、工艺知识图谱、异常原因分析和专家可复核预测模型，并支持关系数据上的模型评价与稳定性分析（<strong>[ICML 2025]</strong>）</li>
+        <li>参与建设 <strong>DL3DV-10K</strong> 大规模 3D 视觉数据集与评测基准，支持真实场景数据整理、基准构建和实验验证，相关成果发表于 <strong>CVPR 2024</strong>；数据集已被 <strong>NVIDIA</strong>、<strong>Adobe</strong>、<strong>Google</strong> 等团队用于多个商业视觉模型和空间智能场景，连接三维视觉、视频理解和视觉模型评测</li>
+        <li>开展<strong>非欧几何与双曲空间表示学习</strong>研究，围绕 <strong>Neuc-MDS</strong>、超越欧氏空间的 Johnson-Lindenstrauss 扩展，以及 <strong>Hyperbolic Space LSH</strong> 推进具有理论保证的表示学习与近邻检索方法，适用于复杂层级数据、知识结构和高维检索场景，可支撑知识检索、相似案例召回和证据定位（<strong>[NeurIPS 2024]</strong>, <strong>[NeurIPS 2025]</strong>, <strong>[SoCG 2026]</strong>）</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">GraphEvol / 复杂系统状态建模</span> <span class="role">— 研究与工程项目</span></div>
+        <span class="entry-date">2026 – 至今</span>
+      </div>
+      <ul>
+        <li>构建图演化学习与阶段恢复实验 pipeline，将图结构数据、拓扑/图特征、模型训练和置信度分析组织为可复用流程，用于复杂系统状态变化建模，并形成从数据接入、特征构造、训练验证到结果分析的评价闭环</li>
+        <li>设计面向结构扰动、阶段恢复稳定性和置信度输出的评价方法，使模型结果不仅可预测，也可被诊断和复核；可迁移到工业过程中的设备状态预测、工况演化识别、异常阶段检测和复杂流程决策支持，适合多源传感数据与阶段性状态判断</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">普渡大学 计算机科学系</span> <span class="role">— 博士研究助理</span></div>
+        <span class="entry-date">2020.08 – 2023.08</span>
+      </div>
+      <div class="entry-meta">导师: Prof. Tamal K. Dey</div>
+      <ul>
+        <li>主导推进 <strong>GRIL</strong> 拓扑向量化框架研究，从理论建模、算法设计到实验验证完整闭环落地，证明其具备更强表达能力；并进一步延展到 <strong>D-GRIL</strong> 端到端拓扑学习方向，推动多参数持续性表示直接进入可微学习流程，增强图/几何模型在科学数据、材料结构和复杂系统数据上的表达能力，可用于复杂关系数据的特征工程与模型泛化分析（<strong>[PMLR 2023]</strong>, <strong>[SoCG 2026]</strong>）</li>
+        <li>开发<strong>广义持续性算法</strong>，提升多参数拓扑分析任务的计算效率，为大规模科学/几何数据处理、模型特征构造和可解释分析提供可复用算法基础，并可作为复杂结构数据建模、压缩表示和可复核分析的底层方法储备（<strong>[JACT 2022]</strong>）</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 教育背景 -->
+  <section>
+    <h2>教育背景</h2>
+    <div class="edu-entry">
+      <div><span class="degree">计算机科学博士</span> <span class="school">· 普渡大学 (Purdue University)</span></div>
+      <span class="year">2023</span>
+    </div>
+    <p class="edu-detail">论文: Decomposition and Stability of Multiparameter Persistence Modules · 导师: Prof. Tamal K. Dey</p>
+
+    <div class="edu-entry">
+      <div><span class="degree">计算机科学硕士</span> <span class="school">· 理海大学 (Lehigh University)</span></div>
+      <span class="year">2016</span>
+    </div>
+    <p class="edu-detail">论文: Machine Learning Techniques for Medical Image Analysis · 方向: 计算机视觉、深度学习医疗影像</p>
+
+    <div class="edu-entry">
+      <div><span class="degree">软件工程学士</span> <span class="school">· 同济大学</span></div>
+      <span class="year">2013</span>
+    </div>
+  </section>
+
+  <!-- 代表论文 -->
+  <section>
+    <h2>代表论文与相关成果</h2>
+    <div class="pub"><span class="venue">SoCG 2026</span> <span class="authors">C. Deng, J. Gao, K. Lu, F. Luo,</span> <span class="me">C. Xin<sup>†</sup></span><span class="authors">.</span> <span class="title">"Locality Sensitive Hashing in Hyperbolic Space"</span></div>
+    <div class="pub"><span class="venue">SoCG 2026</span> <span class="authors">S. Mukherjee, S. N. Samaga,</span> <span class="me">C. Xin</span><span class="authors">, S. Oudot, T. K. Dey.</span> <span class="title">"D-GRIL: End-to-End Topological Learning with 2-parameter Persistence"</span></div>
+    <div class="pub"><span class="venue">ICML 2025</span> <span class="me">C. Xin</span>, <span class="authors">F. Xu, X. Ding, J. Gao, J. Ding.</span> <span class="title">"TopInG: Topologically Interpretable Graph Learning via Persistent Rationale Filtration"</span></div>
+    <div class="pub"><span class="venue">NeurIPS 2025</span> <span class="authors">C. Deng, J. Gao, K. Lu, F. Luo,</span> <span class="me">C. Xin<sup>†</sup></span>. <span class="title">"Johnson-Lindenstrauss Lemma Beyond Euclidean Geometry"</span></div>
+    <div class="pub"><span class="venue">NeurIPS 2024</span> <span class="authors">C. Deng, J. Gao, K. Lu, F. Luo, H. Sun,</span> <span class="me">C. Xin<sup>†</sup></span>. <span class="title">"Neuc-MDS: Non-Euclidean Multidimensional Scaling Through Bilinear Forms"</span></div>
+    <div class="pub"><span class="venue">ICML 2024</span> <span class="authors">S. Haddadan,</span> <span class="me">C. Xin</span>, <span class="authors">J. Gao.</span> <span class="title">"Optimally Improving Cooperative Learning in a Social Setting"</span></div>
+    <div class="pub"><span class="venue">CVPR 2024</span> <span class="authors">L. Ling, ...,</span> <span class="me">C. Xin</span>, <span class="authors">et al.</span> <span class="title">"DL3DV-10K: A Large-Scale Scene Dataset for Deep Learning-Based 3D Vision"</span></div>
+    <div class="pub"><span class="venue">TMLR 2024</span> <span class="authors">S. Zhang,</span> <span class="me">C. Xin</span>, <span class="authors">T. K. Dey.</span> <span class="title">"Expressive Higher-Order Link Prediction through Hypergraph Symmetry Breaking"</span></div>
+    <div class="pub"><span class="venue">ICML-W 2023</span> <span class="me">C. Xin</span>, <span class="authors">S. Mukherjee, S. N. Samaga, T. K. Dey.</span> <span class="title">"GRIL: A 2-parameter Persistence Based Vectorization for Machine Learning"</span></div>
+    <div class="pub"><span class="venue">Ph.D. Thesis 2023</span> <span class="me">C. Xin</span>. <span class="title">"Decomposition and Stability of Multiparameter Persistence Modules"</span></div>
+    <div class="pub"><span class="venue">JACT 2022</span> <span class="authors">T. K. Dey,</span> <span class="me">C. Xin<sup>†</sup></span>. <span class="title">"Generalized Persistence Algorithm for Decomposing Multiparameter Persistence Modules"</span></div>
+    <div class="pub"><span class="venue">SoCG 2018</span> <span class="authors">T. K. Dey,</span> <span class="me">C. Xin<sup>†</sup></span>. <span class="title">"Computing Bottleneck Distance for 2-D Interval Decomposable Modules"</span></div>
+    <div class="pub"><span class="venue">PR 2017</span> <span class="authors">T. Xu, H. Zhang,</span> <span class="me">C. Xin</span>, <span class="authors">et al.</span> <span class="title">"Multi-feature based benchmark for cervical dysplasia classification evaluation"</span></div>
+    <div class="pub"><span class="venue">MLMI 2015</span> <span class="authors">T. Xu,</span> <span class="me">C. Xin<sup>*</sup></span> <span class="authors">et al.</span> <span class="title">"A New Image Data Set and Benchmark for Cervical Dysplasia Classification Evaluation"</span></div>
+    <div class="pub-note">† 表示该论文遵循理论研究传统，作者按姓氏首字母排序，且 C. Xin 为通讯作者；* 表示共同第一作者。</div>
+  </section>
+
+  <!-- 荣誉 -->
+  <section>
+    <h2>荣誉与领导力</h2>
+    <div class="honor"><strong>上海市白玉兰人才计划青年人才</strong>（2025）</div>
+    <div class="honor"><strong>微软高校编程大赛冠军</strong>（2017 @ 俄亥俄州立大学、2015 @ 理海大学）</div>
+    <div class="honor"><strong>研究生课程讲师</strong>: 算法设计与分析（45 名学生，2025）</div>
+    <div class="honor"><strong>Area Chair</strong>: TAG-DS Workshop（2026）</div>
+    <div class="honor"><strong>审稿人</strong>: ICML、ICLR、NeurIPS、SoCG</div>
+  </section>
+
+</div>
+</body>
+</html>
