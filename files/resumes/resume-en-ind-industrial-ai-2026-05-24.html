@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cheng Xin - Industrial AI Platform R&D</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-text: #09090b;
+    --color-muted: #71717a;
+    --color-border: #e4e4e7;
+    --color-bg: #ffffff;
+    --color-tag-bg: #f4f4f5;
+    --color-tag-text: #3f3f46;
+    --color-link: #18181b;
+    --font-sans: "Noto Sans SC", -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+    --font-mono: "SF Mono", "Fira Code", "JetBrains Mono", "Cascadia Code", ui-monospace, monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { font-size: 14px; }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background: #f4f4f5;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 750px;
+    margin: 2rem auto;
+    padding: 3rem;
+    background: var(--color-bg);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  }
+
+  .header { margin-bottom: 1.5rem; }
+  .header h1 { font-size: 1.85rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
+  .header .subtitle { color: var(--color-muted); font-size: 0.92rem; margin-top: 0.25rem; line-height: 1.5; }
+  .header .links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.6rem; }
+  .header .links a {
+    display: inline-flex; align-items: center; gap: 0.25rem;
+    font-size: 0.78rem; font-family: var(--font-mono);
+    color: var(--color-muted); text-decoration: none;
+    padding: 0.15rem 0.5rem; border: 1px solid var(--color-border); border-radius: 4px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .header .links a:hover { color: var(--color-text); border-color: var(--color-tag-text); }
+
+  section { margin-bottom: 1.5rem; }
+  section > h2 {
+    font-size: 0.85rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--color-text);
+    margin-bottom: 0.75rem; padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .summary { font-size: 0.88rem; color: var(--color-muted); line-height: 1.7; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .tag {
+    display: inline-block; font-size: 0.72rem;
+    font-family: "Noto Sans SC", -apple-system, "PingFang SC", "Hiragino Sans GB", var(--font-mono), sans-serif;
+    padding: 0.15rem 0.45rem; background: var(--color-tag-bg);
+    color: var(--color-tag-text); border-radius: 3px; white-space: nowrap;
+  }
+
+  .skills-grid { display: grid; gap: 0.6rem; }
+  .skill-row { display: grid; grid-template-columns: 7rem 1fr; gap: 0.5rem; align-items: start; }
+  .skill-label { font-size: 0.8rem; font-weight: 600; color: var(--color-text); padding-top: 0.15rem; }
+
+  .entry { margin-bottom: 1rem; break-inside: avoid; page-break-inside: avoid; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-header { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; margin-bottom: 0.15rem; }
+  .entry-title { font-size: 0.92rem; font-weight: 600; line-height: 1.3; }
+  .entry-title .org { font-weight: 600; }
+  .entry-title .role { font-weight: 400; color: var(--color-muted); }
+  .entry-date { font-size: 0.75rem; font-family: var(--font-mono); color: var(--color-muted); white-space: nowrap; flex-shrink: 0; }
+  .entry-meta { font-size: 0.78rem; color: var(--color-muted); margin-bottom: 0.3rem; }
+
+  .entry ul { padding-left: 1.2rem; margin: 0; }
+  .entry li { font-size: 0.82rem; color: var(--color-text); line-height: 1.6; margin-bottom: 0.15rem; }
+  .entry li:last-child { margin-bottom: 0; }
+  .entry li strong { font-weight: 600; }
+  .entry a { color: var(--color-link); text-decoration: underline; text-decoration-thickness: 0.06em; text-underline-offset: 0.14em; }
+
+  .venue { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; color: var(--color-text); background: var(--color-tag-bg); padding: 0.1rem 0.35rem; border-radius: 2px; }
+
+  .edu-entry { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.35rem; }
+  .edu-entry .degree { font-size: 0.88rem; font-weight: 600; }
+  .edu-entry .school { font-weight: 400; color: var(--color-muted); }
+  .edu-entry .year { font-size: 0.78rem; font-family: var(--font-mono); color: var(--color-muted); }
+  .edu-detail { font-size: 0.78rem; color: var(--color-muted); margin-left: 0.5rem; margin-bottom: 0.5rem; }
+
+  .pub { font-size: 0.82rem; margin-bottom: 0.35rem; line-height: 1.5; }
+  .pub .authors { color: var(--color-muted); }
+  .pub .me { color: var(--color-text); font-weight: 600; }
+  .pub .title { color: var(--color-text); }
+  .pub sup { font-size: 0.68em; line-height: 0; }
+  .pub-note { font-size: 0.76rem; color: var(--color-muted); margin-top: 0.25rem; }
+
+  .honor { font-size: 0.82rem; margin-bottom: 0.2rem; }
+
+  .version { text-align: right; font-size: 0.7rem; color: var(--color-muted); margin-top: 1.5rem; font-family: var(--font-mono); }
+
+  @media print {
+    html { font-size: 10.7px; }
+    body { background: white; }
+    .page { margin: 0; padding: 0; box-shadow: none; border-radius: 0; max-width: none; }
+    .header .links a { border: 1px solid #ccc; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.75rem; }
+    section { margin-bottom: 0.75rem; }
+    section > h2 { margin-bottom: 0.42rem; padding-bottom: 0.18rem; break-after: avoid; page-break-after: avoid; }
+    .entry { margin-bottom: 0.48rem; }
+    .entry li { line-height: 1.36; margin-bottom: 0.04rem; }
+    .summary { line-height: 1.42; }
+    .pub { margin-bottom: 0.22rem; line-height: 1.38; }
+    .honor { margin-bottom: 0.12rem; }
+  }
+
+  @media (max-width: 600px) {
+    .page { margin: 0; border-radius: 0; padding: 1.5rem; }
+    .entry-header { flex-direction: column; gap: 0; }
+    .skill-row { grid-template-columns: 1fr; gap: 0.2rem; }
+    .edu-entry { flex-direction: column; gap: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="header">
+    <h1>Cheng Xin</h1>
+    <p class="subtitle">Agentic AI R&D · ML Model Training and Evaluation · Graph Representation Learning · Trustworthy AI</p>
+    <div class="links">
+      <a href="mailto:xin.job2025@gmail.com"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> xin.job2025@gmail.com</a>
+      <a href="https://jackal092927.github.io"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> jackal092927.github.io</a>
+      <a href="https://jackal092927.github.io/scholar"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg> Google Scholar</a>
+      <a href="https://github.com/jackal092927"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+    </div>
+  </header>
+
+  <!-- Summary -->
+  <section>
+    <h2>Summary</h2>
+    <p class="summary">
+      <strong>Ph.D. in Computer Science from Purdue University</strong>. Currently a <strong>Postdoctoral Researcher at Rutgers University</strong> and <strong>Co-founder/CTO of Synapse Foundry AI</strong>, with <strong>7+ years of AI research and engineering experience</strong> across <strong>AI/ML system modeling</strong>, <strong>graph/topological machine learning</strong>, <strong>explainable and trustworthy AI</strong>, <strong>AI for Science</strong>, <strong>vision model evaluation and data engineering</strong>, and <strong>agent system architecture and evaluation</strong>. Publications appeared at <strong>NeurIPS, ICML, CVPR, SoCG</strong> and other top venues; industrial R&D experience at <strong>Amazon, Electronic Arts, and Microsoft</strong>. Led design and development of <strong>agentic development infrastructure</strong>, <strong>Data/Trust Gateway</strong>, <strong>RAG/Agentic Search</strong>, <strong>evaluation benchmarks</strong>, and <strong>business workflow automation</strong>. Able to apply multimodal data and large-model capabilities across language, vision, speech, graph/network structures, and tables to real-world industrial intelligence evaluation, prediction, and decision problems, and to build reusable R&D pipelines around <strong>data pipelines</strong>, <strong>model evaluation</strong>, <strong>tool calling</strong>, <strong>auditable evidence</strong>, and <strong>AI system frameworks</strong>.
+    </p>
+  </section>
+
+  <!-- Technical Skills -->
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <span class="skill-label">AI/ML Algorithms</span>
+        <div class="tags">
+          <span class="tag tag-cjk">Predictive Modeling</span>
+          <span class="tag tag-cjk">Decision Modeling</span>
+          <span class="tag tag-cjk">Graph Learning</span>
+          <span class="tag tag-cjk">Topological ML</span>
+          <span class="tag tag-cjk">Vision-Language Models</span>
+          <span class="tag tag-cjk">3D Vision</span>
+          <span class="tag tag-cjk">Visual Detection</span>
+          <span class="tag tag-cjk">Non-Euclidean Representation</span>
+          <span class="tag tag-cjk">Explainable AI</span>
+          <span class="tag tag-cjk">Confidence Estimation</span>
+          <span class="tag tag-cjk">Graph Evolution / State Recognition</span>
+          <span class="tag tag-cjk">Anomaly Detection</span>
+          <span class="tag tag-cjk">Feature Engineering</span>
+          <span class="tag tag-cjk">Complex System Modeling</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">LLM Agents</span>
+        <div class="tags">
+          <span class="tag">LLM</span>
+          <span class="tag">RAG</span>
+          <span class="tag">Agentic Search</span>
+          <span class="tag tag-cjk">Tool Calling</span>
+          <span class="tag tag-cjk">Workflow Automation</span>
+          <span class="tag tag-cjk">Domain Knowledge Bases</span>
+          <span class="tag tag-cjk">Evidence Attribution</span>
+          <span class="tag tag-cjk">Auditable Handoff</span>
+          <span class="tag">MCP / Skill</span>
+          <span class="tag tag-cjk">Multi-agent Collaboration</span>
+          <span class="tag tag-cjk">Observability</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Development Tools</span>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">React</span>
+          <span class="tag">SQL</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">Spark</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">API / SDK</span>
+          <span class="tag tag-cjk">Data Pipelines</span>
+          <span class="tag tag-cjk">Automated Evaluation</span>
+          <span class="tag tag-cjk">Model Deployment</span>
+          <span class="tag tag-cjk">Full-stack Development</span>
+          <span class="tag">CI/CD</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Open Source Contributions -->
+  <section>
+    <h2>Open Source Contributions</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">OpenClaw</span> <span class="role">- Agent Gateway / Multi-agent Infrastructure Open Source Contribution</span></div>
+        <span class="entry-date">2026.02 - Present</span>
+      </div>
+      <ul>
+        <li>As an <strong>early OpenClaw Contributor</strong>, contributed and maintained <strong>30+ Pull Requests</strong>, improving issues around <strong>Agent Gateway, A2A session protocol, message routing, memory-module optimization, model compatibility, and tool calling</strong>; covered interface adaptation, protocol interaction, exception handling, and regression validation in agent infrastructure</li>
+        <li>Designed reusable agent skills and automated workflows covering task decomposition, cross-source information retrieval, long-running task recovery, and context handoff, improving stability, recoverability, observability, and execution efficiency of complex agent runtime frameworks</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">DL3DV-10K</span> <span class="role">- Large-scale 3D Vision Dataset and Vision Model Benchmark</span></div>
+        <span class="entry-date">2023 - Present</span>
+      </div>
+      <ul>
+        <li>As a core contributor, helped build a large-scale real-world-scene <strong>3D vision dataset and benchmark</strong>, covering <strong>10K+ real-world scenes</strong>, <strong>51M+ video frames</strong>, 4K video, and diverse indoor/outdoor environments; contributed to data curation, benchmark construction, experimental validation, and research support, providing foundational data and evaluation benchmarks for large-scale real-world scene vision model R&D (<strong>[CVPR 2024]</strong>)</li>
+        <li>The project has <strong>600+ GitHub Stars</strong>; the dataset has been adopted or cited by industrial research teams including <strong>NVIDIA</strong>, <strong>Adobe Research</strong>, <strong>Google DeepMind</strong>, <strong>Meta AI</strong>, <strong>Microsoft Research</strong>, <strong>ByteDance</strong>, and <strong>Tencent Hunyuan</strong>, and by spatial-intelligence product R&D such as <strong>World Labs Marble</strong>, for model training, post-training, benchmark evaluation, or technical reports in Novel View Synthesis, 3D reconstruction, video understanding and generation, spatial intelligence, and World Models, demonstrating real deployment value in industrial vision models and real-world applications</li>
+        <li>The dataset has also been used by leading academic teams such as <strong>Fei-Fei Li</strong>, <strong>Saining Xie</strong>, and <strong>Jiajun Wu</strong> for spatial reasoning and vision-language model benchmark construction, reflecting recognition in academic spatial intelligence and multimodal model evaluation research</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">PeonPing</span> <span class="role">- AI Coding Agent Notification System and Developer Tool Open Source Contribution</span></div>
+        <span class="entry-date">2026.02 - Present</span>
+      </div>
+      <ul>
+        <li>Contributed to a <strong>4.8k Stars</strong> open-source project for mainstream Coding Agent developer tools such as Claude Code, Codex, and Cursor, providing voice/desktop notifications for task completion, permission waits, error states, and session events, helping developers maintain observability and responsiveness during long-running agent tasks</li>
+        <li>Implemented configurable notification positions, auto-dismiss/persistent notifications, project label overrides, and message templates; also added CLI subcommands, default configuration, README and bilingual docs, bash/fish completions, and BATS tests, improving configurability, maintainability, and user experience across multi-project, multi-terminal, and long-running agent workflows</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Industry Engineering Experience -->
+  <section>
+    <h2>Industry Engineering Experience</h2>
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">Synapse Foundry AI</span> <span class="role">- Co-founder / CTO, AI Agent / Data Gateway / Industry Scenario Model Platform</span></div>
+        <span class="entry-date">2026.01 - Present</span>
+      </div>
+      <div class="entry-meta">Core technical owner at startup · Led technical architecture, R&D implementation, development framework optimization, infrastructure buildout, evaluation platform, and customer delivery</div>
+      <ul>
+        <li><strong>Data/Trust Gateway</strong>: Built a data boundary, evaluation, and governance framework for <strong>agent workflows</strong> in high-risk industries, converting customer scenarios, failure cases, permission boundaries, and compliance requirements into repeatable automated evaluation systems; constructed a <strong>10k+</strong> healthcare-related agent data security and privacy benchmark and converted results into coverage, error-distribution, evidence-chain, and issue-localization reports</li>
+        <li><strong>Model service and tool-calling layer</strong>: Built an Agent tool layer for regulated industries by packaging search, crawl, privacy guardrail, and other external capabilities into unified SDK/API interfaces; provided unified response schemas, cost/latency/quality policies, service routing, failover, call-reason records, and audit logs, forming a reusable model service and tool integration layer</li>
+        <li><strong>Business workflow automation agents</strong>: Extended large models from generic Q&A to auditable workflow automation systems that can call tools, generate evidence, hand off to humans, and support <strong>raw materials -> information filtering -> tool execution -> evidence generation -> rule checking -> handoff package -> audit summary</strong> closed-loop workflows; transferable to industrial knowledge Q&A, anomaly handling, report generation, and human-AI decision support</li>
+        <li><strong>Clinical Arena (live: <a href="https://www.clinicalarena.ai/">clinicalarena.ai</a>)</strong>: Medical AI evaluation platform that provides clinicians, researchers, and institutions with blind head-to-head LLM comparison, preference data collection, safety annotation, leaderboards, and evaluation export capabilities in clinical scenarios; includes evidence verification based on <strong>RAG</strong> and agent workflows, retrieving public, verifiable datasets and papers as evaluation support, and uses multi-agent, multi-model collaborative verification to improve reliability; helps users compare answer quality, safety, and stability across models on real business problems and supports model selection, quality validation, risk discovery, and downstream model optimization</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">Electronic Arts: Big Data Intelligence Group</span> <span class="role">- Machine Learning Scientist Intern</span></div>
+        <span class="entry-date">2018.05 - 2018.08</span>
+      </div>
+      <ul>
+        <li>Built an end-to-end <strong>ML pipeline</strong> for player behavior data on <strong>Spark</strong>, covering multi-table extraction, data cleaning, user-profile feature construction, training-sample generation, model training support, and engagement prediction analysis, enabling continuous business-side evaluation of large-scale user behavior</li>
+        <li>Used <strong>graph relational models</strong> to analyze connections among users, behavior events, content assets, and relational database tables, restructuring and optimizing user-profile data tables and feature views to improve downstream use of relational data and graph-structured signals</li>
+        <li>Decomposed business problems into verifiable data and model tasks, diagnosing sample quality, feature coverage, anomalous distributions, and prediction performance, forming a loop from data preparation and experimental analysis to business interpretation for industrial AI scenario-model iteration</li>
+        <li>Designed and delivered <strong>feature engineering and data compression</strong> solutions, reducing data-view volume by <strong>40%</strong> and improving downstream analysis efficiency and modeling resource utilization</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">Amazon: AWS Infrastructure Group</span> <span class="role">- Software Development Engineer Intern</span></div>
+        <span class="entry-date">2015.05 - 2015.08</span>
+      </div>
+      <ul>
+        <li>Developed and deployed a <strong>real-time data management system</strong> for large-scale network message streams, implementing backend infrastructure, service interfaces, message parsing, storage/retrieval, and data-flow modules to support stable internal operations and improve message-processing efficiency</li>
+        <li>Optimized interface protocols and data exchange flows for message ingestion, parsing, persistence, querying, and replay around AWS infrastructure data management and data interaction needs, improving consistency, traceability, and maintainability across modules</li>
+        <li>Performed debugging and performance optimization for high-throughput message-processing scenarios, focusing on data structures, concurrency, exception recovery, and runtime stability, building engineering foundations for reliable data gateways, model-service interfaces, and scenario toolchains</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">Koal Software: Security Audit Platform Group</span> <span class="role">- Full-stack Software Engineer</span></div>
+        <span class="entry-date">2013.07 - 2013.12</span>
+      </div>
+      <ul>
+        <li>Owned major Web application modules as a full-stack engineer, covering <strong>requirement decomposition, database modeling, backend business logic, REST-style APIs, frontend pages and interactions, testing/validation, and production delivery</strong>, with end-to-end experience from business requirements to runnable systems</li>
+        <li>Implemented Chinese NLP functionality around business text data, including <strong>Chinese word segmentation, keyword extraction, topic modeling, and text-topic understanding</strong>, converting unstructured Chinese text into queryable, analyzable data objects for business judgment</li>
+        <li>Connected databases, backend services, NLP processing modules, and frontend presentation layers so that text-analysis results could enter business query, statistical analysis, and user-interaction workflows; this experience connects naturally to current LLM/RAG, domain knowledge base, information extraction, and workflow automation work</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">Microsoft: SQL Server Business Intelligence Group</span> <span class="role">- R&D Intern</span></div>
+        <span class="entry-date">2012.07 - 2012.11</span>
+      </div>
+      <ul>
+        <li>Served as an R&D intern in the <strong>SQL Server</strong> Business Intelligence Group, working on SQL Server issue diagnosis and feature validation around enterprise data analytics, reporting, query services, and database downstream applications, covering core database objects and mechanisms such as schemas, indexes, views, query plans, logs, and configurations</li>
+        <li>Analyzed real enterprise customer and developer issues including slow queries, index failures, view/aggregation logic, data access anomalies, and performance bottlenecks; used execution plans, logs, and environment configurations to identify root causes and propose reproducible, verifiable fixes</li>
+        <li>Built systematic understanding of relational database internals and business-intelligence application chains, covering data modeling, query optimization, index/view design, performance diagnosis, and database-driven downstream business application delivery</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Research Experience -->
+  <section>
+    <h2>Research and Scenario Model R&D Experience</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">Rutgers University, Department of Computer Science</span> <span class="role">- Postdoctoral Researcher</span></div>
+        <span class="entry-date">2023.10 - Present</span>
+      </div>
+      <div class="entry-meta">Advisor: Prof. Jie Gao</div>
+      <ul>
+        <li>Developed prototype experiments and evaluation studies around <strong>Agentic RL / multi-step decision-making</strong>, focusing on feedback-signal design, behavior optimization, and experimental analysis; related cooperative learning work for networked agents maps to multi-actor decision-making, scheduling optimization, and human-AI collaboration in industrial scenarios, supporting task decomposition, constraint modeling, and feedback-loop design (<strong>[ICML 2024]</strong>)</li>
+        <li>Led development of <strong>TopInG</strong>, an interpretable graph learning framework, achieving up to <strong>20%</strong> improvement in accuracy and interpretability on molecular property prediction; for <strong>AI for Science</strong> and biomedical scenarios, applied <strong>GNN</strong> and interpretability methods to real medical problems, collaborating with <strong>Harvard Medical School</strong> on method design, experimental validation, and deployment-oriented application scenarios; transferable to equipment relation networks, process knowledge graphs, root-cause analysis, and expert-reviewable predictive models, while supporting model evaluation and stability analysis on relational data (<strong>[ICML 2025]</strong>)</li>
+        <li>Contributed to <strong>DL3DV-10K</strong>, a large-scale 3D vision dataset and evaluation benchmark, supporting real-scene data curation, benchmark construction, and experimental validation, with results published at <strong>CVPR 2024</strong>; the dataset has been used by <strong>NVIDIA</strong>, <strong>Adobe</strong>, <strong>Google</strong>, and other teams in multiple commercial vision-model and spatial-intelligence scenarios, connecting 3D vision, video understanding, and vision model evaluation</li>
+        <li>Conducted research on <strong>non-Euclidean and hyperbolic representation learning</strong>, advancing theoretically grounded representation learning and nearest-neighbor retrieval methods around <strong>Neuc-MDS</strong>, Johnson-Lindenstrauss extensions beyond Euclidean geometry, and <strong>Hyperbolic Space LSH</strong>; applicable to complex hierarchical data, knowledge structures, and high-dimensional retrieval, supporting knowledge retrieval, similar-case recall, and evidence localization (<strong>[NeurIPS 2024]</strong>, <strong>[NeurIPS 2025]</strong>, <strong>[SoCG 2026]</strong>)</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">GraphEvol / Complex System State Modeling</span> <span class="role">- Research and Engineering Project</span></div>
+        <span class="entry-date">2026 - Present</span>
+      </div>
+      <ul>
+        <li>Built a graph evolution learning and stage-recovery experimental pipeline that organizes graph-structured data, topological/graph features, model training, and confidence analysis into reusable workflows for modeling state transitions in complex systems, forming an evaluation loop from data ingestion and feature construction to training validation and result analysis</li>
+        <li>Designed evaluation methods for structural perturbation, stage-recovery stability, and confidence outputs so model results are not only predictive but also diagnosable and reviewable; transferable to equipment state prediction, operating-condition evolution recognition, anomaly-stage detection, and complex process decision support in industrial settings with multi-source sensor data and stage-based state judgment</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-title"><span class="org">Purdue University, Department of Computer Science</span> <span class="role">- Ph.D. Research Assistant</span></div>
+        <span class="entry-date">2020.08 - 2023.08</span>
+      </div>
+      <div class="entry-meta">Advisor: Prof. Tamal K. Dey</div>
+      <ul>
+        <li>Led research on the <strong>GRIL</strong> topological vectorization framework, completing the loop from theoretical modeling and algorithm design to experimental validation and proving its stronger expressive power; extended the work toward <strong>D-GRIL</strong> end-to-end topological learning, enabling multiparameter persistence representations to enter differentiable learning workflows and strengthening graph/geometric models for scientific data, material structures, and complex-system data; applicable to feature engineering and model generalization analysis for complex relational data (<strong>[PMLR 2023]</strong>, <strong>[SoCG 2026]</strong>)</li>
+        <li>Developed a <strong>generalized persistence algorithm</strong> that improves computational efficiency for multiparameter topological analysis tasks, providing reusable algorithmic foundations for large-scale scientific/geometric data processing, model feature construction, and explainable analysis, and serving as a bottom-layer method reserve for complex structured data modeling, compressed representation, and reviewable analysis (<strong>[JACT 2022]</strong>)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section>
+    <h2>Education</h2>
+    <div class="edu-entry">
+      <div><span class="degree">Ph.D. in Computer Science</span> <span class="school">· Purdue University</span></div>
+      <span class="year">2023</span>
+    </div>
+    <p class="edu-detail">Dissertation: Decomposition and Stability of Multiparameter Persistence Modules · Advisor: Prof. Tamal K. Dey</p>
+
+    <div class="edu-entry">
+      <div><span class="degree">M.S. in Computer Science</span> <span class="school">· Lehigh University</span></div>
+      <span class="year">2016</span>
+    </div>
+    <p class="edu-detail">Thesis: Machine Learning Techniques for Medical Image Analysis · Focus: Computer vision and deep learning for medical imaging</p>
+
+    <div class="edu-entry">
+      <div><span class="degree">B.E. in Software Engineering</span> <span class="school">· Tongji University</span></div>
+      <span class="year">2013</span>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section>
+    <h2>Selected Publications and Related Outputs</h2>
+    <div class="pub"><span class="venue">SoCG 2026</span> <span class="authors">C. Deng, J. Gao, K. Lu, F. Luo,</span> <span class="me">C. Xin<sup>†</sup></span><span class="authors">.</span> <span class="title">"Locality Sensitive Hashing in Hyperbolic Space"</span></div>
+    <div class="pub"><span class="venue">SoCG 2026</span> <span class="authors">S. Mukherjee, S. N. Samaga,</span> <span class="me">C. Xin</span><span class="authors">, S. Oudot, T. K. Dey.</span> <span class="title">"D-GRIL: End-to-End Topological Learning with 2-parameter Persistence"</span></div>
+    <div class="pub"><span class="venue">ICML 2025</span> <span class="me">C. Xin</span>, <span class="authors">F. Xu, X. Ding, J. Gao, J. Ding.</span> <span class="title">"TopInG: Topologically Interpretable Graph Learning via Persistent Rationale Filtration"</span></div>
+    <div class="pub"><span class="venue">NeurIPS 2025</span> <span class="authors">C. Deng, J. Gao, K. Lu, F. Luo,</span> <span class="me">C. Xin<sup>†</sup></span>. <span class="title">"Johnson-Lindenstrauss Lemma Beyond Euclidean Geometry"</span></div>
+    <div class="pub"><span class="venue">NeurIPS 2024</span> <span class="authors">C. Deng, J. Gao, K. Lu, F. Luo, H. Sun,</span> <span class="me">C. Xin<sup>†</sup></span>. <span class="title">"Neuc-MDS: Non-Euclidean Multidimensional Scaling Through Bilinear Forms"</span></div>
+    <div class="pub"><span class="venue">ICML 2024</span> <span class="authors">S. Haddadan,</span> <span class="me">C. Xin</span>, <span class="authors">J. Gao.</span> <span class="title">"Optimally Improving Cooperative Learning in a Social Setting"</span></div>
+    <div class="pub"><span class="venue">CVPR 2024</span> <span class="authors">L. Ling, ...,</span> <span class="me">C. Xin</span>, <span class="authors">et al.</span> <span class="title">"DL3DV-10K: A Large-Scale Scene Dataset for Deep Learning-Based 3D Vision"</span></div>
+    <div class="pub"><span class="venue">TMLR 2024</span> <span class="authors">S. Zhang,</span> <span class="me">C. Xin</span>, <span class="authors">T. K. Dey.</span> <span class="title">"Expressive Higher-Order Link Prediction through Hypergraph Symmetry Breaking"</span></div>
+    <div class="pub"><span class="venue">ICML-W 2023</span> <span class="me">C. Xin</span>, <span class="authors">S. Mukherjee, S. N. Samaga, T. K. Dey.</span> <span class="title">"GRIL: A 2-parameter Persistence Based Vectorization for Machine Learning"</span></div>
+    <div class="pub"><span class="venue">Ph.D. Thesis 2023</span> <span class="me">C. Xin</span>. <span class="title">"Decomposition and Stability of Multiparameter Persistence Modules"</span></div>
+    <div class="pub"><span class="venue">JACT 2022</span> <span class="authors">T. K. Dey,</span> <span class="me">C. Xin<sup>†</sup></span>. <span class="title">"Generalized Persistence Algorithm for Decomposing Multiparameter Persistence Modules"</span></div>
+    <div class="pub"><span class="venue">SoCG 2018</span> <span class="authors">T. K. Dey,</span> <span class="me">C. Xin<sup>†</sup></span>. <span class="title">"Computing Bottleneck Distance for 2-D Interval Decomposable Modules"</span></div>
+    <div class="pub"><span class="venue">PR 2017</span> <span class="authors">T. Xu, H. Zhang,</span> <span class="me">C. Xin</span>, <span class="authors">et al.</span> <span class="title">"Multi-feature based benchmark for cervical dysplasia classification evaluation"</span></div>
+    <div class="pub"><span class="venue">MLMI 2015</span> <span class="authors">T. Xu,</span> <span class="me">C. Xin<sup>*</sup></span> <span class="authors">et al.</span> <span class="title">"A New Image Data Set and Benchmark for Cervical Dysplasia Classification Evaluation"</span></div>
+    <div class="pub-note">† indicates alphabetic author ordering following theoretical research conventions, with C. Xin as corresponding author; * indicates co-first author.</div>
+  </section>
+
+  <!-- Honors -->
+  <section>
+    <h2>Honors and Leadership</h2>
+    <div class="honor"><strong>Shanghai Magnolia Talent Program - Young Talent</strong> (2025)</div>
+    <div class="honor"><strong>Microsoft Collegiate Programming Competition Champion</strong> (2017 @ Ohio State University, 2015 @ Lehigh University)</div>
+    <div class="honor"><strong>Graduate Course Instructor</strong>: Design and Analysis of Algorithms (45 students, 2025)</div>
+    <div class="honor"><strong>Area Chair</strong>: TAG-DS Workshop (2026)</div>
+    <div class="honor"><strong>Reviewer</strong>: ICML, ICLR, NeurIPS, SoCG</div>
+  </section>
+
+</div>
+</body>
+</html>

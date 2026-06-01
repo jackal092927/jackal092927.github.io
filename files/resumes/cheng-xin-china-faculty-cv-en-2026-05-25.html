@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cheng Xin - China Faculty Academic CV</title>
+<style>
+  :root {
+    --color-text: #09090b;
+    --color-muted: #71717a;
+    --color-border: #e4e4e7;
+    --color-bg: #ffffff;
+    --color-tag-bg: #f4f4f5;
+    --color-tag-text: #3f3f46;
+    --color-link: #18181b;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: "SF Mono", "Fira Code", "JetBrains Mono", "Cascadia Code", ui-monospace, monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { font-size: 14px; }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background: #f4f4f5;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 750px;
+    margin: 2rem auto;
+    padding: 3rem;
+    background: var(--color-bg);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  }
+
+  /* Header */
+  .header { margin-bottom: 1.5rem; }
+
+  .header h1 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  .header .subtitle {
+    color: var(--color-muted);
+    font-size: 0.92rem;
+    margin-top: 0.25rem;
+    line-height: 1.5;
+  }
+
+  .header .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.6rem;
+  }
+
+  .header .links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.78rem;
+    font-family: var(--font-mono);
+    color: var(--color-muted);
+    text-decoration: none;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .header .links a:hover {
+    color: var(--color-text);
+    border-color: var(--color-tag-text);
+  }
+
+  /* Sections */
+  section { margin-bottom: 1.5rem; }
+
+  section > h2 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  /* Summary */
+  .summary {
+    font-size: 0.88rem;
+    color: var(--color-muted);
+    line-height: 1.7;
+  }
+
+  /* Tags */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-family: var(--font-mono);
+    padding: 0.15rem 0.45rem;
+    background: var(--color-tag-bg);
+    color: var(--color-tag-text);
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  /* Skills table */
+  .skills-grid {
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  .skill-row {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    gap: 0.5rem;
+    align-items: start;
+  }
+
+  .skill-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-text);
+    padding-top: 0.15rem;
+  }
+
+  /* Experience entries */
+  .entry { margin-bottom: 1rem; }
+  .entry:last-child { margin-bottom: 0; }
+
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .entry-title {
+    font-size: 0.92rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .entry-title .org {
+    font-weight: 600;
+  }
+
+  .entry-title .role {
+    font-weight: 400;
+    color: var(--color-muted);
+  }
+
+  .entry-date {
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    color: var(--color-muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .entry-meta {
+    font-size: 0.78rem;
+    color: var(--color-muted);
+    margin-bottom: 0.3rem;
+  }
+
+  .entry ul {
+    padding-left: 1.2rem;
+    margin: 0;
+  }
+
+  .entry li {
+    font-size: 0.82rem;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: 0.15rem;
+  }
+
+  .entry li:last-child { margin-bottom: 0; }
+
+  .entry li strong {
+    font-weight: 600;
+  }
+
+  .venue {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text);
+    background: var(--color-tag-bg);
+    padding: 0.1rem 0.35rem;
+    border-radius: 2px;
+  }
+
+  /* Education */
+  .edu-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.35rem;
+  }
+
+  .edu-entry .degree {
+    font-size: 0.88rem;
+    font-weight: 600;
+  }
+
+  .edu-entry .school {
+    font-weight: 400;
+    color: var(--color-muted);
+  }
+
+  .edu-entry .year {
+    font-size: 0.78rem;
+    font-family: var(--font-mono);
+    color: var(--color-muted);
+  }
+
+  .edu-detail {
+    font-size: 0.78rem;
+    color: var(--color-muted);
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Publications */
+  .pub {
+    font-size: 0.82rem;
+    margin-bottom: 0.35rem;
+    line-height: 1.5;
+  }
+
+  .pub .authors { color: var(--color-muted); }
+  .pub .me { color: var(--color-text); font-weight: 600; }
+  .pub .title { color: var(--color-text); }
+
+  /* Talks */
+  .talk {
+    font-size: 0.82rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+  }
+
+  .talk .talk-title {
+    color: var(--color-text);
+  }
+
+  .talk .talk-venue {
+    color: var(--color-muted);
+  }
+
+  /* Honors */
+  .honor {
+    font-size: 0.82rem;
+    margin-bottom: 0.2rem;
+  }
+
+  /* References */
+  .ref-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+
+  .ref-card {
+    font-size: 0.78rem;
+  }
+
+  .ref-card .name {
+    font-weight: 600;
+    font-size: 0.82rem;
+  }
+
+  .ref-card .ref-title { color: var(--color-muted); }
+
+  .ref-card .email {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--color-muted);
+  }
+
+  /* Pub note */
+  .pub-note {
+    font-size: 0.72rem;
+    color: var(--color-muted);
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  /* Footer */
+  .version {
+    text-align: right;
+    font-size: 0.7rem;
+    color: var(--color-muted);
+    margin-top: 1.5rem;
+    font-family: var(--font-mono);
+  }
+
+  /* Print styles */
+  @media print {
+    html { font-size: 12px; }
+    body { background: white; }
+    .page {
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      border-radius: 0;
+      max-width: none;
+    }
+    .header .links a {
+      border: none;
+      padding: 0;
+      font-size: 0.75rem;
+    }
+    .header .links a::after {
+      content: none;
+    }
+    section { margin-bottom: 1.2rem; }
+    .entry { margin-bottom: 0.8rem; }
+  }
+
+  @media (max-width: 600px) {
+    .page { margin: 0; border-radius: 0; padding: 1.5rem; }
+    .entry-header { flex-direction: column; gap: 0; }
+    .skill-row { grid-template-columns: 1fr; gap: 0.2rem; }
+    .ref-grid { grid-template-columns: 1fr; }
+    .edu-entry { flex-direction: column; gap: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="header">
+    <h1>Cheng Xin</h1>
+    <p class="subtitle">Postdoctoral Researcher &middot; Rutgers University, Department of Computer Science</p>
+    <div class="links">
+      <a href="mailto:xin.job2025@gmail.com">xin.job2025@gmail.com</a>
+      <a href="https://jackal092927.github.io">jackal092927.github.io</a>
+      <a href="https://jackal092927.github.io/scholar">Google Scholar</a>
+      <a href="https://github.com/jackal092927">GitHub</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Bio</h2>
+    <p class="summary">Cheng Xin received his Ph.D. in Computer Science from <strong>Purdue University</strong> under the supervision of Prof. Tamal K. Dey, and is currently a postdoctoral researcher in the Department of Computer Science at <strong>Rutgers University</strong>, advised by Prof. Jie Gao. His research spans <strong>Topological and Geometric Machine Learning</strong>, <strong>interpretable AI</strong>, <strong>AI for Science</strong>, and <strong>Model Evaluation</strong>. He has published in top-tier conferences including <strong>NeurIPS</strong>, <strong>ICML</strong>, <strong>CVPR</strong>, and <strong>SoCG</strong>; he was selected for the <strong>Shanghai Baiyulan Talent Program - Young Talent Project</strong> (2025), has served as <strong>Area Chair for TAG-DS Workshop 2026</strong>, and has reviewed for <strong>ICML</strong>, <strong>ICLR</strong>, <strong>NeurIPS</strong>, and <strong>SoCG</strong>.</p>
+  </section>
+
+  <section>
+    <h2>Research Interests</h2>
+    <div class="tags">
+      <span class="tag">Topological and Geometric Machine Learning</span>
+      <span class="tag">Interpretable AI</span>
+      <span class="tag">AI for Science</span>
+      <span class="tag">Model Evaluation</span>
+      <span class="tag">Multiparameter Persistence</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Research &amp; Education</h2>
+    <div class="entry">
+      <div class="entry-header"><div class="entry-title"><span class="org">Rutgers University</span> <span class="role">Department of Computer Science</span></div><span class="entry-date">Oct 2023 - Present</span></div>
+      <div class="entry-meta">Postdoctoral Researcher, Advisor: Prof. Jie Gao</div>
+      <ul>
+        <li>Developing topological frameworks for <strong>interpretable AI</strong>; TopInG improves both prediction performance and explanation quality on molecular graph benchmarks.</li>
+        <li>Researching <strong>non-Euclidean representation learning</strong>, hyperbolic algorithms, AI for Science, model evaluation, and multi-agent learning in social settings.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="entry-header"><div class="entry-title"><span class="org">Purdue University</span> <span class="role">Department of Computer Science</span></div><span class="entry-date">Aug 2020 - Aug 2023</span></div>
+      <div class="entry-meta">Ph.D. in Computer Science, Advisor: Prof. Tamal K. Dey</div>
+      <ul><li>Dissertation: <em>Decomposition and Stability of Multiparameter Persistence Modules</em>.</li></ul>
+    </div>
+    <div class="entry">
+      <div class="entry-header"><div class="entry-title"><span class="org">The Ohio State University</span> <span class="role">Department of Computer Science and Engineering</span></div><span class="entry-date">Jan 2017 - Aug 2020</span></div>
+      <div class="entry-meta">Ph.D. Student / Research Assistant, Advisor: Prof. Tamal K. Dey</div>
+      <ul><li>Developed generalized persistence algorithms and stability theory for multiparameter persistent homology.</li></ul>
+    </div>
+    <div class="entry">
+      <div class="entry-header"><div class="entry-title"><span class="org">Lehigh University</span> <span class="role">Department of Computer Science</span></div><span class="entry-date">Jan 2014 - May 2016</span></div>
+      <div class="entry-meta">M.S. in Computer Science, Advisor: Prof. Xiaolei Huang</div>
+      <ul><li>Thesis: <em>Machine Learning Techniques for Cervigram Image Analysis</em>; research on medical image analysis and machine learning applications.</li></ul>
+    </div>
+    <div class="entry">
+      <div class="entry-header"><div class="entry-title"><span class="org">Tongji University</span> <span class="role">Shanghai, China</span></div><span class="entry-date">Sep 2009 - Jul 2013</span></div>
+      <div class="entry-meta">B.Eng. in Software Engineering</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Invited Talks</h2>
+    <div class="talk"><span class="talk-title">"TopInG: Topologically Interpretable Graph Learning via Persistent Rationale Filtration"</span><br><span class="talk-venue">Conference on Topological Data Analysis: Recent Developments and Applications, University of Missouri, November 2025</span></div>
+    <div class="talk"><span class="talk-title">"Understanding through Shape of Data: Topological Data Analysis for Interpretable AI"</span><br><span class="talk-venue">Management Science and Information Systems Department Colloquium, Rutgers University, October 2024</span></div>
+    <div class="talk"><span class="talk-title">"Exploring Representations Beyond Euclidean Geometry"</span><br><span class="talk-venue">John Hopcroft Center Seminar, Shanghai Jiao Tong University, June 2024</span></div>
+    <div class="talk"><span class="talk-title">"Multiparameter Persistence and Its Applications"</span><br><span class="talk-venue">Theory Seminar, Department of Computer Science, Rutgers University, November 2023</span></div>
+    <div class="talk"><span class="talk-title">"Generalized persistence algorithm for decomposing multi-parameter persistence modules"</span><br><span class="talk-venue">Applied Algebraic Topology Network Seminar, July 2020</span></div>
+  </section>
+
+  <section>
+    <h2>Honors and Academic Service</h2>
+    <div class="honor"><strong>Selected for the Shanghai Baiyulan Talent Program - Young Talent Project</strong>, 2025</div>
+    <div class="honor"><strong>Area Chair</strong>, TAG-DS Workshop, 2026</div>
+    <div class="honor"><strong>Reviewer</strong>, ICML, ICLR, NeurIPS, SoCG</div>
+  </section>
+
+  <section>
+    <h2>Publications</h2>
+    <div class="pub"><span class="venue">ICML 2025</span> <span class="me">C. Xin</span>, <span class="authors">F. Xu, X. Ding, J. Gao, J. Ding.</span> <span class="title">"TopInG: Topologically Interpretable Learning via Persistent Rationale Filtration"</span></div>
+    <div class="pub"><span class="venue">NeurIPS 2025</span> <span class="authors">C. Deng, J. Gao, K. Lu, F. Luo,</span> <span class="me">C. Xin</span><span class="authors">&dagger;.</span> <span class="title">"Johnson-Lindenstrauss Lemma Beyond Euclidean Geometry"</span></div>
+    <div class="pub"><span class="venue">NeurIPS 2024</span> <span class="authors">C. Deng, J. Gao, K. Lu, F. Luo, H. Sun,</span> <span class="me">C. Xin</span><span class="authors">&dagger;.</span> <span class="title">"Neuc-MDS: Non-Euclidean Multidimensional Scaling Through Bilinear Forms"</span></div>
+    <div class="pub"><span class="venue">ICML 2024</span> <span class="authors">S. Haddadan,</span> <span class="me">C. Xin</span>, <span class="authors">J. Gao.</span> <span class="title">"Optimally Improving Cooperative Learning in a Social Setting"</span></div>
+    <div class="pub"><span class="venue">CVPR 2024</span> <span class="authors">L. Ling, ...,</span> <span class="me">C. Xin</span>, <span class="authors">et al.</span> <span class="title">"DL3DV-10K: A Large-Scale Scene Dataset for Deep Learning-Based 3D Vision"</span></div>
+    <div class="pub"><span class="venue">TMLR 2024</span> <span class="authors">S. Zhang,</span> <span class="me">C. Xin</span>, <span class="authors">T. K. Dey.</span> <span class="title">"Expressive Higher-Order Link Prediction through Hypergraph Symmetry Breaking"</span></div>
+    <div class="pub"><span class="venue">ICML-W 2023</span> <span class="me">C. Xin</span>, <span class="authors">S. Mukherjee, S. N. Samaga, T. K. Dey.</span> <span class="title">"GRIL: A 2-parameter Persistence Based Vectorization for Machine Learning"</span></div>
+    <div class="pub"><span class="venue">SoCG 2026</span> <span class="authors">S. Mukherjee, S. N. Samaga,</span> <span class="me">C. Xin</span>, <span class="authors">S. Oudot, T. K. Dey.</span> <span class="title">"D-GRIL: End-to-End Topological Learning with 2-parameter Persistence"</span></div>
+    <div class="pub"><span class="venue">SoCG 2026</span> <span class="authors">C. Deng, J. Gao, K. Lu, F. Luo,</span> <span class="me">C. Xin</span><span class="authors">.</span> <span class="title">"Locality Sensitive Hashing in Hyperbolic Space"</span></div>
+    <div class="pub"><span class="venue">JACT 2022</span> <span class="authors">T. K. Dey,</span> <span class="me">C. Xin</span><span class="authors">&dagger;.</span> <span class="title">"Generalized persistence algorithm for decomposing multiparameter persistence modules"</span></div>
+    <div class="pub"><span class="venue">arXiv 2021</span> <span class="authors">T. K. Dey,</span> <span class="me">C. Xin</span><span class="authors">&dagger;.</span> <span class="title">"Rectangular Approximation and Stability of 2-parameter Persistence Modules"</span></div>
+    <div class="pub"><span class="venue">SoCG 2018</span> <span class="authors">T. K. Dey,</span> <span class="me">C. Xin</span><span class="authors">&dagger;.</span> <span class="title">"Computing Bottleneck Distance for 2-D Interval Decomposable Modules"</span></div>
+    <div class="pub"><span class="venue">PR 2017</span> <span class="authors">T. Xu, H. Zhang,</span> <span class="me">C. Xin</span>, <span class="authors">et al.</span> <span class="title">"Multi-feature based benchmark for cervical dysplasia classification evaluation"</span></div>
+    <div class="pub"><span class="venue">MLMI 2015</span> <span class="authors">T. Xu,</span> <span class="me">C. Xin</span><span class="authors">* et al.</span> <span class="title">"A New Image Data Set and Benchmark for Cervical Dysplasia Classification Evaluation"</span></div>
+    <p class="pub-note">&dagger; authors alphabetically ordered &nbsp;&middot;&nbsp; * co-first author</p>
+  </section>
+
+  <section>
+    <h2>Industrial Experience</h2>
+    <div class="entry"><div class="entry-header"><div class="entry-title"><span class="org">Electronic Arts (EA)</span> <span class="role">Machine Learning Scientist Intern</span></div><span class="entry-date">May - Aug 2018</span></div><div class="entry-meta">Big Data Group &middot; Redwood City, CA</div><ul><li>Large-scale machine learning on <strong>Spark</strong>; graph learning on relational databases, attribute evaluation and selection, and dataset compression.</li></ul></div>
+    <div class="entry"><div class="entry-header"><div class="entry-title"><span class="org">Amazon</span> <span class="role">Software Development Engineer Intern</span></div><span class="entry-date">May - Aug 2015</span></div><div class="entry-meta">AWS Infrastructure Group &middot; Seattle, WA</div><ul><li>Developed a data management system for receiving, parsing, storing, and retrieving network messages.</li></ul></div>
+    <div class="entry"><div class="entry-header"><div class="entry-title"><span class="org">Koal Software</span> <span class="role">Software Developer</span></div><span class="entry-date">Jul - Dec 2013</span></div><div class="entry-meta">Shanghai, China</div><ul><li>Worked on backend databases, business logic, APIs, and frontend UI development.</li></ul></div>
+    <div class="entry"><div class="entry-header"><div class="entry-title"><span class="org">Microsoft</span> <span class="role">Developer Support Intern</span></div><span class="entry-date">Jul - Nov 2012</span></div><div class="entry-meta">Data Intelligence Group &middot; Shanghai, China</div><ul><li>Handled technical support cases related to SQL Server.</li></ul></div>
+  </section>
+
+  <section>
+    <h2>Teaching Experience</h2>
+    <div class="honor"><strong>Lecturer</strong>, Design and Analysis of Algorithms, Rutgers University, Fall 2025, approximately 45 graduate students</div>
+    <div class="honor"><strong>Teaching Assistant</strong>, Data Structures and Algorithms, Purdue University, Spring 2023, approximately 200 undergraduate students</div>
+    <div class="honor"><strong>Teaching Assistant</strong>, Computational Geometry, Purdue University, Fall 2020, approximately 30 graduate students</div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="tags"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Spark</span><span class="tag">Keras</span><span class="tag">Java</span><span class="tag">C</span><span class="tag">C++</span><span class="tag">MATLAB</span><span class="tag">R</span></div>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <p style="font-size: 0.78rem; color: var(--color-muted); font-style: italic; margin-bottom: 0.75rem;">Confidential recommendation letters available via Interfolio Dossier Delivery.</p>
+    <div class="ref-grid">
+      <div class="ref-card"><div class="name">Dr. Tamal K. Dey</div><div class="ref-title">Professor, Computer Science, Purdue University</div><div class="email">tamaldey@purdue.edu</div></div>
+      <div class="ref-card"><div class="name">Dr. Jie Gao</div><div class="ref-title">Professor, Computer Science, Rutgers University</div><div class="email">jg1555@cs.rutgers.edu</div></div>
+      <div class="ref-card"><div class="name">Dr. Feng Luo</div><div class="ref-title">Professor, Mathematics, Rutgers University</div><div class="email">fluo@math.rutgers.edu</div></div>
+    </div>
+  </section>
+
+  <div class="version">v.2026-05-25</div>
+</div>
+</body>
+</html>
