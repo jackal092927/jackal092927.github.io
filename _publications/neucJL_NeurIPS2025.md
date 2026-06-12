@@ -3,8 +3,8 @@ title: "Johnson-Lindenstrauss Lemma Beyond Euclidean Geometry"
 collection: publications
 permalink: /publication/neucJL_NeurIPS2025
 excerpt: 'Extending the Johnson-Lindenstrauss lemma to non-Euclidean geometry with fine-grained error analysis based on geometric deviation.'
-date: 2025-12-01
-venue: 'Conference on Neural Information Processing Systems (NeurIPS)'
+date: 2025-12-02
+venue: '39th Conference on Neural Information Processing Systems (NeurIPS 2025)'
 paperurl: 'http://jackal092927.github.io/files/NeucJL/neucJL.pdf'
 ---
 
@@ -76,4 +76,4 @@ Our methods (JL-PE and JL-Power) significantly outperform classical JL on non-Eu
 ---
 
 ## Links
-[Paper](http://jackal092927.github.io/files/NeucJL/neucJL.pdf) 
+[Paper](http://jackal092927.github.io/files/NeucJL/neucJL.pdf) | [OpenReview](https://openreview.net/forum?id=NLLLkiF3xa)

@@ -12,10 +12,6 @@ I am currently a **Postdoctoral Researcher** in the Department of Computer Scien
 
 I earned my **Ph.D. in Computer Science** from **Purdue University**, advised by **Dr. Tamal K. Dey**. My doctoral research focused on **topological data analysis (TDA)** and the **theory and algorithms of multiparameter persistent homology**, with contributions to both foundational theory and efficient computation.
 
-<div style="color:blue; font-weight:bold;">
-I am actively seeking faculty and research positions.
-</div>
-
 ---
 
 ## Research Overview
@@ -73,4 +69,3 @@ I am committed to mentoring students at all levels and to fostering inclusive le
 ---
 
 *This website is built using the academicpages template and is periodically updated to reflect my current research and teaching activities.*
-
