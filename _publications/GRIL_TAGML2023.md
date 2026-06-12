@@ -8,11 +8,20 @@ venue: '2nd Annual Workshop on Topology, Algebra, and Geometry in Machine Learni
 paperurl: 'https://proceedings.mlr.press/v221/xin23a/xin23a.pdf'
 ---
 
-## Summary
+## Abstract
 
-GRIL introduces the Generalized Rank Invariant Landscape, a vector representation for 2-parameter persistence modules that can be integrated into machine learning pipelines. The work proves stability and differentiability properties, gives an efficient computation strategy, and evaluates the representation on synthetic and graph-learning benchmarks.
+One-parameter persistent homology has become a standard tool for extracting topological features from data, but richer data descriptions often require multiple filtration parameters. This paper introduces the Generalized Rank Invariant Landscape (GRIL), a vector representation for 2-parameter persistence modules designed for machine learning. GRIL is stable, differentiable with respect to underlying filtration functions, and efficiently computable. We evaluate the representation on synthetic and graph-learning benchmarks, including experiments that augment graph neural networks with GRIL features.
+
+## Presentation
 
 This paper appeared in the ICML 2023 TAG-ML workshop proceedings and was selected for an oral presentation.
+
+## Key Contributions
+
+- **2-parameter vectorization**: Introduces GRIL as a machine-learning-ready vector representation for 2-parameter persistence modules.
+- **Stability and differentiability**: Proves properties needed to use GRIL robustly in learning pipelines.
+- **Efficient computation**: Provides an algorithmic approach for computing the representation.
+- **Graph learning applications**: Tests GRIL on graph benchmarks and uses it to augment graph neural networks.
 
 ## Citation
 

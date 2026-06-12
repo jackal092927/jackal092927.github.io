@@ -8,9 +8,16 @@ venue: '42nd International Symposium on Computational Geometry (SoCG 2026)'
 paperurl: 'https://drops.dagstuhl.de/storage/00lipics/lipics-vol367-socg2026/LIPIcs.SoCG.2026.39/LIPIcs.SoCG.2026.39.pdf'
 ---
 
-## Summary
+## Abstract
 
-This work studies locality-sensitive hashing in hyperbolic spaces, motivated by approximate nearest neighbor search for data with hierarchical or negatively curved structure. It gives native hyperbolic LSH constructions for the hyperbolic plane, extends the construction to higher-dimensional hyperbolic spaces through dimension reduction, and proves matching lower-bound phenomena inherited from local Euclidean behavior.
+Locality Sensitive Hashing (LSH) is a central technique for approximate nearest-neighbor search, but its classical theory is developed primarily for Hamming, Euclidean, and spherical geometries. This paper studies LSH in hyperbolic space, a natural model for hierarchical and negatively curved data. For the hyperbolic plane, we construct a native hyperbolic LSH family based on random geodesic partitions and obtain a performance exponent bounded by \(1/c\). For higher-dimensional hyperbolic spaces, we combine hyperbolic dimension reduction with the two-dimensional construction to obtain efficient LSH schemes. We also prove lower-bound behavior by relating hyperbolic geometry locally to Euclidean geometry.
+
+## Key Contributions
+
+- **Hyperbolic LSH construction**: Introduces a native LSH scheme for the hyperbolic plane using random geodesics.
+- **Higher-dimensional extension**: Combines dimension reduction from \(\mathbb{H}^d\) to \(\mathbb{H}^2\) with the two-dimensional LSH construction.
+- **Theoretical bounds**: Establishes upper bounds for the LSH performance exponent and lower-bound phenomena inherited from local Euclidean structure.
+- **Algorithmic motivation**: Connects approximate nearest-neighbor search to hierarchical, tree-like, and non-Euclidean data representations.
 
 ## Citation
 

@@ -8,9 +8,16 @@ venue: 'Transactions on Machine Learning Research (TMLR)'
 paperurl: 'https://openreview.net/pdf?id=oG65SjZNIF'
 ---
 
-## Summary
+## Abstract
 
-This work studies higher-order link prediction in hypergraphs. It identifies symmetry limitations in common message-passing approaches and introduces a preprocessing-based symmetry-breaking method that improves expressive power while keeping the added computational cost small.
+Higher-order link prediction asks whether a missing hyperedge exists in a hypergraph. Many hypergraph representation learning methods inherit expressivity limits from Weisfeiler-Lehman-type message passing, which can fail to distinguish regular or symmetric substructures. This paper introduces a symmetry-breaking approach for higher-order link prediction: a preprocessing algorithm identifies regular subhypergraphs, and training randomly modifies these structures by replacing them with covering hyperedges. The method improves expressive power while adding little computational overhead, and experiments show gains on graph and hypergraph datasets.
+
+## Key Contributions
+
+- **Expressivity analysis**: Identifies limitations of common hypergraph message-passing representations.
+- **Symmetry-breaking method**: Uses preprocessing to find regular subhypergraphs and modifies them during training.
+- **Efficient implementation**: Keeps the extra computation small relative to the input hypergraph.
+- **Higher-order prediction**: Demonstrates improvements for higher-order link prediction on graph and hypergraph benchmarks.
 
 ## Citation
 

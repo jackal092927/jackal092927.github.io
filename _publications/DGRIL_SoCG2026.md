@@ -8,9 +8,16 @@ venue: '42nd International Symposium on Computational Geometry (SoCG 2026)'
 paperurl: 'https://drops.dagstuhl.de/storage/00lipics/lipics-vol367-socg2026/LIPIcs.SoCG.2026.79/LIPIcs.SoCG.2026.79.pdf'
 ---
 
-## Summary
+## Abstract
 
-D-GRIL develops an end-to-end topological learning framework based on 2-parameter persistence. Building on the GRIL vectorization, the paper analyzes differentiability and gradient-based learning for a bifiltration function, then applies the resulting D-GRIL layer to benchmark graph learning and bio-activity prediction tasks.
+End-to-end topological learning with 1-parameter persistence has become an important way to incorporate topological information into machine learning models. This paper extends that direction to 2-parameter persistence by building on the GRIL vectorization. We analyze differentiability properties of GRIL, establish a gradient-based learning framework for bifiltration functions, and develop D-GRIL as a differentiable topological layer. The resulting framework is evaluated on graph learning benchmarks and bio-activity prediction tasks, showing how 2-parameter topological features can be learned directly in a machine learning pipeline.
+
+## Key Contributions
+
+- **Differentiable 2-parameter topology**: Develops a differentiable learning layer based on the GRIL vectorization.
+- **Bifiltration learning**: Learns a bifiltration function instead of relying on hand-designed filter functions.
+- **Theory for optimization**: Analyzes the structure needed for gradient-based learning with GRIL.
+- **Applications**: Applies the framework to graph learning and bio-activity prediction.
 
 ## Citation
 
