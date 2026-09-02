@@ -7,6 +7,9 @@ author_profile: true
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
+<p class="archive__intro">Current and past courses in theoretical computer science, algorithms, and mathematical foundations.</p>
+
+{% assign teaching_posts = site.teaching | sort: "date" | reverse %}
+{% for post in teaching_posts %}
   {% include archive-single.html %}
 {% endfor %}
