@@ -1,0 +1,165 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+
+\begin{document}
+
+\begin{center}
+    {\Large\textbf{Research Statement}}
+
+    Cheng Xin\\
+    Department of Computer Science, California State University, Fresno\\
+    \href{mailto:cxin@mail.fresnostate.edu}{cxin@mail.fresnostate.edu}
+\end{center}
+
+\vspace{-0.1in}
+\section*{Research Overview}
+\vspace{-0.1in}
+
+My research develops geometric and topological foundations for machine learning and artificial intelligence. Working at the intersection of topological data analysis and AI, I create mathematically rigorous frameworks that address fundamental challenges in reliability, interpretability, and structural understanding of machine learning systems. My approach systematically integrates classical mathematical tools—algebraic topology, computational geometry, and geometric analysis—with contemporary machine learning methodologies. While modern machine learning achieves substantial empirical success, many systems lack theoretical guarantees and fail to capture intrinsic geometric and topological structures present in data. My research addresses these limitations by developing principled mathematical frameworks that provide both theoretical insights and practical improvements in AI system performance and trustworthiness.
+
+\vspace{-0.1in}
+\section*{Research Philosophy and Approach}
+\vspace{-0.1in}
+
+Geometric and topological approaches capture essential structural properties that resist conventional statistical analysis. Geometry provides principled frameworks for understanding intrinsic data relationships, while topology reveals stable, qualitative features persisting across scales. These mathematical tools prove particularly valuable for scientific applications where data exhibits complex non-Euclidean structure. My research trajectory demonstrates commitment to developing rigorous mathematical theory while maintaining focus on practical applications—evidenced by publications spanning theoretical computational topology venues (SoCG, JACT) and applied machine learning conferences (ICML, NeurIPS, CVPR).
+
+\vspace{-0.1in}
+\section*{Major Research Contributions}
+
+
+\subsection*{1. Foundational Theory: Multiparameter Persistent Homology}
+
+
+
+\textbf{Research Challenge:} Classical persistent homology analyzes data varying along single parameters, but many applications require tracking topological features across multiple parameters simultaneously. However, multiparameter persistence lacks the algebraic structure of single-parameter cases—computing interleaving distances is NP-hard, and there is no complete discrete invariant analogous to the one-parameter barcode.
+
+\textbf{Contributions:} During my doctoral research, I developed algorithmic solutions to core computational challenges in multiparameter persistent homology. These contributions formed the foundation of my PhD dissertation~\cite{xin2023decomposition}:
+
+\begin{enumerate}
+    \item \textbf{Efficient Decomposition Algorithm:} I designed algorithms for computing decompositions of multiparameter persistence modules~\cite{dey2021generalized}, extending classical persistence algorithms through matrix reduction techniques handling partial order structures. This work provides computational foundations for practical multiparameter analysis.
+    \item \textbf{Polynomial-Time Distance Computation:} For 2-D interval decomposable modules—a theoretically and practically important class—I created polynomial-time algorithms for computing bottleneck distance~\cite{xin2018}, introducing concepts of ``effective intersections'' and ``trivializable intersections'' enabling exact distance computation.
+\end{enumerate}
+
+\textbf{Impact:} These works, published in \textbf{SoCG 2018} and \textbf{JACT 2022}, established computational methods for the multiparameter TDA and provide a foundation for subsequent work on multiparameter persistence.
+
+\vspace{-0.1in}
+\subsection*{2. Applied Theory: Topologically-Enhanced Graph Neural Networks}
+
+\textbf{Research Challenge:} Graph Neural Networks achieve strong performance but face fundamental limitations in capturing complex structural information due to reliance on local message-passing. Many graphs exhibit rich topological structures—cycles, voids, higher-dimensional features—encoding essential semantic information but remaining invisible to standard architectures.
+
+\textbf{Contributions:} I developed general frameworks integrating topology with deep learning:
+
+\begin{enumerate}
+    \item \textbf{GRIL (PMLR 2023):} I introduced Generalized Rank Invariant Landscape~\cite{gril-xin23a-pmlr}, a vectorization framework for two-parameter persistence modules that is 1-Lipschitz stable and differentiable with respect to the underlying filtration functions. The framework enables end-to-end training of topology-aware neural networks.
+
+    \item \textbf{Applications and Validation:} Experiments demonstrate consistent improvements over state-of-the-art methods, particularly in scenarios requiring understanding of complex structural patterns, with promising results in scientific applications where global structural properties prove crucial for predictions.
+\end{enumerate}
+
+\textbf{Impact:} GRIL was selected for oral presentation at the ICML 2023 TAG-ML workshop, establishing it as a notable contribution to topologically-enhanced deep learning.
+
+\vspace{-0.1in}
+\subsection*{3. Interpretable AI: Topological Explainability Framework}
+
+\textbf{Research Challenge:} As AI systems grow increasingly complex, interpretability becomes critical for trust and adoption in high-stakes applications. Current interpretability methods (attention mechanisms, saliency maps) are heuristic and post-hoc, lacking theoretical guarantees. They indicate ``where'' models attend but not ``why'' in terms of structural reasoning.
+
+\textbf{Contributions:} My work on \textbf{TopInG~\cite{topoXGNN} (ICML 2025)} develops principled mathematical frameworks for topological interpretability:
+
+\begin{enumerate}
+    \item \textbf{Theoretical Foundation:}
+    I established rigorous frameworks for topological interpretability, introducing \textbf{topological discrepancy} quantifying
+    statistical differences through
+    $1$-Wasserstein distance between graph distributions with respect to topological structure, with an efficient approximation algorithm and theoretical guarantees showing optimization recovers ground truth under certain conditions.
+
+    \item \textbf{Architecture Innovation:} The framework models GNN decision-making as a ``persistent rationale generation process,'' using differentiable topological representations to track statistically significant structural differences between decision-relevant and irrelevant subgraphs.
+
+    \item \textbf{Performance:} Experiments with TopInG demonstrate improvements over comparison methods in predictive accuracy and interpretation quality on the evaluated benchmarks. The framework successfully handles variable and complex rationale subgraphs where previous methods encounter difficulties, demonstrating improved robustness to spurious correlations.
+\end{enumerate}
+
+\textbf{Impact:} TopInG provides principled, theoretically-grounded frameworks for topological explainability in graph neural networks, with applications to drug discovery, materials science, and domains where understanding model decisions proves as critical as accuracy.
+
+\vspace{-0.1in}
+\subsection*{4. Geometric Innovation: Non-Euclidean Representations}
+
+
+\textbf{Research Challenge:} Classical dimensionality reduction techniques like MDS assume Euclidean structure, but real-world data often exhibits inherently non-Euclidean or non-metric properties. Forcing such data into Euclidean space causes information loss and can lead to paradoxical behaviors like increased error with higher embedding dimensions. Similarly, fundamental results in high-dimensional geometry like the Johnson-Lindenstrauss lemma have been limited to Euclidean spaces.
+
+\textbf{Contributions:} I have developed theoretical frameworks extending classical geometric methods to non-Euclidean settings:
+
+\begin{enumerate}
+    \item \textbf{Neuc-MDS (NeurIPS 2024):} I extended classical MDS theory from Euclidean to pseudo-Euclidean spaces~\cite{neucMDS}. I introduced bilinear forms to unify representation of positive and negative distance information, enabling effective use of negative eigenvalues carrying crucial ``non-Euclidean'' information typically discarded by classical methods. I designed efficient algorithms for jointly optimizing eigenvalue selection and bilinear form choice, with comprehensive theoretical analysis of error bounds and asymptotic behavior.
+
+    \item \textbf{Johnson-Lindenstrauss Beyond Euclidean Geometry (NeurIPS 2025):} I extended the Johnson-Lindenstrauss lemma to pseudo-Euclidean representations and generalized power-distance representations of symmetric hollow dissimilarity matrices~\cite{deng2026johnson}. The guarantees depend on deviation from Euclidean geometry; the power-distance formulation combines multiplicative approximation with a controlled additive error term. This provides a way to analyze dimensionality reduction for non-Euclidean data without assuming the classical Euclidean guarantee holds unchanged.
+\end{enumerate}
+
+\textbf{Impact:} These works provide theoretical foundations for studying non-Euclidean embeddings in modern ML models, with applications to graph representation learning, hyperbolic neural networks, recommendation systems, and biological networks. The extension of the JL lemma opens new possibilities for efficient processing of non-Euclidean data in high-dimensional settings.
+
+\vspace{-0.1in}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{Future Research Directions}
+
+Building upon these foundations, I plan to expand topological and geometric methods as frameworks for developing stable, interpretable, and trustworthy AI systems:
+
+\subsection*{1. Topological Representations for Foundation Models and Sequential Data}
+
+Large language models and foundation models achieve remarkable capabilities through complex internal representations whose structure remains poorly understood. A fundamental challenge arises when these models process data that lies on or near an underlying manifold in high-dimensional space: how do we optimally order and process observations to reveal the manifold's intrinsic structure?
+
+I am developing a unified mathematical framework for \textbf{learnable topological representations of sequential data} through the lens of filtrations on data manifolds. The key insight is that sequential processing—whether in autoregressive language models, visual reasoning systems, or diffusion models—fundamentally involves studying an underlying manifold incrementally, from local neighborhoods to global structure. By formalizing this through soft ordering functions $\alpha: X \to [0,1]$ that induce filtrations $M_\alpha$, we can track topological evolution via persistent homology and optimize these orderings for specific tasks.
+
+This framework addresses three core theoretical challenges:
+\textbf{1. Learnable Filtration Construction:} Designing parameterized families $M_\theta(X,t)$ that are differentiable, topologically expressive, and respect meaningful structure (temporal coherence, causal precedence).
+\textbf{2. Differentiable Topological Vectorization:} Creating stable, informative vector representations from persistence diagrams that enable gradient-based optimization.
+\textbf{3. Efficient Approximation:} Developing near-linear time algorithms ($O(n^{1+\delta})$) for computing topological features and gradients, enabling practical deployment at scale.
+
+
+Beyond representation analysis, topological methods provide new perspectives on causal inference. Current approaches focus on graph structures, but topological stability could identify features persisting across interventions. My multiparameter persistence theory proves particularly valuable for analyzing data varying along multiple causal or semantic dimensions simultaneously, connecting topological stability with causal invariance for robust causal discovery in complex AI systems.
+
+\subsection*{2. Geometric and Topological Foundations for Scientific Discovery}
+
+Scientific data exhibits rich geometric and topological structure beyond Euclidean assumptions, requiring principled mathematical frameworks for analysis and prediction. I plan to develop integrated geometric-topological methods tailored to specific scientific domains where data manifests complex non-Euclidean properties.
+
+\textbf{Non-Euclidean Geometric Representations:} Building on my work extending classical dimensionality reduction and the Johnson-Lindenstrauss lemma to non-Euclidean spaces, I will develop geometric frameworks for molecular conformations in pseudo-Euclidean spaces, hyperbolic embeddings for hierarchical biological networks, and metric geometry approaches for physical simulations where data naturally resides in curved spaces.
+
+\textbf{Topological Analysis of Complex Systems:} Persistent homology provides powerful tools for understanding multi-scale structure in scientific data. I plan to apply topological methods to protein interaction networks (identifying functionally important cycles and voids), materials science (characterizing porous structures and phase transitions), and dynamical systems (detecting bifurcations through topological signatures). The combination of my multiparameter persistence theory with domain-specific filtrations enables richer characterizations than single-parameter approaches.
+
+\textbf{Integrated Geometric-Topological Frameworks:} The true power emerges from combining geometric and topological perspectives. For instance, studying molecular dynamics requires both geometric understanding of conformational spaces and topological tracking of persistent structural motifs across trajectories. My experience with the DL3DV-10K~\cite{ling2023dl3dv10k} dataset for 3D vision demonstrates the value of such integration, which I will extend to broader scientific applications including protein folding, materials discovery, and climate modeling.
+
+This research direction aims to establish geometric and topological data analysis as fundamental tools for scientific machine learning, providing both theoretical guarantees and practical computational methods for domains where traditional Euclidean assumptions fail.
+
+
+\vspace{-0.1in}
+\section*{Collaboration and Broader Impact}
+\vspace{-0.1in}
+
+My interdisciplinary background—training under computational geometers (Tamal K. Dey) and collaboration with experts in network computing (Jie Gao) and non-Euclidean geometry (Feng Luo)—positions me to build bridges between abstract mathematics and practical AI applications. My collaborative work with researchers at Purdue, Rutgers, and other institutions has included contributions to NSF-funded projects, including the AI Institute for Agent-based Cyber Threat Intelligence.
+
+By systematically developing rigorous geometric and topological foundations while maintaining focus on practical applications, my research aims to advance the reliability, interpretability, and theoretical understanding of modern machine learning systems.
+
+\bibliographystyle{plain}
+\bibliography{ref_0920}
+
+\vspace{0.5cm}
+\noindent\rule{\textwidth}{0.4pt}
+\noindent $\dagger$ Authors listed in alphabetical order.
+
+\end{document}
