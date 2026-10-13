@@ -1,0 +1,494 @@
+{
+  "release": "dark-web-v1-20261013",
+  "source_baseline": "ce8f38b4dcc6baf3df9150b4ba00778ed38d3d85",
+  "public_scope": "Presentation assets, compact dashboard records and numerical/evidence companions; full source corpus excluded.",
+  "scientific_data_changed": false,
+  "files": [
+    {
+      "path": "advanced-viz/dashboard/app.js",
+      "bytes": 16640,
+      "sha256": "5755c1315bf86f5972313dc61dbe4be6a9c89ffb739d52aef2210aaed7d9796f",
+      "git_blob_sha": "2d5f3c920b955f7d957fe812743921c1bab70380"
+    },
+    {
+      "path": "advanced-viz/dashboard/data.js",
+      "bytes": 715505,
+      "sha256": "f0c9dbd196f5432c3ddd34e5e2ff6cd548f31c7638f44c0421aed5d8343bb812",
+      "git_blob_sha": "a70f37728636fee3e356062fc453c509491f94c2"
+    },
+    {
+      "path": "advanced-viz/dashboard/index.html",
+      "bytes": 9236,
+      "sha256": "dc5fddf3e8ce3a27a2be53432cd69bdb80d2416819918553613588f3feead474",
+      "git_blob_sha": "e19e80fcb0e2f2c62118dcd887f4f7e3e088706b"
+    },
+    {
+      "path": "advanced-viz/dashboard/style.css",
+      "bytes": 7395,
+      "sha256": "f0f0307d8c658f84ed07744f856efade10657f67f80d2607222b34e01f334a4d",
+      "git_blob_sha": "75401fce4b63de9687f4a22d0eba246b6aa44f59"
+    },
+    {
+      "path": "assets/PLOTLY-LICENSE.txt",
+      "bytes": 1083,
+      "sha256": "8be31ef43f091ec4449b1ef2e238d009672fc30555a5193331bd095a4fa836a6",
+      "git_blob_sha": "98b37b6f42108baa473768ea5020564e3be075cd"
+    },
+    {
+      "path": "assets/plotly.min.js",
+      "bytes": 3682474,
+      "sha256": "10ebc4d3cd9125492b3cddfdcd348a1956c596d90f59b44355861ab34c98d902",
+      "git_blob_sha": "a81fcaaa583778112c9e3ba35739e566852352fb"
+    },
+    {
+      "path": "advanced-viz/tables/accounts.csv",
+      "bytes": 4982,
+      "sha256": "a652a9358b0f0a4c491a14f887cb48e5ff0b2278c6e0f30e852f57f88e0fa10a",
+      "git_blob_sha": "e384c34fbd3273357864bbf4487d3c6ab82cf76a"
+    },
+    {
+      "path": "advanced-viz/tables/adoption_response.csv",
+      "bytes": 214,
+      "sha256": "6e323a972a8dd66b0d38c5261e0a9cf7a4c50beeea6c0beffbfe65471360159e",
+      "git_blob_sha": "7f91b18671d852e834d80f9ea902193c12cc965d"
+    },
+    {
+      "path": "advanced-viz/tables/burst_windows.csv",
+      "bytes": 291,
+      "sha256": "74bc482912e78fe7fde852f1e86de5ea28505c2e81de606562fd5b95e6d8a6d4",
+      "git_blob_sha": "e4f551cd8060f2b05e61c54681aa1aa8d5958089"
+    },
+    {
+      "path": "advanced-viz/tables/cohort_retention.csv",
+      "bytes": 1514,
+      "sha256": "da8aabb72d38b2b12ad48ac9ab2cacb3bedd49b065d538445c1671b06e8e80d7",
+      "git_blob_sha": "ecb06e05db1391de4711f321fe78022d99add2d0"
+    },
+    {
+      "path": "advanced-viz/tables/communication_edges.csv",
+      "bytes": 2434,
+      "sha256": "f179129d42b21b9534d3c74b0d0570ee92668e5c54f896d87d66822763a9b083",
+      "git_blob_sha": "383a5c27be5ca4903c8f8ab9e69bf2a9fa0ee47c"
+    },
+    {
+      "path": "advanced-viz/tables/communication_events.csv",
+      "bytes": 27405,
+      "sha256": "0aafcd82a4d72408742fd13e4eadd7ef5cc3bd4a5a78c3577825bf949c70033c",
+      "git_blob_sha": "cc96a692420eca4f45de245868553720ed68f5d9"
+    },
+    {
+      "path": "advanced-viz/tables/content_reuse_proxy.csv",
+      "bytes": 182,
+      "sha256": "06381e50e635bcf65edc94b1af039cf65e8d62eb433c0ed4200e9f33f4366a6e",
+      "git_blob_sha": "c31a18e09fcaf7ff44a90195a50b78953ce99170"
+    },
+    {
+      "path": "advanced-viz/tables/daily_participation.csv",
+      "bytes": 712,
+      "sha256": "dd13fc035e329edc7ac71bb456c664ec5f545f2110ba3590e00b19bcef77fe04",
+      "git_blob_sha": "04837ec2815b95ed31c9c2509b7ced83f44ff8f1"
+    },
+    {
+      "path": "advanced-viz/tables/event_curves.csv",
+      "bytes": 21471,
+      "sha256": "c53d344635f5c03aff75e39c6f1924b759f6e4eeae5dd8c1f05656b5dee7de0a",
+      "git_blob_sha": "1fdb94ac940ec2e7e0468f78dbd57773126dda2c"
+    },
+    {
+      "path": "advanced-viz/tables/fixed_windows.csv",
+      "bytes": 2562,
+      "sha256": "3f446bc1ebc954d5e22b126d829de4b0a9ab3d8d1297ebd85f5259f66baf7aef",
+      "git_blob_sha": "440744dbb0527b06b0710fee63075f31a0118e0a"
+    },
+    {
+      "path": "advanced-viz/tables/future_references.csv",
+      "bytes": 3050,
+      "sha256": "08fdcbb08590fca8fd4a229064b8c38ef2d0d78701b75ba8aacce232cd8ce99e",
+      "git_blob_sha": "6ca67f5e74f38d08283aa3a50360a598508bfb57"
+    },
+    {
+      "path": "advanced-viz/tables/hourly_activity.csv",
+      "bytes": 7716,
+      "sha256": "a9856c6bbfb59b627940544339f2a0cbda7b9ae7ae5c94a43aea90340ef348ec",
+      "git_blob_sha": "b5a66f515cb46c7556e5035713828d5a323a3374"
+    },
+    {
+      "path": "advanced-viz/tables/merge_response_chronology.csv",
+      "bytes": 19800,
+      "sha256": "b31260687941ddce846c704096b5807597e9a3bf4287799e319943925f87e674",
+      "git_blob_sha": "c5d096d74b0ef2b4b06f1d24585ed5be1b34bd94"
+    },
+    {
+      "path": "advanced-viz/tables/method_cohorts.csv",
+      "bytes": 2088,
+      "sha256": "22da57e02c8784cf8d30369772d3fc32e4bfafd37af5ee2a1dc601d4d0d59c35",
+      "git_blob_sha": "ca8a7a8aec0a4dec6a0ecece1945eff437807036"
+    },
+    {
+      "path": "advanced-viz/tables/method_labels.csv",
+      "bytes": 445824,
+      "sha256": "ad04034030aea83c49f811929bb19ce775584d655da6c96979cfe2a24d4732a1",
+      "git_blob_sha": "87c86d3e3f9879ff09d38eb8536c48b04e347dc0"
+    },
+    {
+      "path": "advanced-viz/tables/method_sensitivity_totals.csv",
+      "bytes": 201,
+      "sha256": "01f71be5f91d17f172347745af5fa2eca824b4c8ef8813dd344956764ca25f08",
+      "git_blob_sha": "9c6c74f39b49b47b53cd88685df52adda3fb6911"
+    },
+    {
+      "path": "advanced-viz/tables/network_evolution.csv",
+      "bytes": 758,
+      "sha256": "cfa2d9a198fe44f020da704fdb39a28c2945cb485e3a2f65792043835a2100a9",
+      "git_blob_sha": "2ce789c23bd983537a96a1a4a799f15dd70c7006"
+    },
+    {
+      "path": "advanced-viz/tables/pr_followup.csv",
+      "bytes": 174814,
+      "sha256": "94f755ea0228eeb342c3c3c63efdcf373003373999b8d34207d0069b22158b58",
+      "git_blob_sha": "935cb716b655f7633f2fe0524eba05e9fdbb5dea"
+    },
+    {
+      "path": "advanced-viz/tables/reference_edges.csv",
+      "bytes": 115231,
+      "sha256": "5e8fbf73862c380c118f44ff9a8411a06d99c62012e86f0cd4cde8b03dac0d8a",
+      "git_blob_sha": "862fbf85707951ce8101710324e913866dcf8bbb"
+    },
+    {
+      "path": "index.html",
+      "bytes": 7719,
+      "sha256": "f95a8f5a3d454ce46aafd4f83d3f97a10022d798f07699588db13d3ec0f204cc",
+      "git_blob_sha": "4cef9847736a4c41a5ba37905c4314609be94b70"
+    },
+    {
+      "path": "lineage-lab/dashboard/app.js",
+      "bytes": 50328,
+      "sha256": "3017e402e0c1908703ec329b0657b3de7a3da166f37fbdf47a123adaf369cb8b",
+      "git_blob_sha": "8b20d9ebd62357e3870465363830d252f9da1a45"
+    },
+    {
+      "path": "lineage-lab/dashboard/data.js",
+      "bytes": 4101841,
+      "sha256": "9e176f0fc0a6b04122c3aad4e57c278f4c399280cebd78a68dcbd4f70217f840",
+      "git_blob_sha": "5a0f00cbec4f5e4ad77bc8bdf52e28a10573b592"
+    },
+    {
+      "path": "lineage-lab/dashboard/index.html",
+      "bytes": 11250,
+      "sha256": "50bbc0087eb49ada39274b59f8691993494a90ad1c7cbbac4d640060ea99ec32",
+      "git_blob_sha": "977e9b564580968c0602fd9eecd6de0c075a9d60"
+    },
+    {
+      "path": "lineage-lab/dashboard/style.css",
+      "bytes": 18077,
+      "sha256": "3846a5ef529dfddedc1f23d1e3e76002387bbfb3f4484b2219c6160a1b16b3e4",
+      "git_blob_sha": "cb9061d03d718093132370bb48c606c5f2a182f6"
+    },
+    {
+      "path": "lineage-lab/hierarchy.json",
+      "bytes": 6909386,
+      "sha256": "328266c21b344287315e1466bc35f17e300348c83108236d1a8431187bc2c663",
+      "git_blob_sha": "b92a966f58ccc5d3ffda21dc6674138b10ff39fd"
+    },
+    {
+      "path": "lineage-lab/tables/account_reference_edges.csv",
+      "bytes": 36113,
+      "sha256": "3007323deb2dd1803f5a3c0e07e48e40bf4ffa4956453cbfcd67f5fec230831c",
+      "git_blob_sha": "1025dd06c999315603052e9b553c510a7d4b08f5"
+    },
+    {
+      "path": "lineage-lab/tables/account_roles.csv",
+      "bytes": 43941,
+      "sha256": "a59071a880822b5ffe4fcaab6f49b67ad74a5f0cd92935a816d067055645565d",
+      "git_blob_sha": "698d1ecc9b8e54a08bedab9a92c322265061727e"
+    },
+    {
+      "path": "lineage-lab/tables/algorithmic_communities.csv",
+      "bytes": 82224,
+      "sha256": "161a09a752206173780067d3e721d0650b8c06085b0e404d027b863ff77a3d68",
+      "git_blob_sha": "b9f9bbc3f916c01e2a9b1a182a7dcd90d4449358"
+    },
+    {
+      "path": "lineage-lab/tables/audited_relations.csv",
+      "bytes": 97867,
+      "sha256": "3c7c4b6e638ef32980f9456da01975703efc34f02a23c3b5b89e23cec83e1d64",
+      "git_blob_sha": "ab282158e1d2438b5cc7e30a53e1e23e19edae35"
+    },
+    {
+      "path": "lineage-lab/tables/claim_exclusions.csv",
+      "bytes": 1391,
+      "sha256": "86f4bd3e4348e12c2e61e015920efa8252af5516e8195844d2462bdcdccf0823",
+      "git_blob_sha": "0cd243aa4d7a429af1082fb0c6db182d05186153"
+    },
+    {
+      "path": "lineage-lab/tables/conditional_kappa_claims.csv",
+      "bytes": 37443,
+      "sha256": "c399c1b656eb21f96b6c978104be0b7bfbee4e46400141d6e0cac19da7bf90c4",
+      "git_blob_sha": "1c855961446d21e8fabfc7fb432d8e01b20d8d22"
+    },
+    {
+      "path": "lineage-lab/tables/graph_edges.csv",
+      "bytes": 2430366,
+      "sha256": "d93f90906a814838e8d3151bfc20872b5c972a21bb39aab0f3b1e5d3d168e98d",
+      "git_blob_sha": "d9d2f89e7efa7a87f7f2ee4b27d44c069c3c520e"
+    },
+    {
+      "path": "lineage-lab/tables/graph_nodes.csv",
+      "bytes": 480086,
+      "sha256": "18388c4b525aedb9dbc30a8e1f0492e2cfcb0fa68883524ec24947411e8b60a1",
+      "git_blob_sha": "2ef6661aee560dc89e1f8e992feaad3e0ce7bb8f"
+    },
+    {
+      "path": "lineage-lab/tables/graph_specifications.csv",
+      "bytes": 1462,
+      "sha256": "d2c9b07ff76b4c7c4df708c8bd3e549f730aee0c446f1d0347e241c8a7b3e19c",
+      "git_blob_sha": "f86313afda0e037e2dbc888ef48ddf6b27754741"
+    },
+    {
+      "path": "lineage-lab/tables/idea_memberships.csv",
+      "bytes": 122263,
+      "sha256": "972060fb228ec9028e004c9574ff81560d384090283b57ba9ee2006895836fe6",
+      "git_blob_sha": "5795b55cafc39b0f4380d45587f3e6ecfc45acf2"
+    },
+    {
+      "path": "lineage-lab/tables/pr_topology.csv",
+      "bytes": 317857,
+      "sha256": "3b3b3de92f6296bec6781877dda2b098fa746e35817ea5f0bc9b34028a71654a",
+      "git_blob_sha": "33a577bd63bb67d05a258a98a441bbcbf4048178"
+    },
+    {
+      "path": "lineage-lab/tables/rank_sensitivity.csv",
+      "bytes": 911223,
+      "sha256": "520de1c52350c33ec4ea6a872b6efadc2ac4e17ff4fac831cf86438b86f4a8bf",
+      "git_blob_sha": "a7ce06f1d0bfe8e776fc745fff76ef2bc3294ccb"
+    },
+    {
+      "path": "lineage-lab/tables/recursive_neighborhoods.csv",
+      "bytes": 3962476,
+      "sha256": "bba3585769ace37b545dd5931e3da0e3386595b7a3016bc504c1a1f174f7776a",
+      "git_blob_sha": "13de679e2a04c0b53b317fddcd95accd85d5899b"
+    },
+    {
+      "path": "lineage-lab/tables/reference_occurrences.csv",
+      "bytes": 2762045,
+      "sha256": "ef9cb0e3a7b27f771ed8a2cf79cfaa5b24c96e919b734731a054eed7daec9f78",
+      "git_blob_sha": "9916f29b3c49bbc2633a0b8d08a6cb317b2c57a8"
+    },
+    {
+      "path": "lineage-lab/tables/scc_condensation.csv",
+      "bytes": 129112,
+      "sha256": "70a06e1a806df05f2f8e16ca5a67a35a7af4bf92161308fe97f35b112c940bcb",
+      "git_blob_sha": "401c75be77b776307af4d2a36382248f71488fe7"
+    },
+    {
+      "path": "methodology.html",
+      "bytes": 7500,
+      "sha256": "6cec8185fd27e7b94e8e8bc650d787881b8775042ee556a69a8c29dad46e6262",
+      "git_blob_sha": "759f3c12881937f2439fbf1adfb30eaf6c93c299"
+    },
+    {
+      "path": "presentation/figures/advanced/01_activity.pdf",
+      "bytes": 21237,
+      "sha256": "4ad00bd08eed8643171e68d783742ee5f157bac8c78071ef723b69b231eb8b6c",
+      "git_blob_sha": "b055064a93eca3dcbe58b351630fb49cbeb503c1"
+    },
+    {
+      "path": "presentation/figures/advanced/01_activity.png",
+      "bytes": 144370,
+      "sha256": "2c9267cc633d75a27641ad13f1d8140ce95cb66040625e3d17ac22311790b963",
+      "git_blob_sha": "eab1a64144ef6c8fa3ed9483ea9ee9549d33db3c"
+    },
+    {
+      "path": "presentation/figures/advanced/01_activity.svg",
+      "bytes": 47215,
+      "sha256": "10a8bba67a5d5dbdd67f6653f902fe1f33b62d6ca962fb246aa6b5abb148d2d0",
+      "git_blob_sha": "89a043c30c1133b2abd6bd517ffb0efb3d67f0a3"
+    },
+    {
+      "path": "presentation/figures/advanced/02_event_timing.pdf",
+      "bytes": 22407,
+      "sha256": "1131f5c58b72d86ebdff3078f60d3d23e4e0940250728c1ae89bcde0f9ccbb7c",
+      "git_blob_sha": "c3a03bfa77b5176ecec17344626c3b648c22872a"
+    },
+    {
+      "path": "presentation/figures/advanced/02_event_timing.png",
+      "bytes": 200465,
+      "sha256": "6f3bbd59e90739eab1acb00415f43d0d6019a1b23177df2886361a42cfab6848",
+      "git_blob_sha": "c73979aeaa6a6e44d9a818eabf82fe3f563626f3"
+    },
+    {
+      "path": "presentation/figures/advanced/02_event_timing.svg",
+      "bytes": 52740,
+      "sha256": "776d60c6da368fa562955caa9e0a22ecc4163d2020bb35d5e39e681464d525d2",
+      "git_blob_sha": "628b92838cb212dbea5d73ed4c2c6c442770c80c"
+    },
+    {
+      "path": "presentation/figures/advanced/03_cohorts.pdf",
+      "bytes": 33973,
+      "sha256": "eda051570ff316e922acd16d0671227d56db36cbb14ccd8bcaf71855518b54b4",
+      "git_blob_sha": "b70909043bd1d98066d227a44f2e74aef73df212"
+    },
+    {
+      "path": "presentation/figures/advanced/03_cohorts.svg",
+      "bytes": 42563,
+      "sha256": "aad63a4140704e7637ec1ee3e34b625aa0e0acb5fcbbd2fffd8db4981100443e",
+      "git_blob_sha": "52d3455f0db80c814886dcc31ad8e91584371651"
+    },
+    {
+      "path": "presentation/figures/advanced/04_concentration.pdf",
+      "bytes": 21535,
+      "sha256": "ca00002a48bfd9337b8d30476c5102412eed32d4e683807155b469d561ccd806",
+      "git_blob_sha": "02f792de35f5f9e13d8ea7678f0f1096e0c6427e"
+    },
+    {
+      "path": "presentation/figures/advanced/04_concentration.svg",
+      "bytes": 27766,
+      "sha256": "eba077bc18c12a324a7457bc16f275b7b978bb310fb5f51fc1876f8d8203bc9c",
+      "git_blob_sha": "c3a30f43fa46e0eb42b07d3f99b427eb82d4f4ae"
+    },
+    {
+      "path": "presentation/figures/advanced/05_communication.pdf",
+      "bytes": 38426,
+      "sha256": "d134a52eec0e9a1f77b310f8d7a6bc34e5f08184a08b73058750d834706fffdf",
+      "git_blob_sha": "6548fe3eecb3e284690cffecaf0e1fc1cd6673f7"
+    },
+    {
+      "path": "presentation/figures/advanced/05_communication.svg",
+      "bytes": 90948,
+      "sha256": "aee98fb19dc7ce6c55ccf5ad2e79ff33dbfac6113b0ce8aebff294e1667e5ceb",
+      "git_blob_sha": "8e577d3735f2a47a9a9138aebf679e2bf6de0f32"
+    },
+    {
+      "path": "presentation/figures/advanced/06_reference_chronology.pdf",
+      "bytes": 23525,
+      "sha256": "32b75f5c87fe3f0e70e99aac4feb2e9acf39889957272bc832033d581ac3143c",
+      "git_blob_sha": "a0dad766739e08cdde3a5fdb59b93247d4e77046"
+    },
+    {
+      "path": "presentation/figures/advanced/06_reference_chronology.svg",
+      "bytes": 94552,
+      "sha256": "4c4aaa87b0942543d82aefe9eab44a88d54a7a0a82b303309af9c8023ee3e795",
+      "git_blob_sha": "e40fd4155ada87e49f34e5f064136dde3da9ca00"
+    },
+    {
+      "path": "presentation/figures/advanced/07_method_sensitivity.pdf",
+      "bytes": 45973,
+      "sha256": "bb2e97a935351d4bc55f20941adc020b4c17f1b60724ba19ef62375af185291c",
+      "git_blob_sha": "e9e091e2d1dd8dca151a583919d36f46f0652e5c"
+    },
+    {
+      "path": "presentation/figures/advanced/07_method_sensitivity.svg",
+      "bytes": 48071,
+      "sha256": "2057c47100e3b851f3f8cb49fe599b89f151e2c1ab68b0bce43a847f34197aba",
+      "git_blob_sha": "2fd1bc4873acaf776795c5726a13c2586d982a51"
+    },
+    {
+      "path": "presentation/figures/advanced/08_adoption_evidence.pdf",
+      "bytes": 13678,
+      "sha256": "77342247511713db29c2772e29dbdfd7ef87d8020a24b2530e619e0cfaea257b",
+      "git_blob_sha": "ee9a1b227e96cf79c380df2a8e14f24ca14331ca"
+    },
+    {
+      "path": "presentation/figures/advanced/08_adoption_evidence.svg",
+      "bytes": 8448,
+      "sha256": "43938874b5fea3d7c644d4dad26d2b5426e7dd07278289b1788cb0cf30d9c43d",
+      "git_blob_sha": "02678b9a36022051d46cd1e885c03cc4cba2b1b8"
+    },
+    {
+      "path": "presentation/figures/advanced/captions.json",
+      "bytes": 3621,
+      "sha256": "99ec86492a5a82d9586d5899e3f6ff992a2829da13f2023f8d4e73cc8339ece7",
+      "git_blob_sha": "fae22e3b50079e9de3dc3d55715f7d1743653776"
+    },
+    {
+      "path": "presentation/figures/lineage/01_extraction_sensitivity.pdf",
+      "bytes": 33565,
+      "sha256": "abb1260c218429889011734d7f16f752b09e3f2bdf884ecdb2deea6d6c553504",
+      "git_blob_sha": "e8ec4441fa3b657db9a78a63f872c262cf816e38"
+    },
+    {
+      "path": "presentation/figures/lineage/01_extraction_sensitivity.png",
+      "bytes": 221704,
+      "sha256": "9757301df532d06acc5102a7f67562fac2e5bd0bac6e311fb328be81833a8587",
+      "git_blob_sha": "3d95bb77ae5eaffa03f059896791c6ac4ae988ad"
+    },
+    {
+      "path": "presentation/figures/lineage/01_extraction_sensitivity.svg",
+      "bytes": 23717,
+      "sha256": "6d794e75f48dd0713f234fdeeedc987f6e46b9dec5acc5e8585507a055cf13e5",
+      "git_blob_sha": "d7ef66553bd712fd2d6eb667d2cc56e28b02f9c0"
+    },
+    {
+      "path": "presentation/figures/lineage/02_typed_evidence_cases.pdf",
+      "bytes": 34575,
+      "sha256": "48dcc5741d00e9b0e33f870f3c675dc6ad515c5a0205a4c02a006b7cc0221e89",
+      "git_blob_sha": "b0084fa1d5ed39c07ad7835980ec183502dd6850"
+    },
+    {
+      "path": "presentation/figures/lineage/02_typed_evidence_cases.png",
+      "bytes": 461629,
+      "sha256": "e8fc3beda30d1fa8b02ad08d951a22624d66d75e8d98c3d70fa9575f4b8fdd88",
+      "git_blob_sha": "704e1e55da2dfd92a8c68b96d4f067cb97cc9cba"
+    },
+    {
+      "path": "presentation/figures/lineage/02_typed_evidence_cases.svg",
+      "bytes": 15296,
+      "sha256": "48515477ec9c5b695e96a913b2cc93bb253a82d2dd4d6bd2fe5bb41ccf07534f",
+      "git_blob_sha": "009fecd2436ab780e98ceff6f876c834523ab5c4"
+    },
+    {
+      "path": "presentation/figures/lineage/03_conditional_claim_trajectories.pdf",
+      "bytes": 28779,
+      "sha256": "282d4f668541c238e39c15ab28edea125f49c498a46fcf661d9028b29ea9a254",
+      "git_blob_sha": "f4b9c434dba03f527caf4be3383337b90d21dd43"
+    },
+    {
+      "path": "presentation/figures/lineage/03_conditional_claim_trajectories.png",
+      "bytes": 262289,
+      "sha256": "a462a7a700571365d78017589686722c09ed4a00d709ac59465c091f5e6387f3",
+      "git_blob_sha": "6226ffec88ea1e7b1a61b5d206e6dc65020adf69"
+    },
+    {
+      "path": "presentation/figures/lineage/03_conditional_claim_trajectories.svg",
+      "bytes": 23845,
+      "sha256": "e7ca5bcefb01ded8e588ee933597949b506c8e666b8727629a10ab4f2e7451cc",
+      "git_blob_sha": "55004a8c85f3d5330780cd9ceba34d7dffb63fa0"
+    },
+    {
+      "path": "presentation/figures/lineage/04_account_roles_and_exposure.pdf",
+      "bytes": 34233,
+      "sha256": "976826b20d005371ae8f46c96fcda92b8cc2e4c214af61d9e84ca89af60c2866",
+      "git_blob_sha": "ba1c7aedc508de64c3ff74e324dd16d4b740fa14"
+    },
+    {
+      "path": "presentation/figures/lineage/04_account_roles_and_exposure.svg",
+      "bytes": 32108,
+      "sha256": "a43dfd7d5f4b0e6993a04b9ee7217d17f96392b3325210e529e939aeb5f1c76f",
+      "git_blob_sha": "6d18ff2f4d627b73ef91eb2f0963e62d0fd807bf"
+    },
+    {
+      "path": "presentation/figures/lineage/05_multihop_and_cycles.pdf",
+      "bytes": 31478,
+      "sha256": "cb00153d5e6e3124471035df002e2de8cb2888b8455ff3c8dd7d7da8d518ecf8",
+      "git_blob_sha": "3b6dcb1ec24bd3049ac1ef1115897bcb9283fa34"
+    },
+    {
+      "path": "presentation/figures/lineage/05_multihop_and_cycles.svg",
+      "bytes": 123374,
+      "sha256": "0d6beac328291b389dec2f093cb86866fdd1e82ac3b0a7f76ee07528a8eeb3a0",
+      "git_blob_sha": "67f9488856f21dcfb255a9a1f0244e8b277d67c0"
+    },
+    {
+      "path": "presentation/figures/lineage/captions.json",
+      "bytes": 3022,
+      "sha256": "955dca65eb737a2667e31fe05f625f550f34ea7817db59e6ebc707f978e02eb3",
+      "git_blob_sha": "462bc0177793231e757acab8fc1ddd42e385253a"
+    },
+    {
+      "path": "presentation/site.css",
+      "bytes": 5668,
+      "sha256": "c890f0971993a0a4941d3e39ec78d26419c780a92001ec916d67a2e260820f20",
+      "git_blob_sha": "ec0325569ebf8cb63939c6a0ad98f15607044e69"
+    }
+  ]
+}

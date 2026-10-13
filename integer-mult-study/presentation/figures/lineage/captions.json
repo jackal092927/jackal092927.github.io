@@ -1,0 +1,45 @@
+[
+  {
+    "id": "01_extraction_sensitivity",
+    "caption": "All specifications retain the same 633 PRs, including isolates. URL and explicitly prefixed PR-number text are mention proxies, not proven inheritance. Removing future-at-opening or same-account pairs is a sensitivity analysis. The surviving current-body links still have unknown historical availability. Table directions are cited antecedent \u2192 citing PR.",
+    "tables": [
+      "graph_specifications.csv",
+      "reference_occurrences.csv"
+    ]
+  },
+  {
+    "id": "02_typed_evidence_cases",
+    "caption": "Selected purposive examples, not frequency estimates. Boxes distinguish PR containers from comment contributions and source versions. Arrows encode audited source-relative semantic roles; none establishes global novelty or independent scientific truth. Full exact excerpts and URLs are in the companion relation/member tables and dashboard evidence desk.",
+    "tables": [
+      "audited_relations.csv",
+      "idea_memberships.csv"
+    ]
+  },
+  {
+    "id": "03_conditional_claim_trajectories",
+    "caption": "Ten source-reported conditional \u03ba records in three purposively selected series. Each panel has its own y scale. Lines only join audited semantic pairs within each series and do not define a comparable or validated frontier. All claim-first-visible dates are unknown: PR opening is a navigation coordinate. The #633 square reproduces #627 and is not a new bound. Headline \u03ba is separate from practical speed, theorem validity, merge state and scientific credit.",
+    "tables": [
+      "conditional_kappa_claims.csv",
+      "claim_exclusions.csv",
+      "audited_relations.csv"
+    ]
+  },
+  {
+    "id": "04_account_roles_and_exposure",
+    "caption": "Twelve most prolific PR author accounts; account IDs are not identities or AI-role labels. Reach is the union of antecedent and citing counterparties in the body URL+shorthand graph. Gray ranges use 200 permutations of author labels within UTC opening days, preserving daily author PR totals and the reference graph. They are a descriptive exposure sensitivity, not confidence intervals, p-values or evidence of intellectual transfer. Communication and audit roles remain separate in the complete table.",
+    "tables": [
+      "account_roles.csv",
+      "account_reference_edges.csv"
+    ]
+  },
+  {
+    "id": "05_multihop_and_cycles",
+    "caption": "Distinct reach excludes the starting node and repeated walks; paths are reference paths, not validated intellectual transmission. SCC condensation is a structural DAG and can have an abstract depth, but PR-level cycles may reflect mutual citation, revisions, or citation style. No historical generation or causal ordering is recovered. Complete input IDs accompany every 1\u20133-hop feature in the CSV, and community resolution sensitivity is exported separately.",
+    "tables": [
+      "recursive_neighborhoods.csv",
+      "scc_condensation.csv",
+      "algorithmic_communities.csv",
+      "pr_topology.csv"
+    ]
+  }
+]

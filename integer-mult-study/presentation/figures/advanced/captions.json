@@ -1,0 +1,68 @@
+[
+  {
+    "id": "01_activity",
+    "caption": "Hourly PR creation and daily author-account activity. First and final dates are partial. Returning means an account created a PR on an earlier observed UTC day; it does not imply continuous engagement. Fixed census: 633 PRs / 77 author accounts.",
+    "csv": [
+      "hourly_activity.csv",
+      "daily_participation.csv",
+      "burst_windows.csv"
+    ]
+  },
+  {
+    "id": "02_event_timing",
+    "caption": "Non-author reply Kaplan\u2013Meier complement and competing first merge/close cumulative incidence (including #166, subsequently reopened) at the conservative common cutoff 2026-10-12T23:33:31.753000Z. Shading: pointwise 95% author-cluster bootstrap sensitivity (800 resamples), not population or causal confidence. Reply median among responders is conditional; full-census median is not reached.",
+    "csv": [
+      "event_curves.csv",
+      "pr_followup.csv"
+    ]
+  },
+  {
+    "id": "03_cohorts",
+    "caption": "Fixed-horizon reply fractions (labels: eligible PRs) use only PRs with sufficient potential follow-up, independent of outcome. Retention cells show active/cohort author accounts; gray em dash means the target calendar day is incomplete or outside observation. Daily activity is not long-term retention or departure.",
+    "csv": [
+      "fixed_windows.csv",
+      "cohort_retention.csv"
+    ]
+  },
+  {
+    "id": "04_concentration",
+    "caption": "PR production and recorded non-author response activity have distinct account denominators. Response events are directed to a PR author, not a demonstrated reply to every participant. Concentration describes visible activity and is not a credit or agent-identity measure.",
+    "csv": [
+      "accounts.csv",
+      "communication_edges.csv"
+    ]
+  },
+  {
+    "id": "05_communication",
+    "caption": "Directed communication matrix across all accounts involved in recorded non-author comments/reviews. Cell value counts events; * indicates at least one formal review event. Empty cells mean no such event observed, not absence of private interaction. Separate comments/reviews remain in CSV and dashboard.",
+    "csv": [
+      "communication_events.csv",
+      "communication_edges.csv"
+    ]
+  },
+  {
+    "id": "06_reference_chronology",
+    "caption": "438 unique nonself current-body URL pairs. Orange diamonds mark the 11 references whose targets were created later than their sources. Neither backward nor forward pairs establish when the link was added or prove reuse/dependency; timestamps are PR creation times only.",
+    "csv": [
+      "reference_edges.csv",
+      "future_references.csv"
+    ]
+  },
+  {
+    "id": "07_method_sensitivity",
+    "caption": "Lexical method-family proxies in titles only (a) versus titles or current bodies (b), using the same cohort denominators. Multi-label categories overlap. Broad inherited or negative discussion can match. This is extraction sensitivity, not validated classification, historical emergence, or independent-idea counts.",
+    "csv": [
+      "method_cohorts.csv",
+      "method_labels.csv",
+      "method_patterns.json"
+    ]
+  },
+  {
+    "id": "08_adoption_evidence",
+    "caption": "First recorded non-author response relative to final recorded resolution, grouped by snapshot state. Labels are PR counts. Among 131 merged PRs, six had such a response at or before merge, 58 only afterward, and 67 none by the cutoff. This does not establish the absence of code checks, CI, private review, or mathematical evaluation. Not a causal comparison.",
+    "csv": [
+      "adoption_response.csv",
+      "merge_response_chronology.csv"
+    ]
+  }
+]

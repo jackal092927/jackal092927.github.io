@@ -1,0 +1,4 @@
+snapshot_state,prs,any_nonauthor_response,no_observed_nonauthor_response,response_before_or_at_final_resolution,response_only_after_final_resolution
+open,454,45,409,,
+merged,131,64,67,6,58
+closed,48,15,33,14,1

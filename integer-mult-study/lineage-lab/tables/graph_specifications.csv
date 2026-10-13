@@ -1,0 +1,9 @@
+specification,nodes,edges,isolates,weak_components,largest_weak_component,strong_components,cyclic_components,largest_strong_component,reciprocity,max_undirected_k_core,future_at_opening,same_account_edges,normalization
+URL body,633,438,430,444,123,633,0,1,0,8,11,99,Directed unweighted betweenness over all 633 nodes; k-core on symmetrized graph.
+URL body / exclude future,633,427,438,453,111,633,0,1,0,8,0,98,Directed unweighted betweenness over all 633 nodes; k-core on symmetrized graph.
+URL body / cross-account,633,339,439,457,69,633,0,1,0,6,10,0,Directed unweighted betweenness over all 633 nodes; k-core on symmetrized graph.
+"URL body / cross-account, exclude future",633,329,446,465,64,633,0,1,0,6,0,0,Directed unweighted betweenness over all 633 nodes; k-core on symmetrized graph.
+URL + shorthand body,633,2241,110,115,515,619,5,7,0.009817045961624275,18,78,460,Directed unweighted betweenness over all 633 nodes; k-core on symmetrized graph.
+URL + shorthand body / exclude future,633,2163,113,118,512,633,0,1,0,18,0,455,Directed unweighted betweenness over all 633 nodes; k-core on symmetrized graph.
+URL + shorthand body / cross-account,633,1781,126,130,501,622,5,6,0.010106681639528355,15,73,0,Directed unweighted betweenness over all 633 nodes; k-core on symmetrized graph.
+Body + title mentions,633,2257,106,110,521,618,6,7,0.010633584404076208,18,79,463,Directed unweighted betweenness over all 633 nodes; k-core on symmetrized graph.

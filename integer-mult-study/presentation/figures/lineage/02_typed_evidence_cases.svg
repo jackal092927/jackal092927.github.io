@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="888.146572pt" height="584.39952pt" viewBox="0 0 888.146572 584.39952" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-13T10:39:07.639046</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.7.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 584.39952 
+L 888.146572 584.39952 
+L 888.146572 0 
+L 0 0 
+z
+"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 61.88831 166.72113 
+L 189.696353 166.72113 
+Q 191.259755 166.72113 191.259755 164.799186 
+L 191.259755 118.192039 
+Q 191.259755 116.270095 189.696353 116.270095 
+L 61.88831 116.270095 
+Q 60.324909 116.270095 60.324909 118.192039 
+L 60.324909 164.799186 
+Q 60.324909 166.72113 61.88831 166.72113 
+z
+" clip-path="url(#p6965d584af)" style="stroke: #53d8fb; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 296.398482 166.72113 
+L 424.206525 166.72113 
+Q 425.769926 166.72113 425.769926 164.799186 
+L 425.769926 118.192039 
+Q 425.769926 116.270095 424.206525 116.270095 
+L 296.398482 116.270095 
+Q 294.83508 116.270095 294.83508 118.192039 
+L 294.83508 164.799186 
+Q 294.83508 166.72113 296.398482 166.72113 
+z
+" clip-path="url(#p6965d584af)" style="stroke: #53d8fb; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 194.237173 141.495612 
+Q 243.048863 141.495612 290.183502 141.495612 
+" clip-path="url(#p6965d584af)" style="fill: none; stroke: #64e0a9; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 284.983502 138.895612 
+L 290.183502 141.495612 
+L 284.983502 144.095612 
+z
+" clip-path="url(#p6965d584af)" style="fill: #64e0a9; stroke: #64e0a9; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #f4f7fb; font: 9px 'DejaVu Sans'" transform="translate(106.161785 138.940034)">PR #181</text>
+    <text style="fill: #f4f7fb; font: 9px 'DejaVu Sans'" transform="translate(69.290613 149.018066)">Shared direction-0 edges</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #f4f7fb; font: 9px 'DejaVu Sans'" transform="translate(340.671956 133.901019)">PR #186</text>
+    <text style="fill: #f4f7fb; font: 9px 'DejaVu Sans'" transform="translate(309.538285 143.97905)">Rematch + frame cuts</text>
+    <text style="fill: #f4f7fb; font: 9px 'DejaVu Sans'" transform="translate(316.378285 154.057081)">+ completed banks</text>
+   </g>
+   <g id="text_3">
+    <g id="patch_5">
+     <path d="M 200.824917 141.573668 
+L 285.269917 141.573668 
+L 285.269917 129.831168 
+L 200.824917 129.831168 
+z
+"/>
+    </g>
+    <text style="fill: #64e0a9; font: 8px 'DejaVu Sans'; text-anchor: middle" x="243.047417" y="137.909918" transform="rotate(-0 243.047417 137.909918)">combines / modifies</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #f4f7fb; font: 10px 'DejaVu Sans'" transform="translate(61.302034 209.577999)">Retains the paired-cube circuit and conditional interfaces.</text>
+    <text style="fill: #f4f7fb; font: 10px 'DejaVu Sans'" transform="translate(61.302034 220.775811)">Bit admission becomes the remaining reported bottleneck.</text>
+   </g>
+   <g id="text_5">
+    <text style="fill: #b5c3d3; font: 8.5px 'DejaVu Sans'; text-anchor: start" x="61.302034" y="273.629277" transform="rotate(-0 61.302034 273.629277)">Author statements, frozen current bodies • independent replay unknown</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #f4f7fb; font: 700 12px 'DejaVu Sans'; text-anchor: start" x="14.4" y="45.398402" transform="rotate(-0 14.4 45.398402)">a</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #f4f7fb; font: 700 11px 'DejaVu Sans'; text-anchor: start" x="49.576526" y="53.812983" transform="rotate(-0 49.576526 53.812983)">Composition within an inherited framework</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_6">
+    <path d="M 495.20807 166.72113 
+L 623.016113 166.72113 
+Q 624.579515 166.72113 624.579515 164.799186 
+L 624.579515 118.192039 
+Q 624.579515 116.270095 623.016113 116.270095 
+L 495.20807 116.270095 
+Q 493.644669 116.270095 493.644669 118.192039 
+L 493.644669 164.799186 
+Q 493.644669 166.72113 495.20807 166.72113 
+z
+" clip-path="url(#pb0d3da6dcf)" style="stroke: #53d8fb; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 729.718242 166.72113 
+L 857.526285 166.72113 
+Q 859.089686 166.72113 859.089686 164.799186 
+L 859.089686 118.192039 
+Q 859.089686 116.270095 857.526285 116.270095 
+L 729.718242 116.270095 
+Q 728.15484 116.270095 728.15484 118.192039 
+L 728.15484 164.799186 
+Q 728.15484 166.72113 729.718242 166.72113 
+z
+" clip-path="url(#pb0d3da6dcf)" style="stroke: #64e0a9; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 627.556933 141.495612 
+Q 676.368623 141.495612 723.503262 141.495612 
+" clip-path="url(#pb0d3da6dcf)" style="fill: none; stroke: #64e0a9; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 718.303262 138.895612 
+L 723.503262 141.495612 
+L 718.303262 144.095612 
+z
+" clip-path="url(#pb0d3da6dcf)" style="fill: #64e0a9; stroke: #64e0a9; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_8">
+    <text style="fill: #f4f7fb; font: 9px 'DejaVu Sans'" transform="translate(539.481545 138.940034)">PR #627</text>
+    <text style="fill: #f4f7fb; font: 9px 'DejaVu Sans'" transform="translate(507.517482 149.018066)">Two factored cold ends</text>
+   </g>
+   <g id="text_9">
+    <text style="fill: #f4f7fb; font: 9px 'DejaVu Sans'" transform="translate(773.991716 138.940034)">PR #633</text>
+    <text style="fill: #f4f7fb; font: 9px 'DejaVu Sans'" transform="translate(747.097888 149.018066)">Pinned replay / audit</text>
+   </g>
+   <g id="text_10">
+    <g id="patch_9">
+     <path d="M 662.078427 141.573668 
+L 690.655927 141.573668 
+L 690.655927 129.831168 
+L 662.078427 129.831168 
+z
+"/>
+    </g>
+    <text style="fill: #64e0a9; font: 8px 'DejaVu Sans'; text-anchor: middle" x="676.367177" y="137.909918" transform="rotate(-0 676.367177 137.909918)">audits</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #f4f7fb; font: 10px 'DejaVu Sans'" transform="translate(494.621794 209.577999)">Same reported κ; audit scope excludes global optimal packing</text>
+    <text style="fill: #f4f7fb; font: 10px 'DejaVu Sans'" transform="translate(494.621794 220.775811)">and an unconditional multiplication theorem.</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #b5c3d3; font: 8.5px 'DejaVu Sans'; text-anchor: start" x="494.621794" y="273.629277" transform="rotate(-0 494.621794 273.629277)">Shorthand-only link missed by the URL graph • audit is source-reported</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #f4f7fb; font: 700 12px 'DejaVu Sans'; text-anchor: start" x="447.71976" y="45.398402" transform="rotate(-0 447.71976 45.398402)">b</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #f4f7fb; font: 700 11px 'DejaVu Sans'; text-anchor: start" x="482.896286" y="53.812983" transform="rotate(-0 482.896286 53.812983)">Audit with no new bound</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_10">
+    <path d="M 59.934058 436.66464 
+L 156.474079 436.66464 
+Q 158.03748 436.66464 158.03748 434.742696 
+L 158.03748 388.135549 
+Q 158.03748 386.213605 156.474079 386.213605 
+L 59.934058 386.213605 
+Q 58.370657 386.213605 58.370657 388.135549 
+L 58.370657 434.742696 
+Q 58.370657 436.66464 59.934058 436.66464 
+z
+" clip-path="url(#pe5127a05d1)" style="stroke: #53d8fb; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 186.960401 436.66464 
+L 283.500422 436.66464 
+Q 285.063823 436.66464 285.063823 434.742696 
+L 285.063823 388.135549 
+Q 285.063823 386.213605 283.500422 386.213605 
+L 186.960401 386.213605 
+Q 185.397 386.213605 185.397 388.135549 
+L 185.397 434.742696 
+Q 185.397 436.66464 186.960401 436.66464 
+z
+" clip-path="url(#pe5127a05d1)" style="stroke: #ffb454; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 329.620756 436.66464 
+L 426.160777 436.66464 
+Q 427.724178 436.66464 427.724178 434.742696 
+L 427.724178 388.135549 
+Q 427.724178 386.213605 426.160777 386.213605 
+L 329.620756 386.213605 
+Q 328.057355 386.213605 328.057355 388.135549 
+L 328.057355 434.742696 
+Q 328.057355 436.66464 329.620756 436.66464 
+z
+" clip-path="url(#pe5127a05d1)" style="stroke: #ffb454; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 161.014899 411.439122 
+Q 171.71599 411.439122 180.74003 411.439122 
+" clip-path="url(#pe5127a05d1)" style="fill: none; stroke: #ffb454; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 175.54003 408.839122 
+L 180.74003 411.439122 
+L 175.54003 414.039122 
+z
+" clip-path="url(#pe5127a05d1)" style="fill: #ffb454; stroke: #ffb454; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 288.042315 411.439122 
+Q 306.562927 411.439122 323.406488 411.439122 
+" clip-path="url(#pe5127a05d1)" style="fill: none; stroke: #ffb454; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 318.206488 408.839122 
+L 323.406488 411.439122 
+L 318.206488 414.039122 
+z
+" clip-path="url(#pe5127a05d1)" style="fill: #ffb454; stroke: #ffb454; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_15">
+    <text style="fill: #f4f7fb; font: 9px 'DejaVu Sans'" transform="translate(88.573522 408.883544)">PR #156</text>
+    <text style="fill: #f4f7fb; font: 9px 'DejaVu Sans'" transform="translate(63.350319 418.961576)">Proposed certificate</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #f4f7fb; font: 9px 'DejaVu Sans'" transform="translate(192.342599 408.883544)">Critique comments</text>
+    <text style="fill: #f4f7fb; font: 9px 'DejaVu Sans'" transform="translate(211.376193 418.961576)">Oct 9, UTC</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #f4f7fb; font: 9px 'DejaVu Sans'" transform="translate(352.524126 408.883544)">Withdrawal</text>
+    <text style="fill: #f4f7fb; font: 9px 'DejaVu Sans'" transform="translate(343.433422 418.961576)">Later comment</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #f4f7fb; font: 10px 'DejaVu Sans'" transform="translate(61.302034 479.521509)">Comment events belong to the same PR, not invented new PRs.</text>
+    <text style="fill: #f4f7fb; font: 10px 'DejaVu Sans'" transform="translate(61.302034 490.719321)">Reported histogram / physical-plan problems remain attributed.</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #b5c3d3; font: 8.5px 'DejaVu Sans'; text-anchor: start" x="61.302034" y="543.572787" transform="rotate(-0 61.302034 543.572787)">A withdrawn claim is retained in the record • no inference of intent</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #f4f7fb; font: 700 12px 'DejaVu Sans'; text-anchor: start" x="14.4" y="315.341912" transform="rotate(-0 14.4 315.341912)">c</text>
+   </g>
+   <g id="text_21">
+    <text style="fill: #f4f7fb; font: 700 11px 'DejaVu Sans'; text-anchor: start" x="49.576526" y="323.756493" transform="rotate(-0 49.576526 323.756493)">Critique and withdrawal</text>
+   </g>
+  </g>
+  <g id="axes_4">
+   <g id="patch_15">
+    <path d="M 495.20807 436.66464 
+L 658.192639 436.66464 
+Q 659.75604 436.66464 659.75604 434.742696 
+L 659.75604 388.135549 
+Q 659.75604 386.213605 658.192639 386.213605 
+L 495.20807 386.213605 
+Q 493.644669 386.213605 493.644669 388.135549 
+L 493.644669 434.742696 
+Q 493.644669 436.66464 495.20807 436.66464 
+z
+" clip-path="url(#p089bafc5e6)" style="stroke: #c1a2ff; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 698.450219 436.66464 
+L 861.434788 436.66464 
+Q 862.998189 436.66464 862.998189 434.742696 
+L 862.998189 388.135549 
+Q 862.998189 386.213605 861.434788 386.213605 
+L 698.450219 386.213605 
+Q 696.886818 386.213605 696.886818 388.135549 
+L 696.886818 434.742696 
+Q 696.886818 436.66464 698.450219 436.66464 
+z
+" clip-path="url(#p089bafc5e6)" style="stroke: #53d8fb; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_22">
+    <text style="fill: #f4f7fb; font: 9px 'DejaVu Sans'" transform="translate(532.103948 408.883544)">#376 earlier review</text>
+    <text style="fill: #f4f7fb; font: 9px 'DejaVu Sans'" transform="translate(531.550589 418.961576)">R822 / PR378 scope</text>
+   </g>
+   <g id="text_23">
+    <text style="fill: #f4f7fb; font: 9px 'DejaVu Sans'" transform="translate(737.36055 408.883544)">#376 current body</text>
+    <text style="fill: #f4f7fb; font: 9px 'DejaVu Sans'" transform="translate(724.932113 418.961576)">PR433 signed admission</text>
+   </g>
+   <g id="text_24">
+    <text style="fill: #ffb454; font: 23px 'DejaVu Sans'; text-anchor: middle" x="678.321429" y="420.188115" transform="rotate(-0 678.321429 420.188115)">≠</text>
+   </g>
+   <g id="text_25">
+    <text style="fill: #f4f7fb; font: 10px 'DejaVu Sans'" transform="translate(494.621794 479.521509)">Review precedes PR #433 opening. Current-body contribution</text>
+    <text style="fill: #f4f7fb; font: 10px 'DejaVu Sans'" transform="translate(494.621794 490.719321)">is different; the prior review cannot be reassigned to it.</text>
+   </g>
+   <g id="text_26">
+    <text style="fill: #b5c3d3; font: 8.5px 'DejaVu Sans'; text-anchor: start" x="494.621794" y="543.572787" transform="rotate(-0 494.621794 543.572787)">Snapshot PR head SHA also does not version mutable body text</text>
+   </g>
+   <g id="text_27">
+    <text style="fill: #f4f7fb; font: 700 12px 'DejaVu Sans'; text-anchor: start" x="447.71976" y="315.341912" transform="rotate(-0 447.71976 315.341912)">d</text>
+   </g>
+   <g id="text_28">
+    <text style="fill: #f4f7fb; font: 700 11px 'DejaVu Sans'; text-anchor: start" x="482.896286" y="323.756493" transform="rotate(-0 482.896286 323.756493)">Earlier review ≠ current claim</text>
+   </g>
+  </g>
+  <g id="text_29">
+   <text style="fill: #f4f7fb; font: 16px 'DejaVu Serif'; text-anchor: middle" x="444.746812" y="26.5575" transform="rotate(-0 444.746812 26.5575)">Four relationships that a single “influence” edge would hide</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p6965d584af">
+   <rect x="49.576526" y="59.812983" width="390.850286" height="240.243027"/>
+  </clipPath>
+  <clipPath id="pb0d3da6dcf">
+   <rect x="482.896286" y="59.812983" width="390.850286" height="240.243027"/>
+  </clipPath>
+  <clipPath id="pe5127a05d1">
+   <rect x="49.576526" y="329.756493" width="390.850286" height="240.243027"/>
+  </clipPath>
+  <clipPath id="p089bafc5e6">
+   <rect x="482.896286" y="329.756493" width="390.850286" height="240.243027"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#000000">
+  <title>Idea lineage laboratory · Evidence atlas</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="../../assets/plotly.min.js"></script>
+  <script defer src="data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#workspace">Skip to research map</a>
+<header class="masthead">
+  <div><p class="project-name"><a href="../../index.html">Study dashboards</a><span aria-hidden="true"> / </span>Integer multiplication bounds</p><h1>Idea lineage laboratory</h1><p class="standfirst">Trace a contribution. Inspect the claim. Keep the evidence in view.</p></div>
+  <div class="release"><span class="release-dot"></span><strong>Frozen-source study</strong><span id="release-meta">Loading local release…</span><a href="../../methodology.html">Scope &amp; study protocol</a></div>
+</header>
+<div id="load-error" class="error hidden" role="alert"></div>
+<main>
+  <section class="toolbar" aria-label="Graph controls">
+    <div class="control search-control"><label for="node-search">Find a PR, idea or account</label><input id="node-search" type="search" placeholder="Try #186, cold ends, or an account" autocomplete="off" aria-controls="search-results"><div id="search-results" class="search-results hidden" role="region" aria-label="Matching nodes"></div><span class="control-hint">Find selects an object; it does not filter the cohort.</span></div>
+    <div class="control"><label for="lens">Study lens</label><select id="lens"><option value="focus">Selected neighborhood</option><option value="reference">Broad reference map</option><option value="audit">Audited sample overview</option></select></div>
+    <div class="control"><label for="edge-layer">Relations to traverse</label><select id="edge-layer"><option value="audited">Audited + participation</option><option value="semantic">Audited technical relations</option><option value="reference">Current-body references</option><option value="membership">PR → idea membership</option><option value="participation">Account → idea participation</option><option value="authorship">Account → PR / event authorship</option><option value="communication">Recorded communication</option></select></div>
+    <div class="control"><label for="direction">Trace direction</label><select id="direction"><option value="both">Both directions</option><option value="ancestors">Incoming / sources</option><option value="descendants">Outgoing / targets</option></select></div>
+    <div class="control small-control"><label for="hops">Hops</label><select id="hops"><option>1</option><option>2</option><option>3</option></select></div>
+    <button id="reset" class="quiet-button">Reset case</button>
+  </section>
+  <section class="cohort-bar" aria-label="PR opening cohort">
+    <div class="cohort-heading"><label for="cohort-end">PR opening cohort through <output id="cohort-date" for="cohort-end">all dates</output></label><span>Navigation by opening time. Exact current-text appearance is unknown.</span></div>
+    <button id="play-cohort" class="quiet-button" aria-pressed="false">Play cohorts</button><input type="range" id="cohort-end" min="0" max="1" value="1" step="1" aria-label="Last included PR opening date">
+    <div class="control state-control"><label for="state-filter">PR state in snapshot</label><select id="state-filter"><option value="all">Any state</option><option value="open">Open</option><option value="closed">Closed, unmerged</option><option value="merged">Merged</option></select></div>
+    <label class="check-label"><input id="future-references" type="checkbox">Include later-opened antecedents</label>
+  </section>
+  <p id="temporal-warning" class="qualification">References and audited interpretations come from frozen current text. Arrows do not establish historical transmission, priority or correctness.</p>
+  <div class="workspace" id="workspace">
+    <section class="map-panel" aria-labelledby="map-title">
+      <div class="panel-heading"><div><h2 id="map-title">A contribution and its neighbors</h2><p id="selection-summary">Selected case: #181 → #186</p></div><div class="segmented" role="group" aria-label="Graph dimension"><button id="view-2d" aria-pressed="true">2D</button><button id="view-3d" aria-pressed="false">3D</button></div></div>
+      <div id="reference-control" class="reference-controls hidden"><label for="reference-spec">Reference extraction</label><select id="reference-spec"><option value="body">Body: URL + PR shorthand</option><option value="url">Body: URL only</option><option value="title">Body + title</option><option value="all">All records including comments</option></select><span>Mentions may be comparisons, exclusions or acknowledgments; they are not audited inheritance.</span></div>
+      <div id="graph-counts" class="counts" aria-live="polite"></div>
+      <div class="graph-context"><p id="graph-scope"></p><div class="case-shortcuts" role="group" aria-label="Audited case shortcuts"><span>Audited cases</span><button type="button" id="case-186">#181 → #186</button><button type="button" id="case-633">#627 → #633</button><button type="button" id="case-417">#376 → #417</button></div></div>
+      <div class="legend" aria-label="Node and edge legend"><span><i class="symbol pr"></i>PR</span><span><i class="symbol idea"></i>Curated idea</span><span><i class="symbol account"></i>Account</span><span><i class="symbol event"></i>Recorded event</span><span><i class="line-key"></i>Source → target</span><span><i class="line-key contextual"></i>Participation / context</span></div>
+      <div id="graph" role="img" aria-label="Interactive lineage graph; all displayed relations are also available in the relation table"></div>
+      <div id="graph-empty" class="empty hidden"></div>
+      <p id="axis-caption" class="plot-caption"></p>
+      <div class="plot-actions"><button id="focus-selection" class="quiet-button">Focus selected object</button><button id="export-svg" class="quiet-button">Export 2D SVG</button><button id="export-png" class="quiet-button">Export 3D PNG</button><button id="download-csv" class="quiet-button">Download shown graph CSV</button><button id="download-json" class="quiet-button">Download shown graph JSON</button></div>
+      <p id="action-status" class="control-hint" role="status"></p>
+    </section>
+    <aside class="evidence-desk" aria-labelledby="desk-title">
+      <div class="desk-heading"><h2 id="desk-title">Evidence desk</h2><span id="selected-type" class="type-badge">PR</span></div>
+      <div id="selected-node"></div>
+      <div class="desk-section"><h3>Relations for this object</h3><label for="relation-direction">Relation direction</label><select id="relation-direction"><option value="both">All incident relations</option><option value="incoming">Incoming to selected</option><option value="outgoing">Outgoing from selected</option></select><label for="relation-picker">Choose a relation to inspect</label><select id="relation-picker"></select><p id="relation-count" class="control-hint"></p></div>
+      <div id="relation-evidence" class="desk-section"></div>
+      <div id="node-assessment" class="desk-section"></div>
+    </aside>
+  </div>
+  <section class="table-panel" aria-labelledby="relation-table-title"><div class="panel-heading"><div><h2 id="relation-table-title">Shown relations</h2><p>Every row has a source and a target. Select a row to open its evidence.</p></div><span id="relation-table-count" class="count-badge"></span></div><div class="table-scroll"><table id="relations-table"><thead><tr><th>Antecedent / source</th><th>Relation</th><th>Contribution / target</th><th>Layer</th><th>Timing &amp; evidence</th></tr></thead><tbody></tbody></table></div><div class="pagination"><button id="relation-prev" class="quiet-button">Previous</button><span id="relation-page"></span><button id="relation-next" class="quiet-button">Next</button></div></section>
+  <div class="research-grid">
+    <section class="research-panel claim-panel" aria-labelledby="claims-title"><div class="panel-heading"><div><h2 id="claims-title">Source-reported κ</h2><p>Conditional claims grouped by audited series. No validated global frontier.</p></div><div class="control"><label for="claim-series">Claim series</label><select id="claim-series"></select></div></div><p id="claim-selection-note" class="control-hint"></p><div id="claim-plot" role="img" aria-label="Source-reported conditional kappa by PR opening date"></div><p class="plot-caption">The date locates the PR opening, not the first availability of this claim. A larger κ does not establish practical speedup or comparable assumptions.</p><label for="claim-picker">Inspect a numerical claim and its assumptions</label><select id="claim-picker"></select><div id="claim-details"></div><details><summary>Excluded numerical claims</summary><div id="claim-exclusions"></div></details></section>
+    <section class="research-panel" aria-labelledby="trajectory-title"><h2 id="trajectory-title">Selected object trajectory</h2><p class="panel-intro">Source-supported roles, versions and unresolved questions.</p><div id="trajectory"></div></section>
+    <section class="research-panel wide-panel" aria-labelledby="authors-title"><div class="panel-heading"><div><h2 id="authors-title">Accounts and participation</h2><p>Authorship and recorded communication are account roles; neither establishes idea origination or human/model identity.</p></div><div class="control"><label for="author-scope">Account rows</label><select id="author-scope"><option value="shown">In shown graph</option><option value="all">All release accounts</option></select></div></div><div id="author-summary" class="control-hint"></div><div class="table-scroll"><table id="authors-table"><thead></thead><tbody></tbody></table></div></section>
+    <section class="research-panel" aria-labelledby="sensitivity-title"><h2 id="sensitivity-title">Topology depends on extraction</h2><p class="panel-intro">Compare graph specifications before interpreting centrality, cycles or groups.</p><div id="sensitivity"></div></section>
+    <section class="research-panel" aria-labelledby="hypotheses-title"><h2 id="hypotheses-title">Hypothesis ledger</h2><p class="panel-intro">Exploratory interpretations are kept separate from observed graph edges.</p><div id="hypotheses"></div></section>
+    <section class="research-panel wide-panel" aria-labelledby="coverage-title"><h2 id="coverage-title">Coverage and evidence boundaries</h2><div id="coverage"></div><details><summary>Version and timing audit notes</summary><div id="audit-notes"></div></details><details><summary>Evidence hierarchy and provenance</summary><div id="hierarchy"></div></details></section>
+  </div>
+</main>
+<footer><p>Frozen-source research atlas. Novelty, potential, implementability, source claim strength, study replay and repository adoption remain separate.</p><a href="../../methodology.html">Methods &amp; limitations</a><a href="../../publication-manifest.json">Published-file checksums</a></footer>
+</body>
+</html>

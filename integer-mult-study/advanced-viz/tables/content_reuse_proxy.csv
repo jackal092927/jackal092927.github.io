@@ -1,0 +1,4 @@
+snapshot_state,prs,prs_with_any_exact_shared_new_blob,max_git_changed_entries,max_distinct_shared_new_blobs
+open,454,423,7589,1455
+merged,131,124,1429,358
+closed,48,41,1914,1081
